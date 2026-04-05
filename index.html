@@ -119,10 +119,27 @@
       height: 291px;
       margin: 0;
       border-radius: 0px !important;
-      background-color: transparent;
-      box-shadow: 0 0 #0000;
+      background: transparent !important;
+      background-color: transparent !important;
+      box-shadow: none !important;
       max-width: 100%;
-      border: none;
+      border: none !important;
+    }
+
+    iframe.beehiiv-embed {
+      filter: none;
+    }
+
+    .form-container {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    div:has(> iframe.beehiiv-embed) {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
     }
 
     footer {
@@ -197,7 +214,7 @@
       <p class="form-label">Be the first to know when we launch — join the list</p>
       <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
       <iframe
-        src="https://subscribe-forms.beehiiv.com/99a27d92-3bee-4026-9c32-33556a386d08"
+        src="https://subscribe-forms.beehiiv.com/99a27d92-3bee-4026-9c32-33556a386d08?background=transparent"
         class="beehiiv-embed"
         data-test-id="beehiiv-embed"
         frameborder="0"
