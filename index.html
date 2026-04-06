@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Madrid Minds — Where Curious Minds Meet</title>
+  <title>Madrid Minds — Where curious minds meet</title>
   <meta name="description" content="Meet interesting people, enjoy Spanish wines and tapas, and discover chess in a relaxed, premium setting. 100% in English." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -15,203 +15,622 @@
       padding: 0;
     }
 
-    :root {
-      --bg: #0e1117;
-      --surface: #141920;
-      --cream: #f5f0e8;
-      --muted: #8a8a8a;
-      --accent: #c9a96e;
+    html {
+      scroll-behavior: smooth;
     }
 
-    html, body {
-      height: 100%;
+    html {
+      font-size: 17px;
     }
 
     body {
-      background-color: var(--bg);
-      color: var(--cream);
-      font-family: 'Inter', sans-serif;
+      background-color: #0D0D0D;
+      color: #F5F0E8;
+      font-family: 'Jost', sans-serif;
       font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 78vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      padding: 3rem 1.5rem;
+      text-align: center;
+      padding: 6rem 2rem;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('hero.png');
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 8, 6, 0.52);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 680px;
+    }
+
+    .hero-logo {
+      width: 80px;
+      height: auto;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(4.5rem, 13vw, 8rem);
+      font-weight: 300;
+      line-height: 1;
+      color: #F5F0E8;
       letter-spacing: 0.01em;
     }
 
-    main {
-      width: 100%;
-      max-width: 640px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0;
+    .hero-divider {
+      width: 48px;
+      height: 1px;
+      background: #C4603A;
+      margin: 2rem auto;
     }
 
-    .eyebrow {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.65rem;
-      font-weight: 400;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--accent);
+    .hero-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-style: italic;
+      font-weight: 300;
+      color: #F5F0E8;
+      letter-spacing: 0.03em;
       margin-bottom: 1.5rem;
     }
 
-    h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(3rem, 10vw, 5.5rem);
+    .hero-descriptor {
+      font-family: 'Jost', sans-serif;
+      font-size: clamp(1rem, 2vw, 1.125rem);
       font-weight: 300;
-      line-height: 1;
+      color: #F5F0E8;
+      line-height: 1.8;
+      max-width: 520px;
+    }
+
+    /* ── SHARED SECTION STYLES ── */
+    .section {
+      width: 100%;
+      padding: 7rem 2rem;
+    }
+
+    .section--dark {
+      background-color: #0D0D0D;
+    }
+
+    .section--mid {
+      background-color: #111111;
+    }
+
+    .inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .inner--narrow {
+      max-width: 680px;
+      margin: 0 auto;
       text-align: center;
-      color: var(--cream);
-      letter-spacing: -0.01em;
     }
 
-    .divider {
-      width: 40px;
-      height: 1px;
-      background: var(--accent);
-      margin: 2rem auto;
-      opacity: 0.6;
-    }
-
-    .tagline {
+    .section-heading {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      font-weight: 300;
+      color: #F5F0E8;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .section-subheading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
       font-style: italic;
       font-weight: 300;
-      color: var(--cream);
-      text-align: center;
-      opacity: 0.85;
-      letter-spacing: 0.02em;
+      color: #F5F0E8;
+      margin-bottom: 3rem;
     }
 
-    .description {
-      font-size: 0.925rem;
+    .accent-rule {
+      width: 40px;
+      height: 1px;
+      background: #C4603A;
+      margin-bottom: 2.5rem;
+    }
+
+    .body-text {
+      font-family: 'Jost', sans-serif;
+      font-size: 1.0625rem;
+      font-weight: 300;
+      color: #F5F0E8;
+      line-height: 1.9;
+    }
+
+    /* ── WHAT TO EXPECT ── */
+    .pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+      margin-top: 4rem;
+    }
+
+    .pillar {
+      background-color: #111111;
+      padding: 2.25rem 2.25rem;
+    }
+
+    .pillars .section--mid & {
+      background-color: #0D0D0D;
+    }
+
+    .pillar-icon {
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #C4603A;
+      margin-bottom: 1.25rem;
+    }
+
+    .pillar-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      font-weight: 400;
+      color: #F5F0E8;
+      margin-bottom: 0.6rem;
+    }
+
+    .pillar-body {
+      font-family: 'Jost', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      color: #F5F0E8;
       line-height: 1.8;
-      text-align: center;
-      color: #b0aba0;
-      max-width: 520px;
-      margin-top: 1.75rem;
     }
 
-    .form-wrapper {
-      margin-top: 2.75rem;
+    /* ── THE EVENING ── */
+    .evening-section {
+      position: relative;
       width: 100%;
+      padding: 7rem 2rem;
+      overflow: hidden;
+    }
+
+    .evening-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('atmosphere.png');
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+
+    .evening-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 8, 6, 0.60);
+      z-index: 1;
+    }
+
+    .evening-content {
+      position: relative;
+      z-index: 2;
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .timeline {
+      margin-top: 3rem;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 0.75rem;
+      gap: 0;
+      text-align: left;
     }
 
-    .form-label {
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
+    .timeline-item {
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid #2A2520;
     }
 
-    .beehiiv-embed {
+    .timeline-item:first-child {
+      border-top: 1px solid #2A2520;
+    }
+
+    .timeline-time {
+      font-family: 'Jost', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #C4603A;
+      min-width: 80px;
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+    }
+
+    .timeline-event {
+      font-family: 'Jost', sans-serif;
+      font-size: 1.0625rem;
+      font-weight: 300;
+      color: #F5F0E8;
+      line-height: 1.5;
+    }
+
+    /* ── SPLIT SECTIONS ── */
+    .split {
+      display: grid;
+      grid-template-columns: 48% 52%;
+      min-height: 540px;
+    }
+
+    .split--reverse {
+      grid-template-columns: 52% 48%;
+    }
+
+    .split-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 400px;
+    }
+
+    .split-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5rem 4.5rem;
+    }
+
+    .split-text .section-heading {
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── HOST ── */
+    .host-body {
+      font-family: 'Jost', sans-serif;
+      font-size: 1.0625rem;
+      font-weight: 300;
+      color: #F5F0E8;
+      line-height: 1.9;
+      max-width: 640px;
+      text-align: left;
+    }
+
+    .host-body p + p {
+      margin-top: 1.25rem;
+    }
+
+    .host-signature {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      font-weight: 300;
+      color: #F5F0E8;
+      margin-top: 2.5rem;
+      text-align: left;
+    }
+
+    /* ── EMAIL SIGNUP ── */
+    .signup-section {
+      background-color: #111111;
+      padding: 7rem 2rem;
+      text-align: center;
+    }
+
+    .signup-subheading {
+      font-family: 'Jost', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      color: #F5F0E8;
+      margin-top: 0.75rem;
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.04em;
+    }
+
+    .beehiiv-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .beehiiv-embed,
+    iframe.beehiiv-embed,
+    iframe[data-test-id="beehiiv-embed"] {
       width: 560px;
       height: 291px;
-      margin: 0;
-      border-radius: 0px !important;
+      border: none !important;
       background: transparent !important;
       background-color: transparent !important;
       box-shadow: none !important;
       max-width: 100%;
-      border: none !important;
     }
 
-    iframe.beehiiv-embed {
-      filter: none;
+    iframe {
+      background: transparent !important;
     }
 
-    .form-container {
+    .beehiiv-wrap,
+    .beehiiv-wrap > * {
       background: transparent !important;
       border: none !important;
       box-shadow: none !important;
     }
 
-    div:has(> iframe.beehiiv-embed) {
-      background: transparent !important;
-      border: none !important;
-      box-shadow: none !important;
-    }
-
+    /* ── FOOTER ── */
     footer {
-      margin-top: 3.5rem;
+      background-color: #0D0D0D;
+      border-top: 1px solid #2A2520;
+      padding: 4rem 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 1rem;
+      text-align: center;
     }
 
-    .instagram-link {
-      display: flex;
+    .footer-logo {
+      width: 40px;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: #F5F0E8;
+      letter-spacing: 0.06em;
+    }
+
+    .footer-meta {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.775rem;
+      font-weight: 300;
+      color: #B8AFA0;
+      letter-spacing: 0.08em;
+    }
+
+    .footer-instagram {
+      display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.45rem;
       text-decoration: none;
-      color: var(--muted);
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
+      color: #B8AFA0;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.775rem;
+      font-weight: 300;
+      letter-spacing: 0.08em;
       transition: color 0.2s ease;
     }
 
-    .instagram-link:hover {
-      color: var(--cream);
+    .footer-instagram:hover {
+      color: #F5F0E8;
     }
 
-    .instagram-link svg {
-      width: 14px;
-      height: 14px;
+    .footer-instagram svg {
+      width: 13px;
+      height: 13px;
       opacity: 0.7;
     }
 
-    .instagram-link:hover svg {
+    .footer-instagram:hover svg {
       opacity: 1;
     }
 
-    .coming-soon-badge {
-      font-size: 0.6rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--accent);
-      opacity: 0.7;
-      margin-top: 0.25rem;
+    /* ── RESPONSIVE ── */
+    @media (max-width: 800px) {
+      .pillars {
+        grid-template-columns: 1fr;
+        gap: 3px;
+      }
+
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .split-image {
+        min-height: 300px;
+        height: 300px;
+      }
+
+      .split-text {
+        padding: 3.5rem 2rem;
+      }
+
+      .split--reverse .split-image {
+        order: -1;
+      }
+
+      .section {
+        padding: 5rem 1.5rem;
+      }
+
+      .evening-section {
+        padding: 5rem 1.5rem;
+      }
+
+      .signup-section {
+        padding: 5rem 1.5rem;
+      }
     }
 
     @media (max-width: 480px) {
-      body {
-        padding: 2.5rem 1.25rem;
-        justify-content: flex-start;
-        padding-top: 4rem;
+      .hero {
+        padding: 5rem 1.5rem;
       }
 
-      .description {
-        font-size: 0.9rem;
+      .pillar {
+        padding: 2.5rem 1.75rem;
+      }
+
+      .split-text {
+        padding: 3rem 1.5rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <main>
-    <h1>Madrid Minds</h1>
+  <!-- ── 1. HERO ── -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img src="logo.png" alt="Madrid Minds logo" class="hero-logo" />
+      <h1>Madrid Minds</h1>
+      <div class="hero-divider"></div>
+      <p class="hero-tagline">Where curious minds meet</p>
+      <p class="hero-descriptor">
+        Meet interesting people, enjoy Spanish wines and tapas, and discover chess in a relaxed, premium setting — 100% in English.
+      </p>
+    </div>
+  </section>
 
-    <div class="divider"></div>
+  <!-- ── 2. WHAT TO EXPECT ── -->
+  <section class="section section--dark">
+    <div class="inner">
+      <div style="text-align:center; max-width:580px; margin:0 auto 0 auto;">
+        <p style="font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5vw,3rem); font-weight:300; color:#F5F0E8; line-height:1.15; margin-bottom:1rem;">What to expect</p>
+        <div class="accent-rule" style="margin-left:auto; margin-right:auto;"></div>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="pillar-icon"></span>
+          <p class="pillar-title">Spanish wines</p>
+          <p class="pillar-body">Two curated Spanish wines with guided tasting notes each evening.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon"></span>
+          <p class="pillar-title">Tapas</p>
+          <p class="pillar-body">A curated selection of Spanish tapas, carefully chosen for the evening.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon"></span>
+          <p class="pillar-title">Chess</p>
+          <p class="pillar-body">A fun, surprising introduction to one of humanity's most fascinating games.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon"></span>
+          <p class="pillar-title">Great company</p>
+          <p class="pillar-body">Curious, English-speaking professionals from Madrid and beyond.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <p class="tagline">Where curious minds meet</p>
+  <!-- ── 3. THE EVENING ── -->
+  <section class="evening-section">
+    <div class="evening-bg"></div>
+    <div class="evening-overlay"></div>
+    <div class="evening-content">
+      <p class="section-heading" style="text-align:center;">An evening worth having</p>
+      <div class="accent-rule" style="margin-left:auto; margin-right:auto;"></div>
+      <p class="section-subheading" style="margin-bottom:0;">Every Madrid Minds evening follows the same carefully designed format</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-time">7:00pm</span>
+          <span class="timeline-event">Arrival &amp; first glass</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-time">7:20pm</span>
+          <span class="timeline-event">The chess moment (30 mins)</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-time">7:50pm</span>
+          <span class="timeline-event">Wine tasting &amp; guided notes</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-time">8:15pm</span>
+          <span class="timeline-event">Tapas &amp; open conversation</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-time">9:30pm</span>
+          <span class="timeline-event">Open boards &amp; last glass</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <p class="description">
-      Meet interesting people, enjoy Spanish wines and tapas, and discover chess in a relaxed, premium setting — 100% in English.
-    </p>
+  <!-- ── 4. WINE & TAPAS ── -->
+  <section class="section--mid" style="padding:0;">
+    <div class="split">
+      <img src="wine.png" alt="Spanish wines and tapas" class="split-image" />
+      <div class="split-text" style="background:#111111;">
+        <p class="section-heading">Spanish wines &amp; tapas included</p>
+        <div class="accent-rule"></div>
+        <p class="body-text">
+          Every evening includes two curated Spanish wines with guided tasting notes — one white, one red. Paired with a selection of Spanish tapas. A mocktail option is available at no extra cost.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <div class="form-wrapper">
-      <p class="form-label">Be the first to know when we launch — join the list</p>
+  <!-- ── 5. CHESS ── -->
+  <section class="section--dark" style="padding:0;">
+    <div class="split split--reverse">
+      <div class="split-text" style="background:#0D0D0D;">
+        <p class="section-heading">Discover chess in a new light</p>
+        <div class="accent-rule"></div>
+        <p class="body-text">
+          No experience needed. Every evening includes a fun, surprising 30-minute introduction to chess — not as a complicated game, but as one of humanity's most fascinating inventions. Hosted by a chess insider with over 20 years in the game.
+        </p>
+      </div>
+      <img src="chess.png" alt="Chess detail" class="split-image" />
+    </div>
+  </section>
+
+  <!-- ── 6. HOST ── -->
+  <section class="section section--mid">
+    <div style="max-width:640px; margin:0 auto;">
+      <p class="section-heading">About your host</p>
+      <div class="accent-rule"></div>
+      <div class="host-body">
+        <p>I created Madrid Minds because some things are just better shared.</p>
+        <p>I've spent over 20 years in the online chess world, building one of the pioneering chess sites, where we strived to make the game accessible, engaging and genuinely fun for people around the world. Along the way I developed a passion for wines, good food, and the kind of evenings where you meet people worth knowing.</p>
+        <p>The idea was simple: bring curious people together in a beautiful Madrid setting, enjoy great wines and tapas, and introduce chess the way it deserves to be — not as a complicated game, but as one of humanity's most fascinating inventions.</p>
+        <p>Good food. Good wine. Good people. And a game that might just change the way you spend your evenings.</p>
+      </div>
+      <p class="host-signature">— Ruy</p>
+    </div>
+  </section>
+
+
+  <!-- ── 7. EMAIL SIGNUP ── -->
+  <section class="signup-section">
+    <div class="inner--narrow">
+      <p class="section-heading">Be the first to know when we launch</p>
+      <p class="signup-subheading">Join the list — no spam, ever.</p>
+    </div>
+    <div class="beehiiv-wrap">
       <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
       <iframe
         src="https://subscribe-forms.beehiiv.com/99a27d92-3bee-4026-9c32-33556a386d08?background=transparent"
@@ -219,27 +638,30 @@
         data-test-id="beehiiv-embed"
         frameborder="0"
         scrolling="no"
-        style="width: 560px; height: 291px; margin: 0; border-radius: 0px 0px 0px 0px !important; background-color: transparent; box-shadow: 0 0 #0000; max-width: 100%;"
+        style="width:560px; height:291px; border:none; background:transparent; box-shadow:none; max-width:100%;"
       ></iframe>
     </div>
+  </section>
 
-    <footer>
-      <a
-        href="https://instagram.com/madridminds"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="instagram-link"
-      >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-          <circle cx="12" cy="12" r="4"/>
-          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
-        </svg>
-        @madridminds
-      </a>
-      <p class="coming-soon-badge">Madrid, Spain &middot; 2026</p>
-    </footer>
-  </main>
+  <!-- ── 8. FOOTER ── -->
+  <footer>
+    <img src="logo.png" alt="Madrid Minds logo" class="footer-logo" />
+    <p class="footer-brand">Madrid Minds</p>
+    <p class="footer-meta">Madrid, Spain &middot; 2026</p>
+    <a
+      href="https://instagram.com/madridminds"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="footer-instagram"
+    >
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+      </svg>
+      @madridminds
+    </a>
+  </footer>
 
 </body>
 </html>
