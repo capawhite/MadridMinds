@@ -390,31 +390,34 @@
     .beehiiv-wrap {
       display: flex;
       justify-content: center;
-      padding: 0 0.5rem;
+      padding: 0 0.75rem;
       max-width: 100%;
+    }
+
+    /* Warm card: Beehiiv’s form is in a cross-origin iframe — use their default (non-transparent)
+       embed so field text/background contrast is correct; we only style the outer frame. */
+    .signup-embed-frame {
+      width: 100%;
+      max-width: 34rem;
+      padding: 1.35rem 1.5rem 1.5rem;
+      border-radius: 18px;
+      background: linear-gradient(165deg, #F0E8DE 0%, #E5D9CC 55%, #DDD2C4 100%);
+      border: 1px solid rgba(196, 96, 58, 0.28);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.45),
+        0 20px 48px rgba(0, 0, 0, 0.38);
     }
 
     .beehiiv-embed,
     iframe.beehiiv-embed,
     iframe[data-test-id="beehiiv-embed"] {
-      width: 560px;
-      height: 291px;
-      border: none !important;
-      background: transparent !important;
-      background-color: transparent !important;
-      box-shadow: none !important;
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 12px;
+      display: block;
+      margin: 0 auto;
       max-width: 100%;
-    }
-
-    iframe {
-      background: transparent !important;
-    }
-
-    .beehiiv-wrap,
-    .beehiiv-wrap > * {
-      background: transparent !important;
-      border: none !important;
-      box-shadow: none !important;
     }
 
     /* ── FOOTER ── */
@@ -538,6 +541,17 @@
 
       .signup-section {
         padding: 4.5rem 1.25rem;
+      }
+
+      .signup-embed-frame {
+        padding: 1.1rem 1.15rem 1.2rem;
+        border-radius: 14px;
+      }
+
+      .beehiiv-embed,
+      iframe.beehiiv-embed,
+      iframe[data-test-id="beehiiv-embed"] {
+        height: 288px;
       }
     }
 
@@ -665,15 +679,17 @@
       <p class="signup-subheading">Be among the first to know when we open our doors.</p>
     </div>
     <div class="beehiiv-wrap">
-      <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-      <iframe
-        src="https://subscribe-forms.beehiiv.com/99a27d92-3bee-4026-9c32-33556a386d08?background=transparent"
-        class="beehiiv-embed"
-        data-test-id="beehiiv-embed"
-        frameborder="0"
-        scrolling="no"
-        style="width:560px; height:291px; border:none; background:transparent; box-shadow:none; max-width:100%;"
-      ></iframe>
+      <div class="signup-embed-frame">
+        <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+        <iframe
+          src="https://subscribe-forms.beehiiv.com/99a27d92-3bee-4026-9c32-33556a386d08"
+          class="beehiiv-embed"
+          data-test-id="beehiiv-embed"
+          title="Subscribe to Madrid Minds"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </div>
     </div>
   </section>
 
