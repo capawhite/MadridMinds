@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Madrid Minds — Where curious minds meet</title>
-  <meta name="description" content="Meet interesting people, enjoy Spanish wines and tapas, and discover chess in a relaxed, premium setting. 100% in English." />
+  <meta name="description" content="Meet interesting people, enjoy Spanish wines and tapas, and discover chess in a relaxed, welcoming setting. 100% in English." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -20,6 +20,12 @@
       font-size: 17px;
     }
 
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
     body {
       background-color: #1C1814;
       color: #F5F0E8;
@@ -31,6 +37,26 @@
     img {
       display: block;
       max-width: 100%;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 200;
+      padding: 0.75rem 1.25rem;
+      background: #2A2520;
+      color: #F5F0E8;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.875rem;
+      text-decoration: none;
+      border-radius: 0 0 4px 0;
+    }
+
+    .skip-link:focus {
+      left: 0;
+      outline: 2px solid #C4603A;
+      outline-offset: 2px;
     }
 
     /* ── NAV ── */
@@ -71,7 +97,8 @@
     .hero {
       position: relative;
       width: 100%;
-      min-height: 78vh;
+      min-height: 100vh;
+      margin-bottom: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -85,16 +112,21 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('hero.png');
+      background-image: url('abya-privados-05.jpg');
       background-size: cover;
-      background-position: center;
+      background-position: center center;
       z-index: 0;
     }
 
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(10, 8, 6, 0.52);
+      background: linear-gradient(
+        to bottom,
+        rgba(10, 8, 6, 0.12) 0%,
+        rgba(10, 8, 6, 0.2) 42%,
+        rgba(10, 8, 6, 0.58) 100%
+      );
       z-index: 1;
     }
 
@@ -130,22 +162,36 @@
       font-weight: 300;
       color: #F5F0E8;
       letter-spacing: 0.03em;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.35rem;
+    }
+
+    .hero-descriptor-wrap {
+      max-width: 36rem;
+      margin: 0 auto;
+      padding: 1.35rem 1.65rem;
+      border-radius: 14px;
+      background: rgba(10, 8, 6, 0.48);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(245, 240, 232, 0.08);
     }
 
     .hero-descriptor {
       font-family: 'Jost', sans-serif;
-      font-size: clamp(1rem, 2vw, 1.125rem);
+      font-size: 1.0625rem;
       font-weight: 300;
-      color: #F5F0E8;
-      line-height: 1.8;
-      max-width: 520px;
+      color: #E8E0D5;
+      line-height: 1.9;
+      margin: 0;
+      text-align: center;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
     }
 
     /* ── SHARED SECTION STYLES ── */
     .section {
       width: 100%;
-      padding: 7rem 2rem;
+      padding: 6.25rem 2rem;
     }
 
     .section--dark {
@@ -158,6 +204,22 @@
 
     .section--warm {
       background-color: #1C1814;
+    }
+
+    .section--flush {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .split-text--panel {
+      background-color: #1C1814;
+    }
+
+    .host-container {
+      max-width: 640px;
+      margin: 0 auto;
     }
 
     /* ── SECTION DIVIDERS ── */
@@ -185,7 +247,8 @@
       font-weight: 300;
       color: #F5F0E8;
       line-height: 1.15;
-      margin-bottom: 1rem;
+      margin-top: 0;
+      margin-bottom: 0.85rem;
     }
 
     .section-subheading {
@@ -201,7 +264,7 @@
       width: 40px;
       height: 1px;
       background: #C4603A;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
 
     .body-text {
@@ -222,25 +285,55 @@
     .split {
       display: grid;
       grid-template-columns: 48% 52%;
-      min-height: 540px;
+      min-height: 0;
+      align-items: stretch;
     }
 
     .split--reverse {
       grid-template-columns: 52% 48%;
     }
 
+    .split-media {
+      position: relative;
+      min-height: 0;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+    }
+
     .split-image {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      min-height: 400px;
+      min-height: 0;
+    }
+
+    .split-image--chess {
+      object-position: 52% 45%;
+    }
+
+    .split-image--wine {
+      object-position: center center;
+    }
+
+    .split-image-wrap {
+      position: relative;
+    }
+    .split-image-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 8, 6, 0.15);
+      pointer-events: none;
+    }
+    .split-image-wrap .split-image {
+      display: block;
     }
 
     .split-text {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 5rem 4.5rem;
+      padding: 4.75rem 4rem;
     }
 
     .split-text .section-heading {
@@ -297,6 +390,8 @@
     .beehiiv-wrap {
       display: flex;
       justify-content: center;
+      padding: 0 0.5rem;
+      max-width: 100%;
     }
 
     .beehiiv-embed,
@@ -373,6 +468,13 @@
       color: #F5F0E8;
     }
 
+    .footer-instagram:focus-visible {
+      outline: 2px solid #C4603A;
+      outline-offset: 4px;
+      border-radius: 2px;
+      color: #F5F0E8;
+    }
+
     .footer-instagram svg {
       width: 13px;
       height: 13px;
@@ -384,7 +486,21 @@
     }
 
     /* ── RESPONSIVE ── */
+    @media (min-width: 801px) {
+      .split-media {
+        aspect-ratio: auto;
+        min-height: min(72vh, 580px);
+      }
+    }
+
     @media (max-width: 800px) {
+      .hero {
+        min-height: 92vh;
+      }
+
+      .hero-bg {
+        background-position: center 22%;
+      }
 
       .nav {
         padding: 16px 24px;
@@ -394,73 +510,101 @@
         grid-template-columns: 1fr;
       }
 
-      .split-image {
-        min-height: 300px;
-        height: 300px;
+      .split-media {
+        aspect-ratio: 16 / 11;
+        max-height: 58vh;
+      }
+
+      .split-image--chess {
+        object-position: 50% 42%;
+      }
+
+      .split-image--wine {
+        object-position: center 40%;
       }
 
       .split-text {
-        padding: 3.5rem 2rem;
+        padding: 3.25rem 1.75rem;
       }
 
-      .split--reverse .split-image {
+      .split--reverse .split-media {
         order: -1;
       }
 
       .section {
-        padding: 5rem 1.5rem;
+        padding: 4.5rem 1.5rem;
       }
 
 
       .signup-section {
-        padding: 5rem 1.5rem;
+        padding: 4.5rem 1.25rem;
       }
     }
 
     @media (max-width: 480px) {
       .hero {
+        min-height: 88vh;
         padding: 5rem 1.5rem;
         padding-top: calc(5rem + 65px);
       }
 
+      .hero-descriptor-wrap {
+        padding: 1.15rem 1.2rem;
+        border-radius: 12px;
+      }
+
+      .hero-bg {
+        background-position: center 18%;
+      }
+
+      .split-media {
+        aspect-ratio: 1 / 1;
+        max-height: none;
+      }
 
       .split-text {
-        padding: 3rem 1.5rem;
+        padding: 2.75rem 1.5rem;
       }
     }
   </style>
 </head>
 <body>
 
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <!-- ── NAV ── -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Primary">
     <div class="nav-brand">
       <img src="logo.png" alt="Madrid Minds logo" class="nav-logo" />
       <span class="nav-name">Madrid Minds</span>
     </div>
   </nav>
 
+  <main id="main-content">
+
   <!-- ── 1. HERO ── -->
-  <section class="hero">
+  <section class="hero" aria-label="Introduction">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Madrid Minds</h1>
       <div class="hero-divider"></div>
       <p class="hero-tagline">Where curious minds meet</p>
-      <p class="hero-descriptor">
-        Meet interesting people, enjoy Spanish wines and tapas, and discover chess in a relaxed, premium setting — 100% in English.
-      </p>
+      <div class="hero-descriptor-wrap">
+        <p class="hero-descriptor">
+          Meet interesting people, enjoy Spanish wines and tapas, and discover chess in a relaxed, welcoming setting — 100% in English.
+        </p>
+      </div>
     </div>
   </section>
 
   <div class="section-rule"></div>
 
   <!-- ── 2. CHESS ── -->
-  <section class="section--dark" style="padding:0;">
+  <section class="section section--dark section--flush">
     <div class="split split--reverse">
-      <div class="split-text" style="background:#1C1814;">
-        <p class="section-heading">Discover chess in a new light</p>
+      <div class="split-text split-text--panel">
+        <h2 class="section-heading">Discover chess in a new light</h2>
         <div class="accent-rule"></div>
         <div class="body-text">
           <p>At Madrid Minds, chess isn't taught — it's shared.</p>
@@ -468,7 +612,9 @@
           <p>No experience needed. No pressure. Just curiosity.</p>
         </div>
       </div>
-      <img src="chess.png" alt="Chess detail" class="split-image" />
+      <div class="split-media split-image-wrap">
+        <img src="chess.png" alt="Chess detail" class="split-image split-image--chess" width="1456" height="816" loading="lazy" decoding="async" />
+      </div>
     </div>
   </section>
 
@@ -476,15 +622,15 @@
 
   <!-- ── 3. HOST ── -->
   <section class="section section--mid">
-    <div style="max-width:640px; margin:0 auto;">
-      <p class="section-heading">About your host</p>
+    <div class="host-container">
+      <h2 class="section-heading">About your host</h2>
       <div class="accent-rule"></div>
       <div class="host-inner">
       <div class="host-body">
         <p>I created Madrid Minds because some things are just better shared.</p>
         <p>I've spent over 20 years in the online chess world, building one of the pioneering chess sites, where we strived to make the game accessible, engaging and genuinely fun for people around the world. Along the way I developed a passion for wines, good food, and the kind of evenings where you meet people worth knowing.</p>
         <p>The idea was simple: bring curious people together in a beautiful Madrid setting, enjoy great wines and tapas, and introduce chess the way it deserves to be — not as a complicated game, but as one of humanity's most fascinating inventions.</p>
-        <p>Good food. Good wine. Good people. And a game that might just change the way you spend your evenings.</p>
+        <p>Good food. Good wine. Good company. And a game worth discovering.</p>
       </div>
       <p class="host-signature">— Ruy</p>
       </div>
@@ -494,15 +640,16 @@
   <div class="section-rule"></div>
 
   <!-- ── 4. WINE & TAPAS ── -->
-  <section class="section--mid" style="padding:0;">
+  <section class="section section--dark section--flush">
     <div class="split">
-      <img src="wine.png" alt="Spanish wines and tapas" class="split-image" />
-      <div class="split-text" style="background:#1C1814;">
-        <p class="section-heading">Spanish wines &amp; tapas included</p>
+      <div class="split-media split-image-wrap">
+        <img src="wine.png" alt="Spanish wines and tapas" class="split-image split-image--wine" width="1456" height="816" loading="lazy" decoding="async" />
+      </div>
+      <div class="split-text split-text--panel">
+        <h2 class="section-heading">Wine, tapas and good conversation</h2>
         <div class="accent-rule"></div>
         <div class="body-text">
-          <p>Good wine and good food make every conversation better.</p>
-          <p>At Madrid Minds we take both seriously — expect to taste and discover some of Spain's finest wines, paired with carefully chosen tapas. Whether you're a seasoned wine lover or just curious, every evening is a gentle exploration of what this country does best.</p>
+          <p>At Madrid Minds, wine and food are never an afterthought. Expect to taste wonderful Spanish wines, paired with carefully chosen tapas, in a setting designed for easy conversation and genuine connection.</p>
           <p>Not drinking? A mocktail pairing is always available.</p>
         </div>
       </div>
@@ -512,9 +659,9 @@
   <div class="section-rule"></div>
 
   <!-- ── 5. EMAIL SIGNUP ── -->
-  <section class="signup-section">
+  <section class="signup-section" aria-label="Email signup">
     <div class="inner--narrow">
-      <p class="section-heading">Madrid Minds is coming soon</p>
+      <h2 class="section-heading">Madrid Minds is coming soon</h2>
       <p class="signup-subheading">Be among the first to know when we open our doors.</p>
     </div>
     <div class="beehiiv-wrap">
@@ -529,6 +676,8 @@
       ></iframe>
     </div>
   </section>
+
+  </main>
 
   <!-- ── 8. FOOTER ── -->
   <footer>
