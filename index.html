@@ -419,6 +419,9 @@
       display: block;
       margin: 0 auto;
       max-width: 100%;
+      /* Beehiiv’s document doesn’t always paint the full iframe; transparent areas show the parent.
+         Match the section background so letterboxing isn’t beige. */
+      background-color: #1C1814;
     }
 
     /* ── FOOTER ── */
