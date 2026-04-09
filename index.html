@@ -394,12 +394,13 @@
       max-width: 100%;
     }
 
-    /* Warm card: Beehiiv’s form is in a cross-origin iframe — use their default (non-transparent)
-       embed so field text/background contrast is correct; we only style the outer frame. */
+    /* Warm card around Beehiiv iframe — no inner padding so the beige doesn’t read as a “strip”
+       between the frame edge and the embed (Beehiiv controls in-iframe spacing in their editor). */
     .signup-embed-frame {
       width: 100%;
       max-width: 34rem;
-      padding: 1.35rem 1.5rem 1.5rem;
+      padding: 0;
+      overflow: hidden;
       border-radius: 18px;
       background: linear-gradient(165deg, #F0E8DE 0%, #E5D9CC 55%, #DDD2C4 100%);
       border: 1px solid rgba(196, 96, 58, 0.28);
@@ -414,7 +415,7 @@
       width: 100%;
       height: 300px;
       border: none;
-      border-radius: 12px;
+      border-radius: 0;
       display: block;
       margin: 0 auto;
       max-width: 100%;
@@ -544,7 +545,6 @@
       }
 
       .signup-embed-frame {
-        padding: 1.1rem 1.15rem 1.2rem;
         border-radius: 14px;
       }
 
