@@ -394,32 +394,30 @@
       max-width: 100%;
     }
 
-    /* Warm card around Beehiiv iframe — no inner padding so the beige doesn’t read as a “strip”
-       between the frame edge and the embed (Beehiiv controls in-iframe spacing in their editor). */
+    /* Keep embed wrapper neutral so Beehiiv form sits on page background. */
     .signup-embed-frame {
       width: 100%;
       max-width: 34rem;
       padding: 0;
-      overflow: hidden;
-      border-radius: 18px;
-      background: linear-gradient(165deg, #F0E8DE 0%, #E5D9CC 55%, #DDD2C4 100%);
-      box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.45),
-        0 20px 48px rgba(0, 0, 0, 0.38);
+      overflow: visible;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
     }
 
     .beehiiv-embed,
     iframe.beehiiv-embed,
     iframe[data-test-id="beehiiv-embed"] {
       width: 100%;
-      height: 300px;
+      height: auto;
+      min-height: 180px;
       border: none;
-      border-radius: 0;
+      border-radius: 12px;
       display: block;
       margin: 0 auto;
       max-width: 100%;
-      /* Unpainted iframe regions show .signup-embed-frame (warm card), not a separate charcoal fill. */
-      background-color: transparent;
+      /* Fallback for unpainted iframe regions. */
+      background-color: #1C1814;
     }
 
     /* ── FOOTER ── */
@@ -545,14 +543,10 @@
         padding: 4.5rem 1.25rem;
       }
 
-      .signup-embed-frame {
-        border-radius: 14px;
-      }
-
       .beehiiv-embed,
       iframe.beehiiv-embed,
       iframe[data-test-id="beehiiv-embed"] {
-        height: 288px;
+        min-height: 170px;
       }
     }
 
