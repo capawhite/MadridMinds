@@ -69,8 +69,10 @@
       background-color: #1C1814;
       border-bottom: 1px solid #2A2520;
       padding: 16px 40px;
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
       align-items: center;
+      gap: 16px;
     }
 
     .nav-brand {
@@ -91,6 +93,107 @@
       font-weight: 400;
       color: #F5F0E8;
       letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-link {
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #F5F0E8;
+      text-decoration: none;
+      opacity: 0.75;
+      transition: opacity 0.2s;
+    }
+
+    .nav-link:hover {
+      opacity: 1;
+    }
+
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown-toggle {
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .nav-caret {
+      font-size: 11px;
+      opacity: 0.8;
+    }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 165px;
+      padding: 0.45rem;
+      border-radius: 12px;
+      border: 1px solid #2A2520;
+      background: #1C1814;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+      display: none;
+      z-index: 120;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown:focus-within .nav-dropdown-menu {
+      display: grid;
+      gap: 2px;
+    }
+
+    .nav-dropdown-item {
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #F5F0E8;
+      text-decoration: none;
+      padding: 0.55rem 0.65rem;
+      border-radius: 8px;
+      opacity: 0.88;
+    }
+
+    .nav-dropdown-item:hover {
+      background: #2A2520;
+      opacity: 1;
+    }
+
+    .nav-link[aria-current="page"] {
+      opacity: 1;
+      color: #F5F0E8;
+      text-decoration: underline;
+      text-decoration-color: #C4603A;
+      text-underline-offset: 5px;
+    }
+
+    .nav-cta {
+      border: 1px solid rgba(196, 96, 58, 0.75);
+      background: rgba(196, 96, 58, 0.16);
+      color: #F5F0E8;
+      padding: 0.5rem 0.85rem;
+      border-radius: 999px;
+      opacity: 1;
+    }
+
+    .nav-cta:hover {
+      background: rgba(196, 96, 58, 0.3);
     }
 
     /* ── HERO ── */
@@ -507,6 +610,13 @@
 
       .nav {
         padding: 16px 24px;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .nav-links {
+        width: 100%;
+        gap: 14px;
       }
 
       .split {
@@ -585,8 +695,22 @@
   <nav class="nav" aria-label="Primary">
     <div class="nav-brand">
       <img src="logo.png" alt="Madrid Minds logo" class="nav-logo" />
-      <span class="nav-name">Madrid Minds</span>
+      <a href="index.html" class="nav-name" style="text-decoration:none;color:inherit;">Madrid Minds</a>
     </div>
+    <div class="nav-links" data-nav-group="primary">
+      <div class="nav-dropdown">
+        <button class="nav-link nav-dropdown-toggle" aria-label="Open Learn menu">
+          Learn <span class="nav-caret">▾</span>
+        </button>
+        <div class="nav-dropdown-menu" role="menu" aria-label="Learn pages">
+          <a href="rules.html" class="nav-dropdown-item" role="menuitem">How to Play</a>
+          <a href="pieces.html" class="nav-dropdown-item" role="menuitem">Pieces</a>
+        </div>
+      </div>
+      <a href="events.html" class="nav-link">Events</a>
+      <a href="#signup" class="nav-link nav-cta">Sign Up</a>
+    </div>
+    <div aria-hidden="true"></div>
   </nav>
 
   <main id="main-content">
@@ -667,7 +791,7 @@
   <div class="section-rule"></div>
 
   <!-- ── 5. EMAIL SIGNUP ── -->
-  <section class="signup-section" aria-label="Email signup">
+  <section class="signup-section" id="signup" aria-label="Email signup">
     <div class="inner--narrow">
       <h2 class="section-heading">Madrid Minds is coming soon</h2>
       <p class="signup-subheading">Join our waitlist for first access to our opening events and dates.</p>
