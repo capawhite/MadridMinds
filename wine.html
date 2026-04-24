@@ -11,8 +11,9 @@
     body { background:var(--bg); color:var(--cream); font-family:'Jost',sans-serif; min-height:100vh; padding-top:86px; }
 
     /* -- NAV -- */
-    .site-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(28,24,20,.95);border-bottom:1px solid rgba(184,175,160,.14);padding:.95rem 1.4rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;backdrop-filter:blur(4px)}
-    .site-nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--cream);text-decoration:none}
+    .site-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(28,24,20,.95);border-bottom:1px solid rgba(184,175,160,.14);padding:.68rem 1.4rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;backdrop-filter:blur(4px)}
+    .site-nav-brand{display:inline-flex;align-items:center;text-decoration:none}
+    .site-nav-logo{height:56px;width:auto;display:block}
     .site-nav-links{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;justify-content:center}
     .site-nav-link{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;opacity:.85}
     .site-nav-link:hover{color:var(--cream);opacity:1}
@@ -102,7 +103,7 @@
 </head>
 <body>
   <nav class="site-nav" aria-label="Primary">
-    <a href="index.html" class="site-nav-brand">Madrid Minds</a>
+    <a href="index.html" class="site-nav-brand" aria-label="Madrid Minds"><img src="TopHeaderReadable.png" alt="Madrid Minds logo" class="site-nav-logo" /></a>
     <div class="site-nav-links">
       <div class="site-nav-dropdown">
         <button class="site-nav-link site-nav-dropdown-toggle" aria-label="Open Learn menu">
@@ -113,8 +114,10 @@
           <a href="pieces.html" class="site-nav-dropdown-item" role="menuitem">Pieces</a>
         </div>
       </div>
-      <a href="events.html" class="site-nav-link">Events</a>
       <a href="wine.html" class="site-nav-link" aria-current="page">Wine</a>
+      <a href="events.html" class="site-nav-link">Events</a>
+      
+      <a href="your-host.html" class="site-nav-link">Your Host</a>
       <a href="index.html#signup" class="site-nav-link site-nav-cta">Sign Up</a>
     </div>
     <div aria-hidden="true"></div>

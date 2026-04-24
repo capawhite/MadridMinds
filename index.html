@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Madrid Minds — Where curious minds meet</title>
-  <meta name="description" content="Meet interesting people, enjoy Spanish wines and tapas, and discover chess in a relaxed, welcoming setting, all in English" />
+  <meta name="description" content="Meet interesting people, enjoy wines and tapas, and discover chess in a relaxed, welcoming setting, all in English" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -68,7 +68,7 @@
       z-index: 100;
       background-color: #1C1814;
       border-bottom: 1px solid #2A2520;
-      padding: 16px 40px;
+      padding: 11px 40px;
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
@@ -76,23 +76,16 @@
     }
 
     .nav-brand {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 10px;
+      text-decoration: none;
     }
 
     .nav-logo {
-      width: 32px;
-      height: 32px;
+      height: 56px;
+      width: auto;
       object-fit: contain;
-    }
-
-    .nav-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 18px;
-      font-weight: 400;
-      color: #F5F0E8;
-      letter-spacing: 0.02em;
+      display: block;
     }
 
     .nav-links {
@@ -693,10 +686,9 @@
 
   <!-- ── NAV ── -->
   <nav class="nav" aria-label="Primary">
-    <div class="nav-brand">
-      <img src="logo.png" alt="Madrid Minds logo" class="nav-logo" />
-      <a href="index.html" class="nav-name" style="text-decoration:none;color:inherit;">Madrid Minds</a>
-    </div>
+    <a href="index.html" class="nav-brand" aria-label="Madrid Minds">
+      <img src="TopHeaderReadable.png" alt="Madrid Minds logo" class="nav-logo" />
+    </a>
     <div class="nav-links" data-nav-group="primary">
       <div class="nav-dropdown">
         <button class="nav-link nav-dropdown-toggle" aria-label="Open Learn menu">
@@ -707,8 +699,10 @@
           <a href="pieces.html" class="nav-dropdown-item" role="menuitem">Pieces</a>
         </div>
       </div>
-      <a href="events.html" class="nav-link">Events</a>
       <a href="wine.html" class="nav-link">Wine</a>
+      <a href="events.html" class="nav-link">Events</a>
+      
+      <a href="your-host.html" class="nav-link">Your Host</a>
       <a href="#signup" class="nav-link nav-cta">Sign Up</a>
     </div>
     <div aria-hidden="true"></div>
@@ -726,7 +720,7 @@
       <p class="hero-tagline">Where curious minds meet</p>
       <div class="hero-descriptor-wrap">
         <p class="hero-descriptor">
-          An elegant evening to meet interesting people, enjoy Spanish wines and tapas, and discover chess in a relaxed, welcoming setting. All in English.
+          An elegant evening to meet interesting people, enjoy wines and tapas, and discover chess in a relaxed, welcoming setting. All in English.
         </p>
       </div>
     </div>
@@ -776,13 +770,13 @@
   <section class="section section--dark section--flush">
     <div class="split">
       <div class="split-media split-image-wrap">
-        <img src="wine.png" alt="Spanish wines and tapas" class="split-image split-image--wine" width="1456" height="816" loading="lazy" decoding="async" />
+        <img src="wine.png" alt="Wines and tapas" class="split-image split-image--wine" width="1456" height="816" loading="lazy" decoding="async" />
       </div>
       <div class="split-text split-text--panel">
         <h2 class="section-heading">Wine, tapas and good conversation</h2>
         <div class="accent-rule"></div>
         <div class="body-text">
-          <p>At Madrid Minds, wine and food are never an afterthought. You’ll enjoy excellent Spanish wines, paired with carefully chosen tapas, in a setting designed for easy conversation and genuine connection.</p>
+          <p>At Madrid Minds, wine and food are never an afterthought. You’ll enjoy excellent wines, paired with carefully chosen tapas, in a setting designed for easy conversation and genuine connection.</p>
           <p>Not drinking? A thoughtful non-alcoholic pairing is always available.</p>
         </div>
       </div>
@@ -816,7 +810,7 @@
 
   <!-- ── 8. FOOTER ── -->
   <footer>
-    <img src="logo.png" alt="Madrid Minds logo" class="footer-logo" />
+    <img src="MMLogo.png" alt="Madrid Minds logo" class="footer-logo" />
     <p class="footer-brand">Madrid Minds</p>
     <p class="footer-meta">Madrid, Spain &middot; 2026</p>
     <a

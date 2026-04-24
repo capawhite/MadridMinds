@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Madrid Minds — Events</title>
+  <title>Madrid Minds — Your Host</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     :root { --bg:#1C1814; --cream:#F5F0E8; --muted:#B8AFA0; --terracotta:#C4603A; }
@@ -25,10 +25,18 @@
     .site-nav-link[aria-current="page"]{color:var(--cream);opacity:1;text-decoration:underline;text-decoration-color:var(--terracotta);text-underline-offset:4px}
     .site-nav-cta{border:1px solid rgba(196,96,58,.75);background:rgba(196,96,58,.16);color:var(--cream);padding:.45rem .8rem;border-radius:999px;opacity:1}
     .site-nav-cta:hover{background:rgba(196,96,58,.3)}
-    main { max-width:860px; margin:0 auto; padding:4rem 1.5rem; text-align:center; }
-    h1 { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(2.4rem,6vw,4rem); margin-bottom:1rem; }
-    p { color:var(--muted); line-height:1.8; font-size:1.05rem; }
-    @media (max-width:720px){.site-nav{padding:.9rem 1rem;gap:.7rem;grid-template-columns:1fr}.site-nav-links{width:100%;gap:.7rem}}
+
+    main{max-width:960px;margin:0 auto;padding:3rem 1.5rem 4rem}
+    .host-card{border:1px solid rgba(184,175,160,.2);border-radius:24px;padding:2rem;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}
+    .host-header{text-align:center;margin-bottom:1.6rem}
+    .kicker{color:var(--terracotta);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:.65rem}
+    h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2.2rem,5.8vw,3.8rem)}
+    .host-body{display:grid;grid-template-columns:220px 1fr;gap:1.6rem;align-items:center}
+    .host-image{width:220px;height:220px;border-radius:18px;object-fit:cover;border:1px solid rgba(184,175,160,.22)}
+    .host-copy{color:var(--muted);line-height:1.9;font-size:1.03rem}
+    .host-copy p + p{margin-top:.8rem}
+    .host-sign{margin-top:1rem;color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:1.3rem}
+    @media (max-width:720px){.site-nav{padding:.9rem 1rem;gap:.7rem;grid-template-columns:1fr}.site-nav-links{width:100%;gap:.7rem}.host-body{grid-template-columns:1fr}.host-image{margin:0 auto}}
   </style>
 </head>
 <body>
@@ -36,25 +44,37 @@
     <a href="index.html" class="site-nav-brand" aria-label="Madrid Minds"><img src="TopHeaderReadable.png" alt="Madrid Minds logo" class="site-nav-logo" /></a>
     <div class="site-nav-links" data-nav-group="primary">
       <div class="site-nav-dropdown">
-        <button class="site-nav-link site-nav-dropdown-toggle" aria-label="Open Learn menu">
+        <button class="site-nav-link site-nav-dropdown-toggle" aria-label="Open Chess menu">
           Chess <span class="site-nav-caret">▾</span>
         </button>
-        <div class="site-nav-dropdown-menu" role="menu" aria-label="Learn pages">
+        <div class="site-nav-dropdown-menu" role="menu" aria-label="Chess pages">
           <a href="rules.html" class="site-nav-dropdown-item" role="menuitem">How to Play</a>
           <a href="pieces.html" class="site-nav-dropdown-item" role="menuitem">Pieces</a>
         </div>
       </div>
       <a href="wine.html" class="site-nav-link">Wine</a>
-      <a href="events.html" class="site-nav-link" aria-current="page">Events</a>
+      <a href="events.html" class="site-nav-link">Events</a>
       
-      <a href="your-host.html" class="site-nav-link">Your Host</a>
+      <a href="your-host.html" class="site-nav-link" aria-current="page">Your Host</a>
       <a href="index.html#signup" class="site-nav-link site-nav-cta">Sign Up</a>
     </div>
     <div aria-hidden="true"></div>
   </nav>
+
   <main>
-    <h1>Events</h1>
-    <p>Upcoming Madrid Minds evenings and event sign-up details will live here.</p>
+    <section class="host-card">
+      <div class="host-header">
+        <p class="kicker">Meet Your Host</p>
+      </div>
+      <div class="host-body">
+        <img src="Avatar3.png" alt="Ruy, host of Madrid Minds" class="host-image" loading="lazy" />
+        <div class="host-copy">
+          <p>I created Madrid Minds because some things are just better shared.</p>
+          <p>I’ve spent over 20 years in the chess industry, helping build an online platform that made the game more accessible, engaging, and genuinely fun for people around the world.</p>
+          <p class="host-sign">— Ruy</p>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>
