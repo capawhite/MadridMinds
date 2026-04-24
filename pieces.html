@@ -9,11 +9,10 @@
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{background:radial-gradient(circle at top, rgba(196,96,58,.08), transparent 24%),var(--bg);color:var(--cream);font-family:'Jost',sans-serif;font-weight:300;min-height:100vh}
-  .header{text-align:center;padding:3.2rem 2rem 1.2rem}
+  .header{text-align:center;padding:2rem 2rem .7rem}
   .header h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,4.8rem);font-weight:300;font-style:italic;color:var(--cream);line-height:1.02}
-  .header p{font-size:.84rem;color:var(--muted);letter-spacing:.22em;text-transform:uppercase;margin-top:.75rem}
   .header-rule{width:64px;height:1px;background:linear-gradient(90deg, transparent, var(--terracotta), transparent);margin:1.2rem auto 0}
-  .piece-nav{display:flex;justify-content:center;gap:.6rem;padding:1.6rem 1rem 0;flex-wrap:wrap;align-items:center;max-width:980px;margin:0 auto}
+  .piece-nav{display:flex;justify-content:center;gap:.6rem;padding:.9rem 1rem 0;flex-wrap:wrap;align-items:center;max-width:980px;margin:0 auto}
   .nav-btn{background:rgba(255,255,255,.02);border:1px solid rgba(184,175,160,.16);color:var(--muted);font-family:'Jost',sans-serif;font-size:.78rem;font-weight:400;letter-spacing:.16em;text-transform:uppercase;padding:.72rem 1rem;border-radius:999px;cursor:pointer;transition:all .24s ease;position:relative;backdrop-filter:blur(4px)}
   .nav-btn:hover{color:var(--cream);border-color:rgba(196,96,58,.55);transform:translateY(-1px)}
   .nav-btn.active{background:rgba(196,96,58,.10);border-color:rgba(196,96,58,.7);color:var(--cream);box-shadow:0 0 0 1px rgba(196,96,58,.16) inset}
@@ -23,8 +22,8 @@
   .nav-btn.special.active{background:rgba(74,107,155,.12);border-color:rgba(106,139,187,.7);color:var(--cream)}
   .nav-btn.special.active::after{background:linear-gradient(90deg, transparent, #6A8BBB, transparent)}
   .nav-divider{width:1px;height:28px;background:rgba(184,175,160,.16);margin:0 .4rem}
-  .content{max-width:1160px;margin:0 auto;padding:2rem 2rem 2.2rem}
-  .piece-panel{display:none;grid-template-columns:minmax(320px,470px) minmax(320px,1fr);gap:4.3rem;align-items:center;animation:fadeIn .45s ease;padding:2.1rem;border:1px solid rgba(184,175,160,.12);border-radius:28px;background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .content{max-width:1160px;margin:0 auto;padding:1.2rem 2rem 1.5rem}
+  .piece-panel{display:none;grid-template-columns:minmax(320px,470px) minmax(320px,1fr);gap:2.6rem;align-items:center;animation:fadeIn .45s ease;padding:1.35rem;border:1px solid rgba(184,175,160,.12);border-radius:28px;background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));box-shadow:var(--shadow);position:relative;overflow:hidden}
   .piece-panel::before{content:'';position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg, transparent, rgba(196,96,58,.55), transparent)}
   .piece-panel.active{display:grid}
   @keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
@@ -36,10 +35,10 @@
   .legend-item{display:flex;align-items:center;gap:.4rem}
   .legend-dot{width:12px;height:12px;border-radius:3px;flex-shrink:0;opacity:.85}
   .info-side{padding-top:.3rem;max-width:500px}
-  .piece-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.25rem,5.3vw,4.6rem);font-weight:300;font-style:italic;color:var(--cream);line-height:.95;margin-bottom:.45rem}
+  .piece-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,4.8vw,3.8rem);font-weight:300;font-style:italic;color:var(--cream);line-height:.95;margin-bottom:.45rem}
   .piece-word{font-size:.78rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--terracotta);margin-bottom:1.1rem}
   .info-rule{width:56px;height:1px;background:linear-gradient(90deg, var(--terracotta), transparent);margin-bottom:1.3rem}
-  .move-description{font-family:'Cormorant Garamond',serif;font-size:1.68rem;font-weight:300;color:var(--cream);line-height:1.58;margin-bottom:1.45rem}
+  .move-description{font-family:'Cormorant Garamond',serif;font-size:1.42rem;font-weight:300;color:var(--cream);line-height:1.45;margin-bottom:1.1rem}
   .tagline{font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-style:italic;font-weight:300;color:var(--muted);line-height:1.65;margin-bottom:1.45rem}
   .tagline strong{color:var(--cream);font-style:normal}
   .quote-block{border-left:1px solid rgba(196,96,58,.46);padding-left:1rem;max-width:33rem;opacity:.84}
@@ -62,7 +61,7 @@
 
 <div class="back-bar"><a href="/rules">← How the Game Works</a></div>
 
-<div class="header"><h1>The Cast of Characters</h1><p>Madrid Minds · How the pieces move</p><div class="header-rule"></div></div>
+<div class="header"><h1>The Cast of Characters</h1><div class="header-rule"></div></div>
 <nav class="piece-nav"><button class="nav-btn active" onclick="showPiece(0)">Rook</button>
 <button class="nav-btn" onclick="showPiece(1)">Bishop</button>
 <button class="nav-btn" onclick="showPiece(2)">Queen</button>

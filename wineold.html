@@ -9,8 +9,6 @@
     :root { --bg:#1C1814; --cream:#F5F0E8; --muted:#B8AFA0; --terracotta:#C4603A; }
     * { box-sizing:border-box; margin:0; padding:0; }
     body { background:var(--bg); color:var(--cream); font-family:'Jost',sans-serif; min-height:100vh; padding-top:86px; }
-
-    /* -- NAV -- */
     .site-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(28,24,20,.95);border-bottom:1px solid rgba(184,175,160,.14);padding:.95rem 1.4rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;backdrop-filter:blur(4px)}
     .site-nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--cream);text-decoration:none}
     .site-nav-links{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;justify-content:center}
@@ -23,92 +21,56 @@
     .site-nav-dropdown:hover .site-nav-dropdown-menu,.site-nav-dropdown:focus-within .site-nav-dropdown-menu{display:grid;gap:2px}
     .site-nav-dropdown-item{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);text-decoration:none;padding:.55rem .65rem;border-radius:8px;opacity:.88}
     .site-nav-dropdown-item:hover{background:#2A2520;opacity:1}
+    .site-nav-link[aria-current="page"]{color:var(--cream);opacity:1;text-decoration:underline;text-decoration-color:var(--terracotta);text-underline-offset:4px}
     .site-nav-cta{border:1px solid rgba(196,96,58,.75);background:rgba(196,96,58,.16);color:var(--cream);padding:.45rem .8rem;border-radius:999px;opacity:1}
     .site-nav-cta:hover{background:rgba(196,96,58,.3)}
-
-    /* -- PAGE -- */
-    main { max-width:1200px; margin:0 auto; padding:3.2rem 1.5rem 5rem; }
-
-    .page-header { text-align:center; max-width:680px; margin:0 auto 3.5rem; }
-    .kicker { color:var(--terracotta); font-size:.74rem; letter-spacing:.28em; text-transform:uppercase; margin-bottom:.85rem; }
-    h1 { font-family:'Cormorant Garamond',serif; font-weight:300; font-style:italic; font-size:clamp(2.6rem,6vw,4.2rem); line-height:1.05; margin-bottom:1.1rem; }
-    .header-rule { width:64px; height:1px; background:linear-gradient(90deg, transparent, var(--terracotta), transparent); margin:1.1rem auto 1.4rem; }
-    .intro-copy { color:var(--muted); line-height:1.9; font-size:1rem; }
-
-    /* -- HERO IMAGE (full-width, cinematic) -- */
-    .hero-img-wrap {
-      width:100%;
-      height:clamp(320px, 52vw, 640px);
-      border-radius:20px;
-      overflow:hidden;
-      position:relative;
-      margin-bottom:1.2rem;
-      box-shadow:0 24px 64px rgba(0,0,0,.5);
-    }
-    .hero-img-wrap img {
-      width:100%; height:100%;
-      object-fit:cover;
-      object-position:center 30%;
-      display:block;
-      transition:transform 8s ease;
-    }
-    .hero-img-wrap:hover img { transform:scale(1.03); }
-    .hero-img-wrap::after {
-      content:'';
-      position:absolute;inset:0;
-      background:linear-gradient(to bottom, transparent 55%, rgba(28,24,20,.55));
-      pointer-events:none;
-    }
-
-    /* -- TWO-COLUMN LOWER IMAGES -- */
-    .gallery-duo {
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:1.2rem;
-      margin-bottom:2.8rem;
-    }
-    .gallery-card {
+    main { max-width:1080px; margin:0 auto; padding:3.2rem 1.5rem 4rem; }
+    .page-header { text-align:center; max-width:840px; margin:0 auto 2.5rem; }
+    .kicker { color:var(--terracotta); font-size:.74rem; letter-spacing:.24em; text-transform:uppercase; margin-bottom:.75rem; }
+    h1 { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(2.4rem,6vw,4rem); margin-bottom:.9rem; }
+    .header-rule { width:80px; height:1px; background:rgba(196,96,58,.7); margin:1rem auto 0; }
+    .intro-copy { color:var(--muted); line-height:1.9; font-size:1.05rem; max-width:720px; margin:0 auto; }
+    .wine-gallery { display:grid; gap:1rem; grid-template-columns:repeat(2,minmax(0,1fr)); margin-top:2.4rem; }
+    .wine-card {
+      border:1px solid rgba(184,175,160,.2);
+      background:linear-gradient(180deg, rgba(42,37,32,.55), rgba(28,24,20,.7));
       border-radius:16px;
+      padding:.65rem;
       overflow:hidden;
-      position:relative;
-      box-shadow:0 16px 40px rgba(0,0,0,.4);
+      min-height:260px;
     }
-    .gallery-card img {
+    .wine-image {
       width:100%;
-      height:auto;
+      height:100%;
+      object-fit:cover;
+      border-radius:11px;
       display:block;
     }
-
-    /* -- CAPTION -- */
     .wine-note {
+      margin-top:1.2rem;
       text-align:center;
-      font-family:'Cormorant Garamond',serif;
-      font-style:italic;
-      font-size:1.35rem;
-      font-weight:300;
-      color:var(--muted);
-      letter-spacing:.03em;
-      line-height:1.6;
+      font-size:.95rem;
+      letter-spacing:.04em;
+      color:#D7CCBC;
     }
-    .wine-note strong { color:var(--cream); font-style:normal; }
-
     @media (max-width:720px){
       .site-nav{padding:.9rem 1rem;gap:.7rem;grid-template-columns:1fr}
       .site-nav-links{width:100%;gap:.7rem}
-      .gallery-duo{grid-template-columns:1fr}
-      .gallery-card{height:260px}
+      main{padding-top:2.5rem}
+      .wine-gallery{grid-template-columns:1fr}
+      .wine-card{grid-column:auto;min-height:240px}
     }
   </style>
 </head>
 <body>
   <nav class="site-nav" aria-label="Primary">
     <a href="index.html" class="site-nav-brand">Madrid Minds</a>
-    <div class="site-nav-links">
+    <div class="site-nav-links" data-nav-group="primary">
       <div class="site-nav-dropdown">
         <button class="site-nav-link site-nav-dropdown-toggle" aria-label="Open Learn menu">
           Learn <span class="site-nav-caret">▾</span>
         </button>
-        <div class="site-nav-dropdown-menu" role="menu">
+        <div class="site-nav-dropdown-menu" role="menu" aria-label="Learn pages">
           <a href="rules.html" class="site-nav-dropdown-item" role="menuitem">How to Play</a>
           <a href="pieces.html" class="site-nav-dropdown-item" role="menuitem">Pieces</a>
         </div>
@@ -118,29 +80,26 @@
     </div>
     <div aria-hidden="true"></div>
   </nav>
-
   <main>
     <header class="page-header">
       <p class="kicker">WineTasting</p>
       <h1>Wine Tasting at Madrid Minds</h1>
-      <div class="header-rule" aria-hidden="true"></div>
       <p class="intro-copy">
         At Madrid Minds, we spend time discovering carefully selected wines to taste, each one chosen
         for its character and story. Every tasting is accompanied by delicious tapas so conversation,
         flavor, and shared curiosity come together naturally.
       </p>
+      <div class="header-rule" aria-hidden="true"></div>
     </header>
 
-    <!-- Two social shots -->
-    <div class="gallery-duo">
-      <div class="gallery-card">
-        <img src="winetasting1.png" alt="Guests enjoying wine at a Madrid Minds evening" loading="lazy" />
-      </div>
-      <div class="gallery-card">
-        <img src="winetasting2.png" alt="Guests mingling with wine at a Madrid Minds event" loading="lazy" />
-      </div>
-    </div>
-
+    <section class="wine-gallery" aria-label="Wine tasting gallery">
+      <figure class="wine-card">
+        <img class="wine-image" src="winetasting1.png" alt="A curated Madrid Minds wine tasting selection" loading="lazy" />
+      </figure>
+      <figure class="wine-card">
+        <img class="wine-image" src="abya-privados-01.jpg" alt="Premium wine bottles prepared for a tasting session" loading="lazy" />
+      </figure>
+    </section>
 
     <p class="wine-note">Thoughtful wines, good tapas, and better conversations.</p>
   </main>
