@@ -1,0 +1,315 @@
+/* Mobile nav (hamburger + slide-in panel). Breakpoint: max-width 800px. */
+
+/* —— Desktop: keep three-column top bar; toggle/backdrop not shown —— */
+nav.site-nav.mm-nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav.nav.mm-nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mm-nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid rgba(184, 175, 160, 0.25);
+  border-radius: 10px;
+  background: rgba(42, 37, 32, 0.6);
+  color: #f5f0e8;
+  font-family: "Jost", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  flex-shrink: 0;
+  z-index: 220;
+}
+
+.mm-nav-toggle:hover {
+  border-color: rgba(196, 96, 58, 0.5);
+  background: rgba(196, 96, 58, 0.12);
+}
+
+.mm-nav-backdrop {
+  display: none;
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 199;
+  background: rgba(8, 6, 4, 0.55);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body.mm-nav-open .mm-nav-backdrop {
+  display: block;
+  pointer-events: auto;
+}
+
+/* ---- site-nav pages ---- */
+@media (max-width: 800px) {
+  /*
+   * backdrop-filter on .site-nav creates a containing block for fixed descendants
+   * (per CSS), so the slide-up panel would be clipped to the nav bar height.
+   * Homepage .nav has no backdrop-filter, which is why the menu worked there only.
+   */
+  .site-nav.mm-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    overflow: visible;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  /* Keep content clear of the real fixed header once --mm-nav-offset is set by JS */
+  body:has(> nav.site-nav.mm-nav) {
+    padding-top: calc(var(--mm-nav-offset, 80px) + 12px);
+  }
+
+  .site-nav.mm-nav .site-nav-spacer {
+    display: none;
+  }
+
+  .site-nav.mm-nav .site-nav-brand,
+  .site-nav.mm-nav .mm-nav-toggle {
+    position: relative;
+    z-index: 210;
+  }
+
+  .site-nav.mm-nav .mm-nav-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav.mm-nav .site-nav-links {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: var(--mm-nav-offset, 64px);
+    z-index: 200;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 1.1rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom, 0));
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0.25rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: rgba(28, 24, 20, 0.98);
+    border-top: 1px solid rgba(184, 175, 160, 0.18);
+    box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.35);
+    transform: translateY(100%);
+    transition: transform 0.28s ease;
+  }
+
+  body.mm-nav-open .site-nav.mm-nav .site-nav-links {
+    transform: translateY(0);
+  }
+
+  .site-nav.mm-nav .site-nav-link,
+  .site-nav.mm-nav .site-nav-dropdown-toggle {
+    justify-content: space-between;
+    min-height: 48px;
+    padding: 0.65rem 0.5rem;
+    width: 100%;
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  .site-nav.mm-nav .site-nav-cta {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  /* Disable hover flyout on touch widths */
+  .site-nav.mm-nav .site-nav:hover .site-nav-dropdown-menu,
+  .site-nav.mm-nav .site-nav-dropdown:focus-within .site-nav-dropdown-menu {
+    display: none;
+  }
+
+  .site-nav.mm-nav .site-nav-dropdown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .site-nav.mm-nav .site-nav-dropdown-menu {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+    min-width: 0;
+    display: none;
+    margin: 0.15rem 0 0.35rem 0.35rem;
+    padding: 0.35rem 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .site-nav.mm-nav .site-nav-dropdown.is-mm-open .site-nav-dropdown-menu {
+    display: grid;
+    gap: 2px;
+  }
+
+  .site-nav.mm-nav .site-nav-dropdown-item {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .site-nav.mm-nav .site-nav-logo {
+    height: 48px;
+  }
+}
+
+/* ---- homepage .nav ---- */
+@media (max-width: 800px) {
+  .nav.mm-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 18px;
+  }
+
+  .nav.mm-nav .nav-brand,
+  .nav.mm-nav .mm-nav-toggle {
+    position: relative;
+    z-index: 210;
+  }
+
+  .nav.mm-nav .mm-nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav.mm-nav > div[aria-hidden="true"] {
+    display: none;
+  }
+
+  .nav.mm-nav .nav-links {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: var(--mm-nav-offset, 64px);
+    z-index: 200;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 1.1rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom, 0));
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0.25rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: #1c1814;
+    border-top: 1px solid #2a2520;
+    transform: translateY(100%);
+    transition: transform 0.28s ease;
+  }
+
+  body.mm-nav-open .nav.mm-nav .nav-links {
+    transform: translateY(0);
+  }
+
+  .nav.mm-nav .nav-link,
+  .nav.mm-nav .nav-dropdown-toggle {
+    min-height: 48px;
+    padding: 0.65rem 0.5rem;
+    width: 100%;
+    text-align: left;
+    justify-content: space-between;
+    font-size: 0.8rem;
+  }
+
+  .nav.mm-nav .nav-cta {
+    text-align: center;
+  }
+
+  .nav.mm-nav .nav-dropdown:hover .nav-dropdown-menu,
+  .nav.mm-nav .nav-dropdown:focus-within .nav-dropdown-menu {
+    display: none;
+  }
+
+  .nav.mm-nav .nav-dropdown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav.mm-nav .nav-dropdown-menu {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+    min-width: 0;
+    display: none;
+    margin: 0.15rem 0 0.35rem 0.35rem;
+    padding: 0.25rem 0;
+    box-shadow: none;
+    border: 0;
+    background: transparent;
+  }
+
+  .nav.mm-nav .nav-dropdown.is-mm-open .nav-dropdown-menu {
+    display: grid;
+  }
+
+  .nav.mm-nav .nav-dropdown-item {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav.mm-nav .nav-logo {
+    height: 48px;
+  }
+}
+
+/* Rules / pieces: horizontal pill scroller on small screens */
+@media (max-width: 800px) {
+  .piece-nav,
+  nav.piece-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.45rem;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0.75rem 0.5rem 0.25rem 0.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+  }
+
+  .piece-nav .nav-btn {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .piece-nav .nav-divider {
+    flex-shrink: 0;
+  }
+}

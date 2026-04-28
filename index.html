@@ -681,33 +681,35 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="nav-mobile.css" />
 </head>
 <body>
 
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <!-- ── NAV ── -->
-  <nav class="nav" aria-label="Primary">
+  <nav class="nav mm-nav" aria-label="Primary">
     <a href="index.html" class="nav-brand" aria-label="Madrid Minds">
       <img src="TopHeaderReadable.png" alt="Madrid Minds logo" class="nav-logo" />
     </a>
-    <div class="nav-links" data-nav-group="primary">
+    <div class="nav-links" id="mm-primary-nav" data-nav-group="primary">
       <div class="nav-dropdown">
-        <button class="nav-link nav-dropdown-toggle" aria-label="Open Learn menu">
+        <button type="button" class="nav-link nav-dropdown-toggle" aria-label="Open Chess menu" aria-expanded="false">
           Chess <span class="nav-caret">▾</span>
         </button>
-        <div class="nav-dropdown-menu" role="menu" aria-label="Learn pages">
+        <div class="nav-dropdown-menu" role="menu" aria-label="Chess pages">
           <a href="rules.html" class="nav-dropdown-item" role="menuitem">How to Play</a>
           <a href="pieces.html" class="nav-dropdown-item" role="menuitem">Pieces</a>
         </div>
       </div>
-      <a href="wine.html" class="nav-link">Wine</a>
+      <a href="wine.html" class="nav-link">The Evening</a>
       <a href="events.html" class="nav-link">Events</a>
-      
       <a href="your-host.html" class="nav-link">Your Host</a>
       <a href="#signup" class="nav-link nav-cta">Sign Up</a>
     </div>
     <div aria-hidden="true"></div>
+    <button type="button" class="mm-nav-toggle" aria-label="Open menu" aria-controls="mm-primary-nav" aria-expanded="false">Menu</button>
+    <div class="mm-nav-backdrop" aria-hidden="true"></div>
   </nav>
 
   <main id="main-content">
@@ -828,5 +830,6 @@
     </a>
   </footer>
 
+  <script src="nav-mobile.js" defer></script>
 </body>
 </html>

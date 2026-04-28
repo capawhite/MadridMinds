@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wine Tasting In Madrid With Tapas | Madrid Minds</title>
-  <meta name="description" content="Join Madrid Minds for curated wine tasting in Madrid, paired with delicious tapas and designed for social connection, conversation, and memorable cultural evenings." />
+  <title>An Evening Worth Showing Up For | Madrid Minds</title>
+  <meta name="description" content="Madrid Minds is an evening built around people. Good wine, tapas, chess — all of it is just the backdrop for conversations you didn't expect and people you hadn't met yet." />
   <link rel="canonical" href="https://madridminds.com/wine.html" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
@@ -102,53 +102,50 @@
       .gallery-card{height:260px}
     }
   </style>
+  <link rel="stylesheet" href="nav-mobile.css" />
 </head>
 <body>
-  <nav class="site-nav" aria-label="Primary">
+  <nav class="site-nav mm-nav" aria-label="Primary">
     <a href="index.html" class="site-nav-brand" aria-label="Madrid Minds"><img src="TopHeaderReadable.png" alt="Madrid Minds logo" class="site-nav-logo" /></a>
-    <div class="site-nav-links">
+    <div class="site-nav-links" id="mm-primary-nav" data-nav-group="primary">
       <div class="site-nav-dropdown">
-        <button class="site-nav-link site-nav-dropdown-toggle" aria-label="Open Learn menu">
+        <button type="button" class="site-nav-link site-nav-dropdown-toggle" aria-label="Open Chess menu" aria-expanded="false">
           Chess <span class="site-nav-caret">▾</span>
         </button>
-        <div class="site-nav-dropdown-menu" role="menu">
+        <div class="site-nav-dropdown-menu" role="menu" aria-label="Chess pages">
           <a href="rules.html" class="site-nav-dropdown-item" role="menuitem">How to Play</a>
           <a href="pieces.html" class="site-nav-dropdown-item" role="menuitem">Pieces</a>
         </div>
       </div>
-      <a href="wine.html" class="site-nav-link" aria-current="page">Wine</a>
+      <a href="wine.html" class="site-nav-link" aria-current="page">The Evening</a>
       <a href="events.html" class="site-nav-link">Events</a>
-      
       <a href="your-host.html" class="site-nav-link">Your Host</a>
       <a href="index.html#signup" class="site-nav-link site-nav-cta">Sign Up</a>
     </div>
-    <div aria-hidden="true"></div>
+    <div class="site-nav-spacer" aria-hidden="true"></div>
+    <button type="button" class="mm-nav-toggle" aria-label="Open menu" aria-controls="mm-primary-nav" aria-expanded="false">Menu</button>
+    <div class="mm-nav-backdrop" aria-hidden="true"></div>
   </nav>
 
   <main>
     <header class="page-header">
-      <p class="kicker">WineTasting</p>
-      <h1>Wine Tasting at Madrid Minds</h1>
+      <p class="kicker">The Evening</p>
+      <h1>An Evening Worth Showing Up For</h1>
       <div class="header-rule" aria-hidden="true"></div>
       <p class="intro-copy">
-        At Madrid Minds, we spend time discovering carefully selected wines to taste, each one chosen
-        for its character and story. Every tasting is accompanied by delicious tapas so conversation,
-        flavor, and shared curiosity come together naturally.
+        Madrid Minds is an evening built around people. Good wine, tapas, chess — all of it
+        is just the backdrop. What stays with you is the conversation you didn't expect to have,
+        and the person across the board you hadn't met yet.
       </p>
     </header>
 
-    <!-- Two social shots -->
-    <div class="gallery-duo">
-      <div class="gallery-card">
-        <img src="winetasting1.png" alt="Guests enjoying wine at a Madrid Minds evening" loading="lazy" />
-      </div>
-      <div class="gallery-card">
-        <img src="winetasting2.png" alt="Guests mingling with wine at a Madrid Minds event" loading="lazy" />
-      </div>
+    <div class="hero-img-wrap">
+      <img src="GroupDrinking.png" alt="Guests enjoying drinks and conversation at a Madrid Minds evening" loading="lazy" />
     </div>
 
 
-    <p class="wine-note">Thoughtful wines, good tapas, and better conversations.</p>
+    <p class="wine-note">Good wine. Great company. The rest takes care of itself.</p>
   </main>
+  <script src="nav-mobile.js" defer></script>
 </body>
 </html>

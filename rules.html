@@ -70,27 +70,29 @@
   @media(max-width:900px){.slide-panel.active{grid-template-columns:1fr;gap:2.2rem;padding:1.35rem}.info-side{max-width:none}.bottom-nav{flex-direction:column;align-items:flex-start}.bottom-controls{width:100%}.btn-prev,.btn-next{flex:1}}
   @media(max-width:720px){.site-nav{padding:.9rem 1rem;gap:.7rem;grid-template-columns:1fr}.site-nav-links{width:100%;gap:.7rem}.header{padding:2.6rem 1.2rem 1rem}.piece-nav{justify-content:flex-start;padding:1.2rem 1.2rem 0}.content{padding:1.3rem 1.2rem 1.7rem}.slide-panel{border-radius:22px}.board-shell{padding:.8rem}.board-container{max-width:340px}.description{font-size:1.44rem}.slide-title{font-size:clamp(2.6rem,12vw,3.4rem)}}
 </style>
+<link rel="stylesheet" href="nav-mobile.css" />
 </head>
 <body>
-<nav class="site-nav" aria-label="Primary">
+<nav class="site-nav mm-nav" aria-label="Primary">
   <a href="index.html" class="site-nav-brand" aria-label="Madrid Minds"><img src="TopHeaderReadable.png" alt="Madrid Minds logo" class="site-nav-logo" /></a>
-  <div class="site-nav-links" data-nav-group="primary">
+  <div class="site-nav-links" id="mm-primary-nav" data-nav-group="primary">
     <div class="site-nav-dropdown">
-      <button class="site-nav-link site-nav-dropdown-toggle" aria-label="Open Learn menu">
+      <button type="button" class="site-nav-link site-nav-dropdown-toggle" aria-label="Open Chess menu" aria-expanded="false">
         Chess <span class="site-nav-caret">▾</span>
       </button>
-      <div class="site-nav-dropdown-menu" role="menu" aria-label="Learn pages">
-        <a href="rules.html" class="site-nav-dropdown-item" role="menuitem">How to Play</a>
+      <div class="site-nav-dropdown-menu" role="menu" aria-label="Chess pages">
+        <a href="rules.html" class="site-nav-dropdown-item" role="menuitem" aria-current="page">How to Play</a>
         <a href="pieces.html" class="site-nav-dropdown-item" role="menuitem">Pieces</a>
       </div>
     </div>
-    <a href="wine.html" class="site-nav-link">Wine</a>
-      <a href="events.html" class="site-nav-link">Events</a>
-    
+    <a href="wine.html" class="site-nav-link">The Evening</a>
+    <a href="events.html" class="site-nav-link">Events</a>
     <a href="your-host.html" class="site-nav-link">Your Host</a>
     <a href="index.html#signup" class="site-nav-link site-nav-cta">Sign Up</a>
   </div>
-  <div aria-hidden="true"></div>
+  <div class="site-nav-spacer" aria-hidden="true"></div>
+  <button type="button" class="mm-nav-toggle" aria-label="Open menu" aria-controls="mm-primary-nav" aria-expanded="false">Menu</button>
+  <div class="mm-nav-backdrop" aria-hidden="true"></div>
 </nav>
 <div class="header"><h1>How the Game Works</h1><div class="header-rule"></div></div>
 <nav class="piece-nav"><button class="nav-btn active" onclick="showSlide(0)">Board</button>
@@ -404,5 +406,6 @@ function nextSlide(){if(current<total-1) showSlide(current+1);}
 function prevSlide(){if(current>0) showSlide(current-1);}
 refreshMeta();
 </script>
+<script src="nav-mobile.js" defer></script>
 </body>
 </html>
