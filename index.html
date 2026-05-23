@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Social Evenings in Madrid for Expats, Locals & Curious Minds | Madrid Minds</title>
-  <meta name="description" content="Madrid Minds is a social evening in Madrid where expats, locals, and curious people meet over wine, tapas, conversation, and beginner-friendly chess." />
+  <title>English Meetup in Madrid | Meet New People | Madrid Minds</title>
+  <meta name="description" content="Madrid Minds is an English-speaking meetup in Madrid where expats, locals, and newcomers meet new people through social evenings, culture, wine, and conversation." />
   <link rel="canonical" href="https://madridminds.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://madridminds.com/" />
-  <meta property="og:title" content="Madrid Minds | Social Evenings in Madrid" />
-  <meta property="og:description" content="A social evening in Madrid for expats, locals, and curious minds: wine, tapas, conversation, and beginner-friendly chess." />
+  <meta property="og:title" content="English Meetup in Madrid | Madrid Minds" />
+  <meta property="og:description" content="Meet new people at an English-speaking social meetup in Madrid with culture, conversation, wine, and tapas." />
   <meta property="og:image" content="https://madridminds.com/social/wine-01.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Madrid Minds | Social Evenings in Madrid" />
-  <meta name="twitter:description" content="Meet people in Madrid through wine, tapas, cultural conversation, and a relaxed introduction to chess." />
+  <meta name="twitter:title" content="English Meetup in Madrid | Madrid Minds" />
+  <meta name="twitter:description" content="A social English meetup in Madrid where expats, locals, and newcomers connect through conversation, culture, wine, and tapas." />
   <meta name="twitter:image" content="https://madridminds.com/social/wine-01.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -561,7 +561,16 @@
       letter-spacing: 0.08em;
     }
 
-    .footer-instagram {
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem 1.1rem;
+    }
+
+    .footer-instagram,
+    .footer-email {
       display: inline-flex;
       align-items: center;
       gap: 0.45rem;
@@ -574,11 +583,13 @@
       transition: color 0.2s ease;
     }
 
-    .footer-instagram:hover {
+    .footer-instagram:hover,
+    .footer-email:hover {
       color: #F5F0E8;
     }
 
-    .footer-instagram:focus-visible {
+    .footer-instagram:focus-visible,
+    .footer-email:focus-visible {
       outline: 2px solid #C4603A;
       outline-offset: 4px;
       border-radius: 2px;
@@ -824,19 +835,22 @@
   <!-- ── 8. FOOTER ── -->
   <footer>
     <img src="TopHeaderReadable.png" alt="Madrid Minds logo" class="footer-logo" />
-    <a
-      href="https://instagram.com/madridminds"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="footer-instagram"
-    >
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-        <circle cx="12" cy="12" r="4"/>
-        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
-      </svg>
-      @madridminds
-    </a>
+    <div class="footer-links">
+      <a
+        href="https://instagram.com/madridminds"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer-instagram"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+        </svg>
+        @madridminds
+      </a>
+      <a href="mailto:ruy@madridminds.com" class="footer-email">ruy@madridminds.com</a>
+    </div>
   </footer>
 
   <script src="nav-mobile.js" defer></script>

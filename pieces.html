@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chess Pieces Made Simple for Social Players | Madrid Minds</title>
-<meta name="description" content="A beginner-friendly guide to chess pieces for Madrid Minds guests discovering chess as a fun social hobby in Madrid." />
+<title>Learn Chess Pieces (New to Chess Guide) | Madrid Minds</title>
+<meta name="description" content="Learn chess pieces in simple terms. This guide helps people new to chess enjoy Madrid Minds social evenings and conversations in English." />
 <link rel="canonical" href="https://madridminds.com/pieces.html" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://madridminds.com/pieces.html" />
+<meta property="og:title" content="Learn Chess Pieces | New to Chess Guide" />
+<meta property="og:description" content="A simple chess pieces guide for people new to chess joining Madrid Minds social evenings in Madrid." />
+<meta property="og:image" content="https://madridminds.com/social/chess-wine-01.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Learn Chess Pieces | Madrid Minds" />
+<meta name="twitter:description" content="New to chess? Learn the pieces quickly and join social English-speaking evenings in Madrid." />
+<meta name="twitter:image" content="https://madridminds.com/social/chess-wine-01.png" />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root{--bg:#1C1814;--bg-card:#231F1B;--bg-hover:#2A2520;--cream:#F5F0E8;--terracotta:#C4603A;--terracotta-soft:#D07A59;--muted:#B8AFA0;--divider:#2A2520;--glass:rgba(255,255,255,.025);--shadow:0 22px 64px rgba(0,0,0,.38)}
@@ -68,6 +77,9 @@
   .btn-prev[disabled],.btn-next[disabled]{opacity:.38;cursor:not-allowed;transform:none}
   .footer{text-align:center;padding:1.5rem 2rem 2.3rem;border-top:1px solid rgba(184,175,160,.08);font-size:.76rem;color:var(--muted);letter-spacing:.15em;text-transform:uppercase}
   .footer span{color:var(--terracotta)}
+  .footer-links{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.5rem 1rem;margin-top:.85rem;text-transform:none;letter-spacing:.08em}
+  .footer-links a{color:var(--muted);text-decoration:none;font-family:'Jost',sans-serif;font-size:.78rem}
+  .footer-links a:hover{color:var(--cream)}
   .back-bar{text-align:center;padding:.9rem 2rem;border-bottom:1px solid rgba(184,175,160,.08)}
   .back-bar a{font-family:'Jost',sans-serif;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
   .back-bar a:hover{color:var(--cream)}
@@ -366,7 +378,13 @@ R . . . K . . R</pre></desc><defs><g id="white-rook" class="white rook" fill="#f
     <button class="btn-next" id="btn-next" onclick="nextPiece()"><span>Continue</span><span>→</span></button>
   </div>
 </div>
-<div class="footer"><a href="/" style="color:var(--terracotta);text-decoration:none;font-family:'Jost',sans-serif">Madrid Minds</a> · Where curious minds meet · <a href="https://madridminds.com" style="color:var(--muted);text-decoration:none">madridminds.com</a></div>
+<div class="footer">
+  <div><a href="index.html" style="color:var(--terracotta);text-decoration:none;font-family:'Jost',sans-serif">Madrid Minds</a> · Where curious minds meet · <a href="https://madridminds.com" style="color:var(--muted);text-decoration:none">madridminds.com</a></div>
+  <div class="footer-links">
+    <a href="https://instagram.com/madridminds" target="_blank" rel="noopener noreferrer">@madridminds</a>
+    <a href="mailto:ruy@madridminds.com">ruy@madridminds.com</a>
+  </div>
+</div>
 <script>
 let current=0;const total=9;
 function showPiece(idx){
