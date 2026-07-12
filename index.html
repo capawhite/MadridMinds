@@ -515,13 +515,16 @@
       gap: 1.5rem;
       max-width: 960px;
       margin: 0 auto;
-      align-items: start;
+      align-items: stretch;
     }
 
     .contact-panel {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       border: 1px solid rgba(184, 175, 160, 0.18);
       border-radius: 18px;
-      padding: 2rem 1.75rem;
+      padding: 2rem 1.75rem 1.75rem;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
       text-align: center;
     }
@@ -541,13 +544,29 @@
       color: #F5F0E8;
       margin-bottom: 0.75rem;
       line-height: 1.2;
+      min-height: 2.4em;
     }
 
     .contact-panel-desc {
       font-size: 0.95rem;
       color: #B8AFA0;
       line-height: 1.75;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0;
+      min-height: calc(0.95rem * 1.75 * 3);
+    }
+
+    .contact-panel-action {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 180px;
+      margin: 1.25rem 0 0.5rem;
+    }
+
+    .contact-panel-action .beehiiv-wrap {
+      width: 100%;
+      padding: 0;
     }
 
     .contact-enquiry-btn {
@@ -569,7 +588,8 @@
     }
 
     .contact-panel-note {
-      margin-top: 1rem;
+      margin-top: auto;
+      padding-top: 0.75rem;
       font-size: 0.82rem;
       color: #B8AFA0;
     }
@@ -873,6 +893,18 @@
         grid-template-columns: 1fr;
       }
 
+      .contact-panel h3 {
+        min-height: 0;
+      }
+
+      .contact-panel-desc {
+        min-height: 0;
+      }
+
+      .contact-panel-action {
+        min-height: 160px;
+      }
+
       .experience-fork,
       .contact-section {
         padding: 3.5rem 1.5rem;
@@ -1061,17 +1093,19 @@
         <p class="contact-panel-label">Madrid Minds Social</p>
         <h3>Join the waitlist</h3>
         <p class="contact-panel-desc">Be first to hear about public English-speaking meetups in Madrid — wine, tapas, and meeting new people.</p>
-        <div class="beehiiv-wrap">
-          <div class="signup-embed-frame">
-            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-            <iframe
-              src="https://subscribe-forms.beehiiv.com/99a27d92-3bee-4026-9c32-33556a386d08"
-              class="beehiiv-embed"
-              data-test-id="beehiiv-embed"
-              title="Subscribe to Madrid Minds Social"
-              frameborder="0"
-              scrolling="no"
-            ></iframe>
+        <div class="contact-panel-action">
+          <div class="beehiiv-wrap">
+            <div class="signup-embed-frame">
+              <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+              <iframe
+                src="https://subscribe-forms.beehiiv.com/99a27d92-3bee-4026-9c32-33556a386d08"
+                class="beehiiv-embed"
+                data-test-id="beehiiv-embed"
+                title="Subscribe to Madrid Minds Social"
+                frameborder="0"
+                scrolling="no"
+              ></iframe>
+            </div>
           </div>
         </div>
         <p class="contact-panel-note"><a href="events.html">View upcoming social events</a></p>
@@ -1080,7 +1114,9 @@
         <p class="contact-panel-label">Madrid Minds for Teams</p>
         <h3>Book a team experience</h3>
         <p class="contact-panel-desc">Planning an offsite, leadership day or team session in Madrid? Tell us your group size and preferred date — we'll suggest a format that fits.</p>
-        <a href="mailto:ruy@madridminds.com?subject=Madrid%20Minds%20for%20Teams%20enquiry" class="contact-enquiry-btn">Enquire by email</a>
+        <div class="contact-panel-action">
+          <a href="mailto:ruy@madridminds.com?subject=Madrid%20Minds%20for%20Teams%20enquiry" class="contact-enquiry-btn">Enquire by email</a>
+        </div>
         <p class="contact-panel-note"><a href="teams.html">See what's included</a></p>
       </div>
     </div>
