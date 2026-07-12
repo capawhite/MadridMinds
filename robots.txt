@@ -3,5 +3,8 @@ Allow: /
 Disallow: /download.html
 Disallow: /wineold.html
 Disallow: /madrid-minds-rules.html
+Disallow: /wine%20(1).html
+Disallow: /wine%20(2).html
+Disallow: /wine%20(3).html
 
 Sitemap: https://madridminds.com/sitemap.xml

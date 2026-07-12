@@ -492,22 +492,65 @@
       color: #F5F0E8;
     }
 
-    /* ── TEAMS TEASER ── */
-    .teams-teaser {
-      padding: 4.5rem 2rem;
+    /* ── CONTACT SPLIT (Social signup + Teams enquiry) ── */
+    .contact-section {
       background-color: #1C1814;
+      padding: 5rem 2rem 6rem;
+    }
+
+    .contact-section .section-heading {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-section .section-subheading {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      color: #B8AFA0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 960px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    .contact-panel {
+      border: 1px solid rgba(184, 175, 160, 0.18);
+      border-radius: 18px;
+      padding: 2rem 1.75rem;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
       text-align: center;
     }
 
-    .teams-teaser .inner--narrow {
-      max-width: 640px;
+    .contact-panel-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #C4603A;
+      margin-bottom: 0.65rem;
     }
 
-    .teams-teaser .body-text {
+    .contact-panel h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 3vw, 1.75rem);
+      font-weight: 300;
+      color: #F5F0E8;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .contact-panel-desc {
+      font-size: 0.95rem;
+      color: #B8AFA0;
+      line-height: 1.75;
       margin-bottom: 1.5rem;
     }
 
-    .teams-teaser-cta {
+    .contact-enquiry-btn {
       display: inline-block;
       font-size: 0.75rem;
       letter-spacing: 0.12em;
@@ -516,13 +559,35 @@
       color: #F5F0E8;
       border: 1px solid rgba(196, 96, 58, 0.55);
       background: rgba(196, 96, 58, 0.12);
-      padding: 0.65rem 1.25rem;
+      padding: 0.75rem 1.35rem;
       border-radius: 999px;
       transition: background 0.2s;
     }
 
-    .teams-teaser-cta:hover {
+    .contact-enquiry-btn:hover {
       background: rgba(196, 96, 58, 0.28);
+    }
+
+    .contact-panel-note {
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      color: #B8AFA0;
+    }
+
+    .contact-panel-note a {
+      color: #C4603A;
+      text-decoration: none;
+    }
+
+    .contact-panel-note a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── EMAIL SIGNUP (panel embed) ── */
+    .signup-section {
+      background-color: transparent;
+      padding: 0;
+      text-align: center;
     }
 
     /* ── SPLIT SECTIONS ── */
@@ -614,13 +679,7 @@
       text-align: left;
     }
 
-    /* ── EMAIL SIGNUP ── */
-    .signup-section {
-      background-color: #1C1814;
-      padding: 7rem 2rem;
-      text-align: center;
-    }
-
+    /* ── EMAIL SIGNUP (panel embed) ── */
     .signup-subheading {
       font-family: 'Jost', sans-serif;
       font-size: 1rem;
@@ -810,8 +869,12 @@
         grid-template-columns: 1fr;
       }
 
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
       .experience-fork,
-      .teams-teaser {
+      .contact-section {
         padding: 3.5rem 1.5rem;
       }
 
@@ -869,7 +932,7 @@
           <a href="pieces.html" class="nav-dropdown-item" role="menuitem">Pieces</a>
         </div>
       </div>
-      <a href="wine.html" class="nav-link">Social</a>
+      <a href="social.html" class="nav-link">Social</a>
       <a href="teams.html" class="nav-link">For Teams</a>
       <a href="events.html" class="nav-link">Events</a>
       <a href="your-host.html" class="nav-link">Your Host</a>
@@ -909,7 +972,7 @@
           <h3>Meet new people over wine &amp; tapas</h3>
           <p>An English-speaking evening for expats, locals and curious newcomers — networking, Spanish wine, tapas, and chess as a social backdrop. No chess experience needed.</p>
           <div class="fork-card-actions">
-            <a href="wine.html" class="fork-link">See social evenings</a>
+            <a href="social.html" class="fork-link">See social evenings</a>
             <a href="events.html" class="fork-link-secondary">Upcoming events</a>
           </div>
         </article>
@@ -958,7 +1021,7 @@
       <div class="host-body">
         <p>I created Madrid Minds because some things are just better shared.</p>
         <p>I’ve spent over 20 years in the chess industry, helping build an online platform that made the game more accessible, engaging, and genuinely fun for people around the world. Along the way I developed a passion for wines, good food, and the kind of evenings where you meet people worth knowing.</p>
-        <p>The idea was simple: bring curious people together in a beautiful Madrid setting, enjoy great wines and tapas, and introduce chess in a way that feels fresh, welcoming, and genuinely enjoyable.</p>
+        <p>The idea was simple: bring curious people together in a beautiful Madrid setting — for social evenings, and for teams who want to discover how they think together.</p>
       </div>
       <p class="host-signature">— Ruy</p>
       </div>
@@ -987,39 +1050,38 @@
 
   <div class="section-rule"></div>
 
-  <!-- ── TEAMS TEASER ── -->
-  <section class="teams-teaser" aria-labelledby="teams-teaser-heading">
-    <div class="inner--narrow">
-      <h2 class="section-heading" id="teams-teaser-heading">Planning an offsite or team day?</h2>
-      <div class="accent-rule" style="margin:0 auto 1.5rem;"></div>
-      <div class="body-text">
-        <p><strong>Discover how your team thinks.</strong> Madrid Minds for Teams is a collaborative strategy experience — chess-inspired challenges that reveal how your group communicates, solves problems and makes decisions. No chess experience required.</p>
-        <p>Optional: complete the experience with Spanish wine and tapas after the session.</p>
+  <!-- ── CONTACT: Social signup + Teams enquiry ── -->
+  <section class="contact-section" aria-labelledby="contact-heading">
+    <div class="inner--narrow" style="max-width:960px;margin:0 auto 2.5rem;">
+      <h2 class="section-heading" id="contact-heading">Get started</h2>
+      <p class="section-subheading">Join a social evening or enquire for your team</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-panel" id="signup">
+        <p class="contact-panel-label">Madrid Minds Social</p>
+        <h3>Join the waitlist</h3>
+        <p class="contact-panel-desc">Be first to hear about public English-speaking meetups in Madrid — wine, tapas, and meeting new people.</p>
+        <div class="beehiiv-wrap">
+          <div class="signup-embed-frame">
+            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+            <iframe
+              src="https://subscribe-forms.beehiiv.com/99a27d92-3bee-4026-9c32-33556a386d08"
+              class="beehiiv-embed"
+              data-test-id="beehiiv-embed"
+              title="Subscribe to Madrid Minds Social"
+              frameborder="0"
+              scrolling="no"
+            ></iframe>
+          </div>
+        </div>
+        <p class="contact-panel-note"><a href="events.html">View upcoming social events</a></p>
       </div>
-      <a href="teams.html" class="teams-teaser-cta">Explore Madrid Minds for Teams</a>
-    </div>
-  </section>
-
-  <div class="section-rule"></div>
-
-  <!-- ── 5. EMAIL SIGNUP ── -->
-  <section class="signup-section" id="signup" aria-label="Email signup">
-    <div class="inner--narrow">
-      <h2 class="section-heading">Madrid Minds Social is coming soon</h2>
-      <p class="signup-subheading">Join our waitlist for first access to public social evenings and event dates in Madrid.</p>
-      <p class="signup-subheading" style="margin-top:1rem;font-size:0.95rem;color:#B8AFA0;">Team or corporate booking? <a href="mailto:ruy@madridminds.com" style="color:#C4603A;text-decoration:none;">ruy@madridminds.com</a></p>
-    </div>
-    <div class="beehiiv-wrap">
-      <div class="signup-embed-frame">
-        <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-        <iframe
-          src="https://subscribe-forms.beehiiv.com/99a27d92-3bee-4026-9c32-33556a386d08"
-          class="beehiiv-embed"
-          data-test-id="beehiiv-embed"
-          title="Subscribe to Madrid Minds"
-          frameborder="0"
-          scrolling="no"
-        ></iframe>
+      <div class="contact-panel" id="teams-enquiry">
+        <p class="contact-panel-label">Madrid Minds for Teams</p>
+        <h3>Book a team experience</h3>
+        <p class="contact-panel-desc">Planning an offsite, leadership day or team session in Madrid? Tell us your group size and preferred date — we'll suggest a format that fits.</p>
+        <a href="mailto:ruy@madridminds.com?subject=Madrid%20Minds%20for%20Teams%20enquiry" class="contact-enquiry-btn">Enquire by email</a>
+        <p class="contact-panel-note"><a href="teams.html">See what's included</a></p>
       </div>
     </div>
   </section>

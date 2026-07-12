@@ -3,5 +3,10 @@ services:
     name: madridminds
     runtime: static
     staticPublishPath: .
+    routes:
+      - type: redirect
+        source: /wine.html
+        destination: /social.html
+        status: 301
     # No catch-all rewrite: each *.html is a real file; rewriting /* → /index.html
     # would make /wine.html, /events.html, etc. serve the homepage in production.
