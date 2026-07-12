@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Building & Strategy Experiences in Madrid | Madrid Minds for Teams</title>
+  <meta name="description" content="Discover how your team thinks. Madrid Minds for Teams is a collaborative strategy experience in Madrid using chess-inspired challenges for communication, problem-solving and decision-making. No chess experience required." />
+  <link rel="canonical" href="https://madridminds.com/teams.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://madridminds.com/teams.html" />
+  <meta property="og:title" content="Discover How Your Team Thinks | Madrid Minds for Teams" />
+  <meta property="og:description" content="A collaborative strategy experience for companies in Madrid: communication, problem-solving and playful competition through chess-inspired challenges." />
+  <meta property="og:image" content="https://madridminds.com/social/chess-wine-01.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Madrid Minds for Teams" />
+  <meta name="twitter:description" content="Team development experience in Madrid. Chess-inspired challenges. No chess experience required. English." />
+  <meta name="twitter:image" content="https://madridminds.com/social/chess-wine-01.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#1C1814; --cream:#F5F0E8; --muted:#B8AFA0; --terracotta:#C4603A; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--cream); font-family:'Jost',sans-serif; min-height:100vh; padding-top:86px; line-height:1.7; }
+    .site-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(28,24,20,.95);border-bottom:1px solid rgba(184,175,160,.14);padding:.68rem 1.4rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;backdrop-filter:blur(4px)}
+    .site-nav-brand{display:inline-flex;align-items:center;text-decoration:none}
+    .site-nav-logo{height:56px;width:auto;display:block}
+    .site-nav-links{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;justify-content:center}
+    .site-nav-link{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;opacity:.85}
+    .site-nav-link:hover{color:var(--cream);opacity:1}
+    .site-nav-dropdown{position:relative}
+    .site-nav-dropdown-toggle{background:transparent;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;color:inherit;font:inherit}
+    .site-nav-caret{font-size:11px;opacity:.8}
+    .site-nav-dropdown-menu{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);min-width:165px;padding:.45rem;border-radius:12px;border:1px solid rgba(184,175,160,.16);background:var(--bg);box-shadow:0 14px 30px rgba(0,0,0,.35);display:none;z-index:120}
+    .site-nav-dropdown:hover .site-nav-dropdown-menu,.site-nav-dropdown:focus-within .site-nav-dropdown-menu{display:grid;gap:2px}
+    .site-nav-dropdown-item{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);text-decoration:none;padding:.55rem .65rem;border-radius:8px;opacity:.88}
+    .site-nav-dropdown-item:hover{background:#2A2520;opacity:1}
+    .site-nav-link[aria-current="page"]{color:var(--cream);opacity:1;text-decoration:underline;text-decoration-color:var(--terracotta);text-underline-offset:4px}
+    .site-nav-cta{border:1px solid rgba(196,96,58,.75);background:rgba(196,96,58,.16);color:var(--cream);padding:.45rem .8rem;border-radius:999px;opacity:1}
+    .site-nav-cta:hover{background:rgba(196,96,58,.3)}
+
+    main { max-width:920px; margin:0 auto; padding:3rem 1.5rem 4rem; }
+    .kicker { color:var(--terracotta); font-size:.74rem; letter-spacing:.28em; text-transform:uppercase; margin-bottom:.85rem; text-align:center; }
+    h1 { font-family:'Cormorant Garamond',serif; font-weight:300; font-style:italic; font-size:clamp(2.4rem,6vw,3.8rem); line-height:1.08; margin-bottom:1rem; text-align:center; }
+    .header-rule { width:64px; height:1px; background:linear-gradient(90deg, transparent, var(--terracotta), transparent); margin:1.1rem auto 1.5rem; }
+    .lead { color:var(--muted); font-size:1.05rem; text-align:center; max-width:640px; margin:0 auto 2.5rem; line-height:1.85; }
+    .lead strong { color:var(--cream); font-weight:400; }
+
+    section { margin-bottom:3rem; }
+    h2 { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(1.75rem,4vw,2.35rem); margin-bottom:.75rem; color:var(--cream); }
+    h3 { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.35rem; margin-bottom:.5rem; color:var(--cream); }
+    .section-intro { color:var(--muted); margin-bottom:1.25rem; font-size:.98rem; }
+
+    .pill-row { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.5rem; }
+    .pill { font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; padding:.45rem .75rem; border-radius:999px; border:1px solid rgba(184,175,160,.2); color:var(--muted); }
+
+    .benefit-list { list-style:none; display:grid; gap:.65rem; margin-bottom:1rem; }
+    .benefit-list li { color:var(--muted); padding-left:1.1rem; position:relative; font-size:.98rem; }
+    .benefit-list li::before { content:''; position:absolute; left:0; top:.65em; width:5px; height:5px; border-radius:50%; background:var(--terracotta); }
+
+    .agenda { border:1px solid rgba(184,175,160,.14); border-radius:16px; overflow:hidden; margin-top:1rem; }
+    .agenda-row { display:grid; grid-template-columns:5.5rem 1fr; gap:1rem; padding:1rem 1.25rem; border-bottom:1px solid rgba(184,175,160,.1); align-items:start; }
+    .agenda-row:last-child { border-bottom:0; }
+    .agenda-row.optional { background:rgba(196,96,58,.06); }
+    .agenda-time { font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--terracotta); padding-top:.15rem; }
+    .agenda-title { font-family:'Cormorant Garamond',serif; font-size:1.15rem; color:var(--cream); margin-bottom:.25rem; }
+    .agenda-desc { font-size:.88rem; color:var(--muted); line-height:1.6; }
+
+    .format-cards { display:grid; gap:1rem; margin-top:1rem; }
+    @media (min-width:640px) { .format-cards { grid-template-columns:repeat(3, 1fr); } }
+    .format-card { border:1px solid rgba(184,175,160,.16); border-radius:14px; padding:1.25rem; background:rgba(255,255,255,.02); }
+    .format-card.featured { border-color:rgba(196,96,58,.45); }
+    .format-card h3 { font-size:1.1rem; margin-bottom:.4rem; }
+    .format-card p { font-size:.88rem; color:var(--muted); line-height:1.65; }
+
+    .faq { display:grid; gap:1rem; margin-top:1rem; }
+    .faq-item { border-left:2px solid rgba(196,96,58,.4); padding-left:1rem; }
+    .faq-item dt { font-size:.95rem; color:var(--cream); margin-bottom:.35rem; }
+    .faq-item dd { font-size:.9rem; color:var(--muted); line-height:1.65; }
+
+    .cta-block { text-align:center; margin-top:3rem; padding:2rem 1.5rem; border:1px solid rgba(196,96,58,.35); border-radius:18px; background:rgba(196,96,58,.08); }
+    .cta-block p { color:var(--muted); margin-bottom:1.25rem; max-width:480px; margin-left:auto; margin-right:auto; }
+    .btn-primary { display:inline-block; padding:.85rem 1.6rem; border-radius:999px; background:rgba(196,96,58,.22); border:1px solid rgba(196,96,58,.65); color:var(--cream); text-decoration:none; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; transition:background .2s; }
+    .btn-primary:hover { background:rgba(196,96,58,.38); }
+    .cross-link { text-align:center; margin-top:2rem; font-size:.88rem; color:var(--muted); }
+    .cross-link a { color:var(--terracotta); text-decoration:none; }
+    .cross-link a:hover { text-decoration:underline; }
+
+    .site-footer{text-align:center;padding:2rem 1.5rem 2.5rem;border-top:1px solid rgba(184,175,160,.14)}
+    .footer-links{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.5rem 1rem}
+    .footer-links a{color:var(--muted);text-decoration:none;font-size:.78rem;letter-spacing:.08em}
+    .footer-links a:hover{color:var(--cream)}
+    @media (max-width:720px){.site-nav{padding:.9rem 1rem;gap:.7rem;grid-template-columns:1fr}.site-nav-links{width:100%;gap:.7rem}.agenda-row{grid-template-columns:1fr;gap:.35rem}}
+  </style>
+  <link rel="stylesheet" href="nav-mobile.css" />
+</head>
+<body>
+  <nav class="site-nav mm-nav" aria-label="Primary">
+    <a href="index.html" class="site-nav-brand" aria-label="Madrid Minds"><img src="TopHeaderReadable.png" alt="Madrid Minds logo" class="site-nav-logo" /></a>
+    <div class="site-nav-links" id="mm-primary-nav" data-nav-group="primary">
+      <div class="site-nav-dropdown">
+        <button type="button" class="site-nav-link site-nav-dropdown-toggle" aria-label="Open Learn chess menu" aria-expanded="false">
+          Learn Chess <span class="site-nav-caret">▾</span>
+        </button>
+        <div class="site-nav-dropdown-menu" role="menu" aria-label="Learn chess pages">
+          <a href="rules.html" class="site-nav-dropdown-item" role="menuitem">How to Play</a>
+          <a href="pieces.html" class="site-nav-dropdown-item" role="menuitem">Pieces</a>
+        </div>
+      </div>
+      <a href="wine.html" class="site-nav-link">Social</a>
+      <a href="teams.html" class="site-nav-link" aria-current="page">For Teams</a>
+      <a href="events.html" class="site-nav-link">Events</a>
+      <a href="your-host.html" class="site-nav-link">Your Host</a>
+      <a href="index.html#signup" class="site-nav-link site-nav-cta">Sign Up</a>
+    </div>
+    <div class="site-nav-spacer" aria-hidden="true"></div>
+    <button type="button" class="mm-nav-toggle" aria-label="Open menu" aria-controls="mm-primary-nav" aria-expanded="false">Menu</button>
+    <div class="mm-nav-backdrop" aria-hidden="true"></div>
+  </nav>
+
+  <main>
+    <header>
+      <p class="kicker">Madrid Minds for Teams</p>
+      <h1>Discover how your team thinks.</h1>
+      <div class="header-rule" aria-hidden="true"></div>
+      <p class="lead">
+        A <strong>collaborative strategy experience</strong> combining communication, problem-solving and playful competition through chess-inspired challenges.
+        <strong>No chess experience required.</strong> Delivered in English.
+      </p>
+    </header>
+
+    <section aria-labelledby="who-for">
+      <h2 id="who-for">Built for teams that want more than a dinner</h2>
+      <p class="section-intro">Ideal for offsites, leadership groups, HR programmes, conferences, onboarding and international teams in Madrid.</p>
+      <div class="pill-row">
+        <span class="pill">Offsites</span>
+        <span class="pill">Leadership groups</span>
+        <span class="pill">HR &amp; L&amp;D</span>
+        <span class="pill">Conferences</span>
+        <span class="pill">Onboarding</span>
+        <span class="pill">Graduate days</span>
+      </div>
+      <ul class="benefit-list">
+        <li>Reveal how your team communicates under pressure</li>
+        <li>Practice decision-making with incomplete information</li>
+        <li>Build collaboration through playful competition — not lectures</li>
+        <li>Adapt after mistakes in a safe, energising setting</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="sample-session">
+      <h2 id="sample-session">Sample 2-hour experience</h2>
+      <p class="section-intro">A structured team development experience — not a training course. Optional debrief draws out clarity, imagination, communication and resilience.</p>
+      <div class="agenda">
+        <div class="agenda-row">
+          <div class="agenda-time">15 min</div>
+          <div>
+            <div class="agenda-title">Opening challenge</div>
+            <p class="agenda-desc">Pattern recognition and team formation.</p>
+          </div>
+        </div>
+        <div class="agenda-row">
+          <div class="agenda-time">25 min</div>
+          <div>
+            <div class="agenda-title">Communication challenge</div>
+            <p class="agenda-desc">Different people hold different pieces of information.</p>
+          </div>
+        </div>
+        <div class="agenda-row">
+          <div class="agenda-time">25 min</div>
+          <div>
+            <div class="agenda-title">Strategy challenge</div>
+            <p class="agenda-desc">Teams choose between competing options under time pressure.</p>
+          </div>
+        </div>
+        <div class="agenda-row">
+          <div class="agenda-time">25 min</div>
+          <div>
+            <div class="agenda-title">Problem-solving round</div>
+            <p class="agenda-desc">Chess-inspired puzzles that require collaboration, not prior chess knowledge.</p>
+          </div>
+        </div>
+        <div class="agenda-row">
+          <div class="agenda-time">20 min</div>
+          <div>
+            <div class="agenda-title">Final team challenge</div>
+            <p class="agenda-desc">A larger competitive mission bringing the session together.</p>
+          </div>
+        </div>
+        <div class="agenda-row">
+          <div class="agenda-time">10 min</div>
+          <div>
+            <div class="agenda-title">Debrief</div>
+            <p class="agenda-desc">Reflection on how the team worked — what surfaced, what surprised you.</p>
+          </div>
+        </div>
+        <div class="agenda-row optional">
+          <div class="agenda-time">Optional</div>
+          <div>
+            <div class="agenda-title">Wine &amp; tapas reception</div>
+            <p class="agenda-desc">30–60 minutes after the main session. The challenge comes first; hospitality follows.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="formats">
+      <h2 id="formats">Three ways to host it</h2>
+      <p class="section-intro">Food and drink are modular — coffee, lunch, tapas, alcohol-free options, optional wine reception or dinner. You choose what fits your team.</p>
+      <div class="format-cards">
+        <div class="format-card">
+          <h3>No wine</h3>
+          <p>Best for daytime offsites, HR programmes and inclusive team sessions. Alcohol-free throughout.</p>
+        </div>
+        <div class="format-card featured">
+          <h3>Wine after the challenge</h3>
+          <p>Our recommended premium format. The team experience runs first; everyone relaxes over Spanish wine and tapas afterward.</p>
+        </div>
+        <div class="format-card">
+          <h3>Optional wine round</h3>
+          <p>For private evening events or client entertainment — a short sensory round, never mandatory or the headline.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq">
+      <h2 id="faq">Common questions</h2>
+      <dl class="faq">
+        <div class="faq-item">
+          <dt>Do we need to know chess?</dt>
+          <dd>No. Challenges are designed for people who have never played. Prior chess knowledge is not an advantage.</dd>
+        </div>
+        <div class="faq-item">
+          <dt>Is alcohol required?</dt>
+          <dd>No. Many teams book alcohol-free formats. Wine and tapas are an optional add-on, usually after the session.</dd>
+        </div>
+        <div class="faq-item">
+          <dt>Is it in English?</dt>
+          <dd>Yes. Madrid Minds for Teams is delivered in English — ideal for international and expat teams in Madrid.</dd>
+        </div>
+        <div class="faq-item">
+          <dt>Is this an HR training course?</dt>
+          <dd>No. It is a team experience — a structured, facilitated session with optional debrief, not accredited classroom training.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <div class="cta-block">
+      <h2>Enquire for your team</h2>
+      <p>Tell us your group size, preferred date and format. We will reply with options tailored to your offsite or team day.</p>
+      <a href="mailto:ruy@madridminds.com?subject=Madrid%20Minds%20for%20Teams%20enquiry" class="btn-primary">ruy@madridminds.com</a>
+    </div>
+
+    <p class="cross-link">Looking for a social evening to meet new people? See <a href="wine.html">Madrid Minds Social</a>.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="https://instagram.com/madridminds" target="_blank" rel="noopener noreferrer">@madridminds</a>
+      <a href="mailto:ruy@madridminds.com">ruy@madridminds.com</a>
+    </div>
+  </footer>
+  <script src="nav-mobile.js" defer></script>
+</body>
+</html>
