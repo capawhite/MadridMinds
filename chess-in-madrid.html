@@ -77,6 +77,51 @@
     @media (max-width:720px){.site-nav{padding:.9rem 1rem;gap:.7rem;grid-template-columns:1fr}.site-nav-links{width:100%;gap:.7rem}}
   </style>
   <link rel="stylesheet" href="nav-mobile.css" />
+  <!-- PLACEHOLDER: confirm venue/day; Event startDate below is provisional (September 2026) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://madridminds.com/#organization",
+        "name": "Madrid Minds",
+        "url": "https://madridminds.com/",
+        "logo": "https://madridminds.com/TopHeaderReadable.png",
+        "sameAs": ["https://instagram.com/madridminds"]
+      },
+      {
+        "@type": "Event",
+        "name": "Madrid Minds \u2014 Weekly English Chess Social Night",
+        "description": "A weekly English-speaking chess social night in Madrid: a short chess talk, casual games and meeting new people. No experience needed, beginners welcome.",
+        "inLanguage": "en",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "startDate": "2026-09-01T20:00:00+02:00",
+        "url": "https://madridminds.com/chess-in-madrid.html",
+        "image": "https://madridminds.com/chess.png",
+        "eventSchedule": {
+          "@type": "Schedule",
+          "repeatFrequency": "P1W",
+          "byDay": "https://schema.org/Tuesday",
+          "startTime": "20:00",
+          "startDate": "2026-09-01"
+        },
+        "location": {
+          "@type": "Place",
+          "name": "Abya Restaurante",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Calle Ortega y Gasset 32",
+            "addressLocality": "Madrid",
+            "addressCountry": "ES"
+          }
+        },
+        "organizer": { "@id": "https://madridminds.com/#organization" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <nav class="site-nav mm-nav" aria-label="Primary">
@@ -115,7 +160,7 @@
       <p class="cta-card-label">The weekly night</p>
       <h2>Madrid Minds Social — English chess night</h2>
       <!-- PLACEHOLDER: confirm venue/day -->
-      <p class="venue">Currently every Tuesday at 8PM</p>
+      <p class="venue">Beginning September 2026 · every Tuesday at 8PM</p>
       <p class="venue-sub">Abya Restaurante · Calle Ortega y Gasset 32, Madrid</p>
       <div class="cta-actions">
         <a href="index.html#signup" class="btn-primary">Join the waitlist</a>
