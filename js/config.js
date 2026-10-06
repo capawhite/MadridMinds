@@ -23,14 +23,16 @@ window.MM_CONFIG = {
     experienceForTwo: 75,
     bundleForTwo: 180,
     guestIncluded: true,
-    note: "Your guest is included.",
-    // TODO: what a solo guest pays — do not invent a number on the site
+    note: "Your guest is on us.",
+    // Solo guest price unpublished until confirmed
     soloGuestPrice: null
   },
 
+  // Consumer duration unpublished until a real length is set.
+  // Teams may still say ~90–120 minutes as an approximate range.
   duration: {
-    minutes: 120,
-    label: "About 2 hours"
+    published: false,
+    label: null
   },
 
   /**

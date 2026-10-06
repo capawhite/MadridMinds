@@ -43,7 +43,16 @@
   }
 
   function fillDuration() {
-    var label = t("common.duration", (cfg.duration && cfg.duration.label) || "About 2 hours");
+    var published = cfg.duration && cfg.duration.published && cfg.duration.label;
+    if (!published) {
+      document.querySelectorAll("[data-mm-duration]").forEach(function (el) {
+        var item = el.closest(".practical-item, .pill, li");
+        if (item) item.remove();
+        else el.remove();
+      });
+      return;
+    }
+    var label = t("common.duration", cfg.duration.label);
     document.querySelectorAll("[data-mm-duration]").forEach(function (el) {
       el.textContent = label;
     });
@@ -75,16 +84,16 @@
   function emptyCard(exp, featured) {
     var isFirst = exp.id === "the-first-move";
     var heading = isFirst
-      ? t("book.datesSoon", "Dates announced soon")
-      : t("book.nextDatesSoon", "Next dates coming soon");
+      ? t("book.datesSoon", "New dates coming soon")
+      : t("book.nextDatesSoon", "New dates coming soon");
     var copy = isFirst
       ? t(
           "book.firstMoveWait",
-          "A two-hour evening for complete beginners in Madrid. Register your interest and we’ll send the next date as soon as it’s set."
+          "A beginner evening for people who have never played. Register your interest and we’ll send the next date as soon as it’s set."
         )
       : t(
           "book.lessOftenWait",
-          "This evening runs less often than The First Move. Leave your email and we’ll tell you when the next date is set — no invented schedule."
+          "New dates coming soon. Leave your email and we’ll tell you when the next evening is set."
         );
     var aboutHref = pageHref(exp.href || "/experiences.html");
     var actions = isFirst
@@ -123,10 +132,10 @@
       t("common.madrid", "Madrid") +
       "</li>" +
       "<li>" +
-      t("common.guestIncluded", "Your guest is included") +
+      t("common.guestIncluded", "Your guest is on us") +
       "</li>" +
       '<li><span data-mm-price="experience"></span> ' +
-      t("common.forTwo", "for two") +
+      t("home.forYouGuest", "for you + one guest") +
       "</li>" +
       "</ul>" +
       '<div class="event-card-actions">' +
@@ -162,10 +171,10 @@
       (session.seatsLabel || "Small group") +
       "</li>" +
       '<li>' +
-      t("common.guestIncluded", "Your guest is included") +
+      t("common.guestIncluded", "Your guest is on us") +
       "</li>" +
       '<li><span data-mm-price="experience"></span> ' +
-      t("common.forTwo", "for two") +
+      t("home.forYouGuest", "for you + one guest") +
       "</li>" +
       "</ul>" +
       '<div class="event-card-actions">' +

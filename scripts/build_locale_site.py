@@ -28,14 +28,12 @@ def merge(base: dict, over: dict) -> dict:
 
 COMMON_EN = {
     "common": {
-        "photoPlaceholder": "Photography placeholder",
         "forTwo": "for two",
-        "duration": "About 2 hours",
         "englishLevel": "Comfortable following English",
         "english": "English",
         "madrid": "Madrid",
         "smallGroups": "Small groups",
-        "guestIncluded": "Your guest is included",
+        "guestIncluded": "Your guest is on us",
         "getNotified": "Get notified of the next dates",
         "bookFirstMove": "Book The First Move",
         "aboutThisEvening": "About this evening",
@@ -43,7 +41,6 @@ COMMON_EN = {
         "whatHappens": "What happens",
         "leaveKnowing": "What you leave knowing",
         "practical": "Practical information",
-        "durationLabel": "Duration",
         "languageLabel": "Language",
         "whereLabel": "Where",
         "groupLabel": "Group",
@@ -66,14 +63,12 @@ COMMON_EN = {
 
 COMMON_ES = {
     "common": {
-        "photoPlaceholder": "Espacio para fotografía",
         "forTwo": "para dos",
-        "duration": "Unas 2 horas",
         "englishLevel": "Comodidad siguiendo el inglés",
         "english": "Inglés",
         "madrid": "Madrid",
         "smallGroups": "Grupos pequeños",
-        "guestIncluded": "Tu invitado está incluido",
+        "guestIncluded": "Tu invitado corre de nuestra cuenta",
         "getNotified": "Avísame de las próximas fechas",
         "bookFirstMove": "Reservar The First Move",
         "aboutThisEvening": "Sobre esta velada",
@@ -81,7 +76,6 @@ COMMON_ES = {
         "whatHappens": "Qué pasa",
         "leaveKnowing": "Con qué te vas",
         "practical": "Información práctica",
-        "durationLabel": "Duración",
         "languageLabel": "Idioma",
         "whereLabel": "Dónde",
         "groupLabel": "Grupo",
@@ -299,6 +293,17 @@ def main() -> None:
     es_data["home"] = es_extra["home"]
     en_data.pop("learnGuide", None)
     es_data.pop("learnGuide", None)
+    # Drop unpublished / internal leak keys so they cannot resurface via i18n.
+    for data in (en_data, es_data):
+        common = data.get("common") or {}
+        for key in ("photoPlaceholder", "duration", "durationLabel"):
+            common.pop(key, None)
+        about = data.get("about") or {}
+        for key in ("photoKicker", "hostTitle", "hostBody", "hostKicker"):
+            about.pop(key, None)
+        teams = data.get("teams") or {}
+        for key in ("photoKicker", "photoCaption", "photoAria"):
+            teams.pop(key, None)
     dump(en_path, en_data)
     dump(es_path, es_data)
 
