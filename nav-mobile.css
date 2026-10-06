@@ -74,12 +74,15 @@ body.mm-nav-open .mm-nav-backdrop {
   }
 
   /* Keep content clear of the real fixed header once --mm-nav-offset is set by JS */
-  body:has(> nav.site-nav.mm-nav) {
-    padding-top: calc(var(--mm-nav-offset, 80px) + 12px);
-  }
+  /* Offset is handled per-page via hero / page-hero padding. */
 
   .site-nav.mm-nav .site-nav-spacer {
     display: none;
+  }
+
+  .site-nav.mm-nav .site-nav-end {
+    justify-self: end;
+    z-index: 210;
   }
 
   .site-nav.mm-nav .site-nav-brand,

@@ -6,7 +6,67 @@ services:
     routes:
       - type: redirect
         source: /wine.html
-        destination: /social.html
+        destination: /en/experiences.html
+        status: 301
+      - type: redirect
+        source: /social.html
+        destination: /en/experiences.html
+        status: 301
+      - type: redirect
+        source: /events.html
+        destination: /en/book.html
+        status: 301
+      - type: redirect
+        source: /your-host.html
+        destination: /en/about.html
+        status: 301
+      - type: redirect
+        source: /teams.html
+        destination: /en/teams.html
+        status: 301
+      - type: redirect
+        source: /index.html
+        destination: /en/
+        status: 301
+      - type: redirect
+        source: /the-first-move.html
+        destination: /en/the-first-move.html
+        status: 301
+      - type: redirect
+        source: /think-ahead.html
+        destination: /en/think-ahead.html
+        status: 301
+      - type: redirect
+        source: /game-plan.html
+        destination: /en/game-plan.html
+        status: 301
+      - type: redirect
+        source: /experiences.html
+        destination: /en/experiences.html
+        status: 301
+      - type: redirect
+        source: /book.html
+        destination: /en/book.html
+        status: 301
+      - type: redirect
+        source: /about.html
+        destination: /en/about.html
+        status: 301
+      - type: redirect
+        source: /learn.html
+        destination: /en/learn.html
+        status: 301
+      - type: redirect
+        source: /chess-in-madrid.html
+        destination: /en/chess-in-madrid.html
+        status: 301
+      - type: redirect
+        source: /rules.html
+        destination: /en/rules.html
+        status: 301
+      - type: redirect
+        source: /pieces.html
+        destination: /en/pieces.html
         status: 301
     # No catch-all rewrite: each *.html is a real file; rewriting /* → /index.html
     # would make /wine.html, /events.html, etc. serve the homepage in production.

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-page="thinkAhead">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var locale = /\/es(?:\/|$)/.test(location.pathname) ? "es" : "en";
+      document.documentElement.lang = locale;
+      if (locale === "es") document.documentElement.classList.add("mm-i18n-pending");
+    })();
+  </script>
+  <title>Think Ahead — Chess Evening in Madrid | MadridMinds</title>
+  <meta name="description" content="Think Ahead is a standalone chess evening in Madrid for people who know how the pieces move." />
+  <link rel="canonical" href="https://madridminds.com/en/think-ahead.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Think Ahead | MadridMinds" />
+  <meta property="og:description" content="Start seeing what good players see. A standalone chess evening in English, in Madrid." />
+  <meta property="og:image" content="https://madridminds.com/chess.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Think Ahead | MadridMinds" />
+  <meta name="twitter:description" content="Start seeing what good players see. A standalone chess evening in English, in Madrid." />
+  <meta name="twitter:image" content="https://madridminds.com/chess.png" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/site.css" />
+  <link rel="stylesheet" href="/nav-mobile.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-i18n="nav.skip">Skip to main content</a>
+  <nav class="site-nav mm-nav" aria-label="Primary">
+    <a href="/index.html" class="site-nav-brand" data-i18n-aria="nav.brand" aria-label="Madrid Minds"><img src="/TopHeaderReadable.png" alt="Madrid Minds logo" class="site-nav-logo" data-i18n-alt="nav.logoAlt" /></a>
+    <div class="site-nav-links" id="mm-primary-nav" data-nav-group="primary">
+      <a href="/experiences.html" class="site-nav-link" aria-current="page" data-i18n="nav.experiences">Experiences</a>
+      <div class="site-nav-dropdown">
+        <button type="button" class="site-nav-link site-nav-dropdown-toggle" data-i18n-aria="nav.learnOpen" aria-label="Open Learn menu" aria-expanded="false"><span data-i18n="nav.learn">Learn</span> <span class="site-nav-caret">▾</span></button>
+        <div class="site-nav-dropdown-menu" role="menu" aria-label="Learn pages">
+          <a href="/learn.html" class="site-nav-dropdown-item" role="menuitem" data-i18n="nav.learnStart">Start here</a>
+          <a href="/rules.html" class="site-nav-dropdown-item" role="menuitem" data-i18n="nav.howToPlay">How to play</a>
+          <a href="/pieces.html" class="site-nav-dropdown-item" role="menuitem" data-i18n="nav.pieces">Pieces</a>
+        </div>
+      </div>
+      <a href="/teams.html" class="site-nav-link" data-i18n="nav.forTeams">For Teams</a>
+      <a href="/about.html" class="site-nav-link" data-i18n="nav.about">About</a>
+      <a href="/book.html" class="site-nav-link site-nav-cta" data-i18n="nav.book">Book The First Move</a>
+    </div>
+    <div class="site-nav-end">
+      <nav class="lang-switch" data-i18n-aria="nav.language" aria-label="Language">
+        <a href="/en/" lang="en" hreflang="en" data-locale-link="en">EN</a>
+        <a href="/es/" lang="es" hreflang="es" data-locale-link="es">ES</a>
+      </nav>
+      <button type="button" class="mm-nav-toggle" data-i18n-aria="nav.menu" aria-label="Open menu" aria-controls="mm-primary-nav" aria-expanded="false" data-i18n="nav.menu">Menu</button>
+    </div>
+    <div class="mm-nav-backdrop" aria-hidden="true"></div>
+  </nav>
+  <main id="main-content">
+    <header class="page-hero">
+      <p class="kicker" data-i18n="thinkAhead.kicker">02 · Think</p>
+      <h1 data-i18n="experiences.thinkAheadName">Think Ahead</h1>
+      <p class="hero-sub" data-i18n="thinkAhead.sub">Start seeing what good players see.</p>
+      <p class="lede lede--center" data-i18n="thinkAhead.lede">For people who know how the pieces move and want to understand what is actually happening on the board. A standalone evening — not an academic tactics class.</p>
+      <div class="hero-actions" style="margin-top:1.5rem">
+        <a class="btn btn-primary" href="#notify" data-i18n="common.getNotified">Get notified of the next dates</a>
+        <a class="btn btn-ghost" href="/the-first-move.html" data-i18n="thinkAhead.startFirst">Start with The First Move</a>
+      </div>
+    </header>
+    <section class="section" style="padding-top:0">
+      <div class="inner">
+        <div class="photo-placeholder product-photo" role="img" data-i18n-aria="common.photoPlaceholder" aria-label="Photography placeholder">
+          <span class="ph-kicker" data-i18n="common.photoPlaceholder">Photography placeholder</span>
+          <p data-i18n="thinkAhead.photo">Two people leaning over a board, spotting a threat.</p>
+        </div>
+        <article class="event-card event-card--soon" id="dates">
+          <p class="event-card-label" data-i18n="experiences.thinkAheadName">Think Ahead</p>
+          <h2 data-i18n="book.nextDatesSoon">Next dates coming soon</h2>
+          <p data-i18n="book.lessOftenWait">This evening runs less often than The First Move. Leave your email and we’ll tell you when the next date is set — no invented schedule.</p>
+          <div class="event-card-actions">
+            <a class="btn btn-primary" href="#notify" data-i18n="common.getNotified">Get notified of the next dates</a>
+          </div>
+        </article>
+        <div class="card-grid card-grid--2">
+          <article>
+            <h2 class="section-heading" data-i18n="common.whoFor">Who this is for</h2>
+            <ul class="who-list">
+              <li data-i18n="thinkAhead.who1">You already know how the pieces move</li>
+              <li data-i18n="thinkAhead.who2">You’ve played a game or two and want more than the rules</li>
+              <li data-i18n="thinkAhead.who3">You finished The First Move and want the next evening</li>
+            </ul>
+            <p class="body-text" style="margin-top:1.25rem;color:var(--muted);font-size:.95rem">
+              <span data-i18n="thinkAhead.neverHint">If you’ve never played, start with</span>
+              <a href="/the-first-move.html" data-i18n="experiences.firstMoveName">The First Move</a>.
+              <span data-i18n="thinkAhead.neverHint2">That’s the unintimidating way in.</span>
+            </p>
+          </article>
+          <article>
+            <h2 class="section-heading" data-i18n="common.whatHappens">What happens</h2>
+            <ul class="who-list">
+              <li data-i18n="thinkAhead.hap1">Simple tactics you can actually use</li>
+              <li data-i18n="thinkAhead.hap2">Threats, captures and piece values</li>
+              <li data-i18n="thinkAhead.hap3">Pattern recognition through play, not drills</li>
+              <li data-i18n="thinkAhead.hap4">Development and making stronger decisions</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section section--tight">
+      <div class="inner inner--narrow">
+        <h2 class="section-heading" data-i18n="common.leaveKnowing">What you leave knowing</h2>
+        <p class="body-text" data-i18n="thinkAhead.leave">How to notice when something is hanging. How to look one idea further than the obvious move. Enough pattern language to feel the board start to speak — without drowning in theory.</p>
+      </div>
+    </section>
+    <section class="section section--tight">
+      <div class="inner">
+        <h2 class="section-heading" data-i18n="common.practical">Practical information</h2>
+        <dl class="practical-grid" style="margin-top:1.5rem">
+          <div class="practical-item"><dt data-i18n="common.durationLabel">Duration</dt><dd data-mm-duration>About 2 hours</dd></div>
+          <div class="practical-item"><dt data-i18n="common.languageLabel">Language</dt><dd><span data-i18n="common.english">English</span><span class="english-note" data-mm-english>Comfortable following English</span></dd></div>
+          <div class="practical-item"><dt data-i18n="common.whereLabel">Where</dt><dd data-i18n="common.madrid">Madrid</dd></div>
+          <div class="practical-item"><dt data-i18n="common.groupLabel">Group</dt><dd data-i18n="common.smallGroups">Small groups</dd></div>
+          <div class="practical-item"><dt data-i18n="common.priceLabel">Price</dt><dd><span data-mm-price="experience">€75</span> <span data-i18n="common.forTwo">for two</span></dd></div>
+          <div class="practical-item"><dt data-i18n="common.guestLabel">Guest policy</dt><dd data-i18n="thinkAhead.guest">Your guest is included.</dd></div>
+        </dl>
+        <p style="margin-top:2rem"><a class="btn btn-primary" href="#notify" data-i18n="common.getNotified">Get notified of the next dates</a></p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="inner inner--narrow center">
+        <p class="kicker" data-i18n="thinkAhead.nextKicker">Recommended next</p>
+        <h2 class="section-heading" data-i18n="thinkAhead.nextTitle">Continue with Game Plan</h2>
+        <p class="lede lede--center" data-i18n="thinkAhead.nextLede">The third evening is about starting a game with purpose — opening principles, not memorised sequences.</p>
+        <p style="margin-top:1.5rem"><a class="btn btn-ghost" href="/game-plan.html" data-i18n="experiences.gamePlanName">Game Plan</a></p>
+      </div>
+    </section>
+    <section id="notify" class="section notify-band" aria-labelledby="notify-heading">
+      <div class="inner inner--narrow">
+        <div class="signup-block">
+          <h2 class="section-heading" id="notify-heading" style="font-size:1.8rem" data-i18n="thinkAhead.notifyTitle">Get notified of the next dates</h2>
+          <p data-i18n="thinkAhead.notifyBody">Think Ahead is not on a published schedule yet. Leave your email and we’ll tell you when the next evening is set.</p>
+          <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+          <iframe src="https://subscribe-forms.beehiiv.com/99a27d92-3bee-4026-9c32-33556a386d08" class="beehiiv-embed" data-test-id="beehiiv-embed" data-i18n-title="thinkAhead.notifyIframe" title="Get notified of the next Think Ahead dates" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-cta" data-sticky-cta>
+    <a class="btn btn-primary" href="#notify" data-i18n="common.getNotified">Get notified of the next dates</a>
+  </div>
+
+  <footer class="site-footer">
+    <img src="/TopHeaderReadable.png" alt="Madrid Minds logo" class="footer-logo" data-i18n-alt="nav.logoAlt" />
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/experiences.html" data-i18n="footer.experiences">Experiences</a>
+      <a href="/learn.html" data-i18n="footer.learn">Learn</a>
+      <a href="/teams.html" data-i18n="footer.forTeams">For Teams</a>
+      <a href="/about.html" data-i18n="footer.about">About</a>
+      <a href="/book.html" data-i18n="footer.book">Book</a>
+      <a href="/chess-in-madrid.html" data-i18n="footer.chessInMadrid">Chess in Madrid</a>
+    </nav>
+    <div class="footer-links">
+      <a href="https://instagram.com/madridminds" target="_blank" rel="noopener noreferrer">@madridminds</a>
+      <a href="mailto:ruy@madridminds.com">ruy@madridminds.com</a>
+    </div>
+  </footer>
+  <script src="/js/config.js"></script>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/site.js"></script>
+  <script src="/nav-mobile.js" defer></script>
+</body>
+</html>

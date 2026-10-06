@@ -1,0 +1,95 @@
+[
+  {
+    "id": "home",
+    "file": "index.html",
+    "body": "home.html",
+    "current": "",
+    "title": "Chess for Beginners in Madrid (English) | MadridMinds",
+    "description": "Beginner-friendly chess experiences in English, in Madrid. The First Move is a premium evening for complete beginners. Chess is easier than you think.",
+    "ogTitle": "Chess is easier than you think. | MadridMinds",
+    "ogDescription": "Premium, beginner-friendly chess evenings in English, in Madrid. No experience needed."
+  },
+  {
+    "id": "firstMove",
+    "file": "the-first-move.html",
+    "body": "first-move.html",
+    "current": "experiences",
+    "title": "The First Move — Chess for Complete Beginners in Madrid | MadridMinds",
+    "description": "Never played chess? Perfect. The First Move is a two-hour beginner chess evening in English, in Madrid.",
+    "ogTitle": "The First Move | MadridMinds",
+    "ogDescription": "A premium chess evening for complete beginners in Madrid. Never played? Perfect.",
+    "sticky": { "href": "/book.html", "i18n": "common.bookFirstMove", "text": "Book The First Move" }
+  },
+  {
+    "id": "thinkAhead",
+    "file": "think-ahead.html",
+    "body": "think-ahead.html",
+    "current": "experiences",
+    "title": "Think Ahead — Chess Evening in Madrid | MadridMinds",
+    "description": "Think Ahead is a standalone chess evening in Madrid for people who know how the pieces move.",
+    "ogTitle": "Think Ahead | MadridMinds",
+    "ogDescription": "Start seeing what good players see. A standalone chess evening in English, in Madrid.",
+    "sticky": { "href": "#notify", "i18n": "common.getNotified", "text": "Get notified of the next dates" }
+  },
+  {
+    "id": "gamePlan",
+    "file": "game-plan.html",
+    "body": "game-plan.html",
+    "current": "experiences",
+    "title": "Game Plan — Chess Evening in Madrid | MadridMinds",
+    "description": "Game Plan is a standalone chess evening in Madrid for beginners who want to start a game confidently.",
+    "ogTitle": "Game Plan | MadridMinds",
+    "ogDescription": "Start playing with a plan. A standalone chess evening in English, in Madrid.",
+    "sticky": { "href": "#notify", "i18n": "common.getNotified", "text": "Get notified of the next dates" }
+  },
+  {
+    "id": "experiencesPage",
+    "file": "experiences.html",
+    "body": "experiences.html",
+    "current": "experiences",
+    "title": "Chess Experiences in Madrid | MadridMinds",
+    "description": "Three standalone chess evenings in English, in Madrid: The First Move, Think Ahead and Game Plan.",
+    "ogTitle": "Three standalone evenings | MadridMinds",
+    "ogDescription": "Beginner-friendly chess experiences in English, in Madrid. Come to one. Or experience all three."
+  },
+  {
+    "id": "book",
+    "file": "book.html",
+    "body": "book.html",
+    "current": "book",
+    "title": "Book a Chess Evening in Madrid | MadridMinds",
+    "description": "Book The First Move — a beginner chess evening in English, in Madrid. Your guest is included.",
+    "ogTitle": "Book The First Move | MadridMinds",
+    "ogDescription": "Upcoming chess evenings in Madrid. Your guest is included."
+  },
+  {
+    "id": "about",
+    "file": "about.html",
+    "body": "about.html",
+    "current": "about",
+    "title": "About MadridMinds — Chess Experiences for Curious Adults in Madrid",
+    "description": "Premium, beginner-friendly chess evenings in English, in Madrid.",
+    "ogTitle": "About MadridMinds",
+    "ogDescription": "Not a game for geniuses. A game for curious people."
+  },
+  {
+    "id": "learn",
+    "file": "learn.html",
+    "body": "learn.html",
+    "current": "learn",
+    "title": "Learn Chess — A Simple Guide for Beginners | MadridMinds",
+    "description": "A calm introduction to how chess works. Built for curious adults in Madrid.",
+    "ogTitle": "Learn Chess | MadridMinds",
+    "ogDescription": "How the board works, how the pieces move, check, castling and the basic rules — then come play."
+  },
+  {
+    "id": "chessInMadrid",
+    "file": "chess-in-madrid.html",
+    "body": "chess-in-madrid.html",
+    "current": "",
+    "title": "Where to Play Chess in Madrid (in English) | MadridMinds",
+    "description": "Beginner-friendly chess evenings in English, in Madrid. The First Move is designed for complete beginners.",
+    "ogTitle": "Where to Play Chess in Madrid (in English) | MadridMinds",
+    "ogDescription": "Beginner-friendly chess evenings in English, in Madrid. Chess is easier than you think."
+  }
+]
