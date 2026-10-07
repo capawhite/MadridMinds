@@ -274,6 +274,23 @@
     }
   }
 
+  function homeFinalCta() {
+    var root = document.querySelector("[data-mm-home-final]");
+    if (!root) return;
+    var hasDates = sessions.length > 0;
+    var withDates = root.querySelector('[data-final-mode="has-dates"]');
+    var noDates = root.querySelector('[data-final-mode="no-dates"]');
+    if (withDates) withDates.hidden = !hasDates;
+    if (noDates) noDates.hidden = hasDates;
+  }
+
+  function homeHeroCta() {
+    var cta = document.querySelector("[data-mm-home-hero-cta]");
+    if (!cta) return;
+    cta.textContent = t("home.seeHowItWorks", "See how it works");
+    cta.setAttribute("href", "#never-played");
+  }
+
   var didSticky = false;
   function init() {
     fillPrices();
@@ -281,6 +298,8 @@
     fillEnglish();
     renderBooking();
     renderProof();
+    homeFinalCta();
+    homeHeroCta();
     if (!didSticky) {
       stickyCta();
       didSticky = true;

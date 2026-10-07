@@ -68,9 +68,9 @@
     "body": "about.html",
     "current": "about",
     "title": "About MadridMinds — Chess Experiences for Curious Adults in Madrid",
-    "description": "Premium, beginner-friendly chess evenings in English, in Madrid.",
+    "description": "MadridMinds brings together chess, conversation and a relaxed setting for curious adults in Madrid. Experiences hosted in English.",
     "ogTitle": "About MadridMinds",
-    "ogDescription": "Not a game for geniuses. A game for curious people."
+    "ogDescription": "More than learning chess. Chess evenings for curious adults in Madrid."
   },
   {
     "id": "learn",
@@ -88,8 +88,8 @@
     "body": "chess-in-madrid.html",
     "current": "",
     "title": "Where to Play Chess in Madrid (in English) | MadridMinds",
-    "description": "Beginner-friendly chess evenings in English, in Madrid. The First Move is designed for complete beginners.",
+    "description": "Looking to learn and play chess in Madrid in English? MadridMinds hosts beginner-friendly evenings for adults — The First Move is designed for complete beginners. No experience needed.",
     "ogTitle": "Where to Play Chess in Madrid (in English) | MadridMinds",
-    "ogDescription": "Beginner-friendly chess evenings in English, in Madrid. Chess is easier than you think."
+    "ogDescription": "Beginner-friendly chess evenings in English, in Madrid. Small groups. Complete beginners welcome."
   }
 ]
