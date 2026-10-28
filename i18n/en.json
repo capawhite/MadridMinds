@@ -278,33 +278,36 @@
     "bundle": "Bundle",
     "bundleTitleBefore": "All three —",
     "bundleLede1": "One evening is",
-    "bundleLede2": "All three save €20 per person. Most people start with The First Move.",
-    "askBundle": "Ask about the bundle",
-    "bundleSubject": "MadridMinds bundle of all three"
+    "bundleLede2": "Most people start with The First Move.",
+    "askBundle": "Ask about all three",
+    "bundleSubject": "MadridMinds bundle of all three",
+    "bundleQuiet": "Most people start with The First Move. Each evening stands alone — ask if you’d like all three."
   },
   "book": {
     "meta": {
       "title": "Book your First Move | MadridMinds",
-      "description": "Book your First Move — a beginner chess evening in English, in Madrid. €55 per person.",
+      "description": "Book your First Move — a beginner chess evening in English, in Madrid. €75 per person.",
       "ogTitle": "Book your First Move | MadridMinds",
-      "ogDescription": "A beginner chess evening in Madrid. €55 per person."
+      "ogDescription": "A beginner chess evening in Madrid. €75 per person."
     },
     "kicker": "The First Move",
     "h1": "Book your First Move",
-    "lede": "Your first chess evening in Madrid. €55 per person — wine and light snacks included. Coming alone is normal. No subscriptions. No weekly commitment.",
+    "lede": "Your first chess evening in Madrid. €75 per person — wine and light snacks included. Coming alone is normal. No subscriptions. No weekly commitment.",
     "datesSoon": "New dates coming soon",
     "nextDatesSoon": "New dates coming soon",
     "firstMoveWait": "A beginner evening for people who have never played. Leave your email and we’ll send the next date as soon as it’s set.",
     "lessOftenWait": "New dates coming soon. Leave your email and we’ll tell you when the next evening is set.",
     "bookSubject": "Book your First Move",
     "priceLine1": "One evening —",
-    "priceLine2": "All three —",
+    "priceLine2": "",
     "notifyTitle": "Get notified of the next First Move",
     "notifyBody": "Dates aren’t published yet. Join the list and we’ll tell you when The First Move is next in Madrid.",
     "notifyIframe": "Get MadridMinds dates",
     "teamsLead": "Planning something for your team?",
     "teamsCta": "Request a proposal",
-    "saveLine": "Save €20 per person on all three."
+    "saveLine": "",
+    "inviteNote": "Personal invite rate.",
+    "askAllThree": "Ask about all three"
   },
   "about": {
     "meta": {

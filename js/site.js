@@ -15,23 +15,62 @@
     return "€" + n;
   }
 
+  function inviteUnlocked() {
+    var key = pricing.inviteStorageKey || "mm-invite";
+    try {
+      return sessionStorage.getItem(key) === "1";
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function unlockInvite() {
+    var key = pricing.inviteStorageKey || "mm-invite";
+    try {
+      sessionStorage.setItem(key, "1");
+    } catch (e) {}
+  }
+
+  /** Soft personal-invite unlock via ?invite= or ?code= matching pricing.inviteCode */
+  function applyInviteFromQuery() {
+    var code = pricing.inviteCode;
+    if (!code) return;
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var given = params.get("invite") || params.get("code");
+      if (given && given.toLowerCase() === String(code).toLowerCase()) {
+        unlockInvite();
+      }
+    } catch (e) {}
+  }
+
   function experiencePrice() {
+    if (inviteUnlocked() && typeof pricing.invitePerPerson === "number") {
+      return pricing.invitePerPerson;
+    }
     return typeof pricing.experiencePerPerson === "number"
       ? pricing.experiencePerPerson
       : pricing.experienceForTwo;
   }
 
   function bundlePrice() {
-    return typeof pricing.bundlePerPerson === "number"
-      ? pricing.bundlePerPerson
-      : pricing.bundleForTwo;
+    if (typeof pricing.bundlePerPerson !== "number") return null;
+    return pricing.bundlePerPerson;
   }
 
   function fillPrices() {
+    applyInviteFromQuery();
+    var invited = inviteUnlocked();
     document.querySelectorAll("[data-mm-price]").forEach(function (el) {
       var key = el.getAttribute("data-mm-price");
       if (key === "experience") el.textContent = formatEuro(experiencePrice());
-      if (key === "bundle") el.textContent = formatEuro(bundlePrice());
+      if (key === "bundle") {
+        var b = bundlePrice();
+        el.textContent = b == null ? "" : formatEuro(b);
+      }
+    });
+    document.querySelectorAll("[data-mm-invite-note]").forEach(function (el) {
+      el.hidden = !invited;
     });
   }
 
@@ -95,7 +134,7 @@
 
   function emptyCard(exp, featured) {
     var isFirst = exp.id === "the-first-move";
-    var heading = isFirst
+    var status = isFirst
       ? t("book.datesSoon", "New dates coming soon")
       : t("book.nextDatesSoon", "New dates coming soon");
     var copy = isFirst
@@ -125,17 +164,23 @@
         '">' +
         t("common.aboutThisEvening", "About this evening") +
         "</a>";
-    var name = t("experiences." + (isFirst ? "firstMove" : exp.id === "think-ahead" ? "thinkAhead" : "gamePlan") + "Name", exp.name || "Experience");
+    var nameKey =
+      isFirst ? "firstMove" : exp.id === "think-ahead" ? "thinkAhead" : "gamePlan";
+    var name = t("experiences." + nameKey + "Name", exp.name || "Experience");
+    var eyebrow = exp.number && exp.label ? exp.number + " · " + exp.label : status;
     return (
       '<article class="event-card' +
       (featured ? " event-card--featured" : " event-card--soon") +
       '">' +
       '<p class="event-card-label">' +
-      name +
+      eyebrow +
       "</p>" +
       "<h2>" +
-      heading +
+      name +
       "</h2>" +
+      '<p class="event-card-status">' +
+      status +
+      "</p>" +
       "<p>" +
       copy +
       "</p>" +

@@ -20,16 +20,23 @@ window.MM_CONFIG = {
 
   pricing: {
     currency: "EUR",
-    /** Primary sticker price — one seat */
-    experiencePerPerson: 55,
-    /** All three evenings, per person */
-    bundlePerPerson: 145,
+    /** Public sticker — one seat */
+    experiencePerPerson: 75,
+    /**
+     * Personal invite rate. Share /en/book.html?invite=CODE (or ?code=).
+     * Soft unlock only — not real security. Change inviteCode anytime.
+     */
+    invitePerPerson: 55,
+    inviteCode: "welcome",
+    inviteStorageKey: "mm-invite",
+    /** Not sold publicly — ask via mailto if someone wants all three */
+    bundlePerPerson: null,
     guestIncluded: false,
     guestAddOn: null,
     note: null,
-    // Legacy aliases (same numbers; do not use for “for two” framing)
-    experienceForTwo: 55,
-    bundleForTwo: 145
+    // Legacy aliases (public sticker)
+    experienceForTwo: 75,
+    bundleForTwo: null
   },
 
   /**

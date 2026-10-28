@@ -1289,8 +1289,18 @@ body:has(.sticky-cta.is-visible) {
 .event-card h2 {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
+  font-size: clamp(1.75rem, 4vw, 2.15rem);
+  margin-bottom: 0.35rem;
+  line-height: 1.15;
+}
+
+.event-card-status {
+  margin: 0 0 0.75rem;
+  font-family: var(--sans, "Jost", sans-serif);
+  font-size: 0.84rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 .event-card p {
@@ -1430,6 +1440,13 @@ html.mm-members-locked #mm-members-content {
 
 html.mm-members-locked .site-footer {
   display: none;
+}
+
+[data-mm-invite-note]:not([hidden]) {
+  display: inline;
+  margin-left: 0.35em;
+  font-style: italic;
+  color: var(--muted);
 }
 
 .mm-members-gate {

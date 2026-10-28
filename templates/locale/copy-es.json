@@ -167,20 +167,21 @@
     "bundle": "Pack",
     "bundleTitleBefore": "Las tres —",
     "bundleLede1": "Una velada es",
-    "bundleLede2": "Las tres ahorran €20 por persona. La mayoría empieza por The First Move. Trae un invitado sin coste extra.",
-    "askBundle": "Preguntar por el pack",
-    "bundleSubject": "Pack MadridMinds de las tres veladas"
+    "bundleLede2": "La mayoría empieza por The First Move.",
+    "askBundle": "Preguntar por las tres",
+    "bundleSubject": "Pack MadridMinds de las tres veladas",
+    "bundleQuiet": "La mayoría empieza por The First Move. Cada velada es independiente — pregunta si quieres las tres."
   },
   "book": {
     "meta": {
       "title": "Reservar una velada de ajedrez en Madrid | MadridMinds",
-      "description": "Reserva The First Move — una velada de ajedrez para principiantes, en inglés, en Madrid. €55 por persona; trae un invitado sin coste extra.",
+      "description": "Reserva The First Move — una velada de ajedrez para principiantes, en inglés, en Madrid. €75 por persona.",
       "ogTitle": "Reservar tu First Move | MadridMinds",
-      "ogDescription": "Una velada de ajedrez para principiantes en Madrid. €55 por persona; invitado gratis."
+      "ogDescription": "Una velada de ajedrez para principiantes en Madrid. €75 por persona."
     },
     "kicker": "The First Move",
     "h1": "Reservar tu First Move",
-    "lede": "Tu primera velada de ajedrez en Madrid. €55 por persona — vino y algo ligero para picar incluidos. Venir solo es normal. Sin suscripciones. Sin compromiso semanal.",
+    "lede": "Tu primera velada de ajedrez en Madrid. €75 por persona — vino y algo ligero para picar incluidos. Venir solo es normal. Sin suscripciones. Sin compromiso semanal.",
     "datesSoon": "Próximas fechas muy pronto",
     "nextDatesSoon": "Próximas fechas muy pronto",
     "firstMoveWait": "Una velada para principiantes totales en Madrid. Déjanos tu interés y te enviaremos la siguiente fecha en cuanto esté.",
@@ -193,7 +194,9 @@
     "notifyBody": "Aún no hay fechas publicadas. Apúntate a la lista y te diremos cuándo The First Move vuelve a Madrid.",
     "notifyIframe": "Fechas de MadridMinds",
     "teamsLead": "¿Algo para tu equipo?",
-    "teamsCta": "Pedir una propuesta"
+    "teamsCta": "Pedir una propuesta",
+    "inviteNote": "Tarifa de invitación personal.",
+    "askAllThree": "Preguntar por las tres"
   },
   "about": {
     "meta": {
