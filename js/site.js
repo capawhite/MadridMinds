@@ -15,11 +15,23 @@
     return "€" + n;
   }
 
+  function experiencePrice() {
+    return typeof pricing.experiencePerPerson === "number"
+      ? pricing.experiencePerPerson
+      : pricing.experienceForTwo;
+  }
+
+  function bundlePrice() {
+    return typeof pricing.bundlePerPerson === "number"
+      ? pricing.bundlePerPerson
+      : pricing.bundleForTwo;
+  }
+
   function fillPrices() {
     document.querySelectorAll("[data-mm-price]").forEach(function (el) {
       var key = el.getAttribute("data-mm-price");
-      if (key === "experience") el.textContent = formatEuro(pricing.experienceForTwo);
-      if (key === "bundle") el.textContent = formatEuro(pricing.bundleForTwo);
+      if (key === "experience") el.textContent = formatEuro(experiencePrice());
+      if (key === "bundle") el.textContent = formatEuro(bundlePrice());
     });
   }
 
@@ -77,7 +89,7 @@
       "mailto:" +
       email +
       "?subject=" +
-      encodeURIComponent(subject || "Book The First Move")
+      encodeURIComponent(subject || "Book your First Move")
     );
   }
 
@@ -98,9 +110,9 @@
     var aboutHref = pageHref(exp.href || "/experiences.html");
     var actions = isFirst
       ? '<a class="btn btn-primary" href="' +
-        mailLink(t("book.bookSubject", "Book The First Move")) +
+        mailLink(t("book.bookSubject", "Book your First Move")) +
         '">' +
-        t("common.bookFirstMove", "Book The First Move") +
+        t("common.bookFirstMove", "Book your First Move") +
         "</a>" +
         '<a class="btn btn-ghost" href="#waitlist">' +
         t("common.getNotified", "Get notified of the next dates") +
@@ -131,11 +143,11 @@
       "<li>" +
       t("common.madrid", "Madrid") +
       "</li>" +
-      "<li>" +
-      t("common.guestIncluded", "Your guest is on us") +
-      "</li>" +
       '<li><span data-mm-price="experience"></span> ' +
-      t("home.forYouGuest", "for you + one guest") +
+      t("common.perPerson", "per person") +
+      "</li>" +
+      "<li>" +
+      t("common.comeAlone", "Coming alone is normal — we’ll seat you with the group.") +
       "</li>" +
       "</ul>" +
       '<div class="event-card-actions">' +
@@ -170,11 +182,11 @@
       "<li>" +
       (session.seatsLabel || "Small group") +
       "</li>" +
-      '<li>' +
-      t("common.guestIncluded", "Your guest is on us") +
-      "</li>" +
       '<li><span data-mm-price="experience"></span> ' +
-      t("home.forYouGuest", "for you + one guest") +
+      t("common.perPerson", "per person") +
+      "</li>" +
+      "<li>" +
+      t("common.comeAlone", "Coming alone is normal — we’ll seat you with the group.") +
       "</li>" +
       "</ul>" +
       '<div class="event-card-actions">' +
@@ -183,6 +195,7 @@
       '">' +
       t("common.book", "Book") +
       "</a>" +
+
       "</div>" +
       "</article>"
     );
@@ -284,11 +297,31 @@
     if (noDates) noDates.hidden = hasDates;
   }
 
-  function homeHeroCta() {
-    var cta = document.querySelector("[data-mm-home-hero-cta]");
-    if (!cta) return;
-    cta.textContent = t("home.seeHowItWorks", "See how it works");
-    cta.setAttribute("href", "#never-played");
+  function homeActionCtas() {
+    var hasDates = sessions.length > 0;
+    var bookLabel = t("common.bookFirstMove", "Book your First Move");
+    var notifyLabel = t("home.getNotifiedShort", "Get notified");
+    var bookHref = pageHref("/book.html");
+
+    document.querySelectorAll("[data-mm-home-hero-cta]").forEach(function (cta) {
+      if (hasDates) {
+        cta.textContent = bookLabel;
+        cta.setAttribute("href", bookHref);
+      } else {
+        cta.textContent = notifyLabel;
+        cta.setAttribute("href", "#notify");
+      }
+    });
+
+    document.querySelectorAll("[data-mm-home-book-cta]").forEach(function (cta) {
+      if (hasDates) {
+        cta.textContent = bookLabel;
+        cta.setAttribute("href", bookHref);
+      } else {
+        cta.textContent = notifyLabel;
+        cta.setAttribute("href", "#notify");
+      }
+    });
   }
 
   var didSticky = false;
@@ -299,7 +332,7 @@
     renderBooking();
     renderProof();
     homeFinalCta();
-    homeHeroCta();
+    homeActionCtas();
     if (!didSticky) {
       stickyCta();
       didSticky = true;

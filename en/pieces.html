@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-i18n-page="learnGuide">
 <head>
+<script>document.documentElement.classList.add("mm-members-locked");</script>
 <meta charset="UTF-8">
   <script>
     (function () {
@@ -19,6 +20,7 @@
   </style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chess Pieces Guide for Beginners | MadridMinds</title>
+<meta name="robots" content="noindex, nofollow" />
 <meta name="description" content="How each chess piece moves, plus castling and promotion. A visual guide for curious adults — then try The First Move in Madrid." />
 <link rel="canonical" href="https://madridminds.com/pieces.html" />
 <meta property="og:type" content="website" />
@@ -109,30 +111,21 @@
   <a href="index.html" class="site-nav-brand" aria-label="Madrid Minds"><img src="/TopHeaderReadable.png" alt="Madrid Minds logo" class="site-nav-logo" /></a>
   <div class="site-nav-links" id="mm-primary-nav" data-nav-group="primary">
     <a href="experiences.html" class="site-nav-link">Experiences</a>
-    <div class="site-nav-dropdown">
-      <button type="button" class="site-nav-link site-nav-dropdown-toggle" aria-label="Open Learn menu" aria-expanded="false">
-        Learn <span class="site-nav-caret">▾</span>
-      </button>
-      <div class="site-nav-dropdown-menu" role="menu" aria-label="Learn pages">
-        <a href="learn.html" class="site-nav-dropdown-item" role="menuitem">Start here</a>
-        <a href="rules.html" class="site-nav-dropdown-item" role="menuitem">How to Play</a>
-        <a href="pieces.html" class="site-nav-dropdown-item" role="menuitem" aria-current="page">Pieces</a>
-      </div>
-    </div>
     <a href="teams.html" class="site-nav-link">For Teams</a>
     <a href="about.html" class="site-nav-link">About</a>
-    <a href="book.html" class="site-nav-link site-nav-cta">Book The First Move</a>
+    <a href="members.html" class="site-nav-link">Members</a>
+    <a href="book.html" class="site-nav-link site-nav-cta">Book your First Move</a>
   </div>
   <div class="site-nav-end">
-      <nav class="lang-switch" aria-label="Language">
-        <a href="/en/" lang="en" hreflang="en" data-locale-link="en">EN</a>
-        <a href="/es/" lang="es" hreflang="es" data-locale-link="es">ES</a>
-      </nav>
-      <button type="button" class="mm-nav-toggle" aria-label="Open menu" aria-controls="mm-primary-nav" aria-expanded="false">Menu</button>
+    <button type="button" class="mm-nav-toggle" aria-label="Open menu" aria-controls="mm-primary-nav" aria-expanded="false">Menu</button>
+  </div>
   <div class="mm-nav-backdrop" aria-hidden="true"></div>
 </nav>
 
-<div class="back-bar"><a href="rules.html">← How the game works</a></div>
+<div id="mm-members-content" hidden>
+
+
+<div class="back-bar"><a href="/learn.html">← Members hub</a></div>
 
 <div class="header"><h1>The Cast of Characters</h1><div class="header-rule"></div></div>
 <nav class="piece-nav"><button class="nav-btn active" onclick="showPiece(0)">Rook</button>
@@ -401,8 +394,8 @@ R . . . K . . R</pre></desc><defs><g id="white-rook" class="white rook" fill="#f
 </div>
 <div class="learn-cta" style="max-width:720px;margin:0 auto 2.5rem;padding:2rem 1.5rem;border:1px solid rgba(196,96,58,.35);border-radius:18px;text-align:center;background:rgba(196,96,58,.07)">
   <p style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;margin-bottom:.6rem">Reading about chess is useful. Playing it is better.</p>
-  <p style="color:var(--muted);margin-bottom:1.1rem">Try The First Move — a beginner chess evening for complete beginners in Madrid.</p>
-  <a href="the-first-move.html" style="display:inline-flex;padding:.85rem 1.45rem;border-radius:999px;background:rgba(196,96,58,.22);border:1px solid rgba(196,96,58,.7);color:var(--cream);text-decoration:none;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase">Try The First Move</a>
+  <p style="color:var(--muted);margin-bottom:1.1rem">When you’re ready for more play, see what’s coming next.</p>
+  <a href="/book.html" style="display:inline-flex;padding:.85rem 1.45rem;border-radius:999px;background:rgba(196,96,58,.22);border:1px solid rgba(196,96,58,.7);color:var(--cream);text-decoration:none;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase">See upcoming evenings</a>
 </div>
 <div class="footer">
   <div><a href="index.html" style="color:var(--terracotta);text-decoration:none;font-family:'Jost',sans-serif">Madrid Minds</a> · <a href="https://madridminds.com" style="color:var(--muted);text-decoration:none">madridminds.com</a></div>
@@ -435,8 +428,11 @@ function prevPiece(){if(current>0) showPiece(current-1);}
 // init
 document.getElementById('btn-prev').disabled=true;
 </script>
+</div>
+
 <script src="/js/config.js"></script>
   <script src="/js/i18n.js"></script>
+  <script src="/js/members-gate.js"></script>
   <script src="/nav-mobile.js" defer></script>
 </body>
 </html>

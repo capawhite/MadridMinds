@@ -18,7 +18,7 @@
     "description": "Never played chess? Perfect. The First Move is a beginner chess evening in English, in Madrid.",
     "ogTitle": "The First Move | MadridMinds",
     "ogDescription": "A premium chess evening for complete beginners in Madrid. Never played? Perfect.",
-    "sticky": { "href": "/book.html", "i18n": "common.bookFirstMove", "text": "Book The First Move" }
+    "sticky": { "href": "/book.html", "i18n": "common.bookFirstMove", "text": "Book your First Move" }
   },
   {
     "id": "thinkAhead",
@@ -58,9 +58,9 @@
     "body": "book.html",
     "current": "book",
     "title": "Book a Chess Evening in Madrid | MadridMinds",
-    "description": "Book The First Move — a beginner chess evening in English, in Madrid. Your guest is included.",
-    "ogTitle": "Book The First Move | MadridMinds",
-    "ogDescription": "Upcoming chess evenings in Madrid. Your guest is included."
+    "description": "Book your First Move — a beginner chess evening in English, in Madrid. €55 per person; bring a guest at no extra cost.",
+    "ogTitle": "Book your First Move | MadridMinds",
+    "ogDescription": "A beginner chess evening in Madrid. €55 per person; bring a guest free."
   },
   {
     "id": "about",

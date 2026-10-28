@@ -20,12 +20,26 @@ window.MM_CONFIG = {
 
   pricing: {
     currency: "EUR",
-    experienceForTwo: 75,
-    bundleForTwo: 180,
-    guestIncluded: true,
-    note: "Your guest is on us.",
-    // Solo guest price unpublished until confirmed
-    soloGuestPrice: null
+    /** Primary sticker price — one seat */
+    experiencePerPerson: 55,
+    /** All three evenings, per person */
+    bundlePerPerson: 145,
+    guestIncluded: false,
+    guestAddOn: null,
+    note: null,
+    // Legacy aliases (same numbers; do not use for “for two” framing)
+    experienceForTwo: 55,
+    bundleForTwo: 145
+  },
+
+  /**
+   * Soft-gated Members area (Learn / rules / pieces).
+   * Change password here; email the link /en/members.html + this code after booking.
+   * Not real security — courtesy gate only.
+   */
+  members: {
+    password: "madridminds",
+    storageKey: "mm-members"
   },
 
   // Consumer duration unpublished until a real length is set.
@@ -36,13 +50,12 @@ window.MM_CONFIG = {
   },
 
   /**
-   * Open product decisions. Keep unpublished until confirmed.
-   * Intended come-alone tone: "Come alone and we'll seat you with someone."
+   * Open product decisions.
    */
   openDecisions: {
     comeAlone: {
-      allowed: null,
-      publishedCopy: null
+      allowed: true,
+      publishedCopy: "Coming alone is normal — we'll seat you with the group."
     },
     bundle: {
       sameGuestRequired: null,
@@ -78,7 +91,7 @@ window.MM_CONFIG = {
    *   timeLabel: "19:00",
    *   city: "Madrid",
    *   seatsLabel: "Small group",
-   *   mailtoSubject: "Book The First Move — 12 November"
+   *   mailtoSubject: "Book your First Move — 12 November"
    * }
    */
   sessions: [],

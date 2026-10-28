@@ -34,37 +34,27 @@
     <a href="/index.html" class="site-nav-brand" data-i18n-aria="nav.brand" aria-label="Madrid Minds"><img src="/TopHeaderReadable.png" alt="Madrid Minds logo" class="site-nav-logo" data-i18n-alt="nav.logoAlt" /></a>
     <div class="site-nav-links" id="mm-primary-nav" data-nav-group="primary">
       <a href="/experiences.html" class="site-nav-link" data-i18n="nav.experiences">Experiences</a>
-      <div class="site-nav-dropdown">
-        <button type="button" class="site-nav-link site-nav-dropdown-toggle" data-i18n-aria="nav.learnOpen" aria-label="Open Learn menu" aria-expanded="false"><span data-i18n="nav.learn">Learn</span> <span class="site-nav-caret">▾</span></button>
-        <div class="site-nav-dropdown-menu" role="menu" aria-label="Learn pages">
-          <a href="/learn.html" class="site-nav-dropdown-item" role="menuitem" data-i18n="nav.learnStart">Start here</a>
-          <a href="/rules.html" class="site-nav-dropdown-item" role="menuitem" data-i18n="nav.howToPlay">How to play</a>
-          <a href="/pieces.html" class="site-nav-dropdown-item" role="menuitem" data-i18n="nav.pieces">Pieces</a>
-        </div>
-      </div>
       <a href="/teams.html" class="site-nav-link" data-i18n="nav.forTeams">For Teams</a>
       <a href="/about.html" class="site-nav-link" data-i18n="nav.about">About</a>
-      <a href="/book.html" class="site-nav-link site-nav-cta" data-i18n="nav.book">Book The First Move</a>
+      <a href="/members.html" class="site-nav-link" data-i18n="nav.members">Members</a>
+      <a href="/book.html" class="site-nav-link site-nav-cta" data-i18n="nav.book">Book your First Move</a>
     </div>
     <div class="site-nav-end">
-      <nav class="lang-switch" data-i18n-aria="nav.language" aria-label="Language">
-        <a href="/en/" lang="en" hreflang="en" data-locale-link="en">EN</a>
-        <a href="/es/" lang="es" hreflang="es" data-locale-link="es">ES</a>
-      </nav>
       <button type="button" class="mm-nav-toggle" data-i18n-aria="nav.menu" aria-label="Open menu" aria-controls="mm-primary-nav" aria-expanded="false" data-i18n="nav.menu">Menu</button>
     </div>
     <div class="mm-nav-backdrop" aria-hidden="true"></div>
   </nav>
   <main id="main-content">
     <section class="hero" aria-label="Introduction">
-      <div class="hero-bg" style="background-image:url('/atmosphere.png')" role="img" aria-hidden="true"></div>
+      <div class="hero-bg" style="background-image:url('/photos/web/hero-pieces.jpg')" role="img" aria-hidden="true"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <h1 data-i18n="home.h1">Chess is easier than you think.</h1>
         <p class="hero-sub" data-i18n="home.sub">Let us prove it.</p>
         <p class="hero-support" data-i18n="home.support">Beginner-friendly chess experiences in Madrid, in English.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#never-played" data-mm-home-hero-cta data-i18n="home.seeHowItWorks">See how it works</a>
+          <a class="btn btn-primary" href="/book.html" data-mm-home-hero-cta data-i18n="common.bookFirstMove">Book your First Move</a>
+          <a class="btn-text" href="#never-played" data-i18n="home.seeHowItWorks">See how it works</a>
         </div>
         <p class="hero-note" data-i18n="home.heroReassure">Complete beginners welcome. No experience needed.</p>
       </div>
@@ -78,6 +68,8 @@
           <h2 class="section-heading" id="never-played" data-i18n="home.never">Never played chess?</h2>
           <p class="hero-sub" data-i18n="home.perfect">Perfect.</p>
           <p class="lede lede--center" data-i18n="home.neverLede">Meet The First Move — our introductory evening for complete beginners. We’ll show you the essentials, get you playing, and by the end of the evening you’ll have played a real game.</p>
+          <p class="lede lede--center" style="margin-top:.5rem;color:var(--muted);font-size:.95rem"><span data-mm-price="experience">€55</span> <span data-i18n="common.perPerson">per person</span>.</p>
+          <p style="margin-top:1.5rem"><a class="btn btn-primary" href="/book.html" data-mm-home-book-cta data-i18n="common.bookFirstMove">Book your First Move</a></p>
         </div>
         <ul class="pillar-row pillar-row--strip">
           <li>
@@ -101,8 +93,8 @@
     <section class="section" aria-labelledby="journey">
       <div class="inner">
         <div class="center">
-          <h2 class="section-heading" id="journey" data-i18n="home.journeyTitle">Three evenings. Take one or all three.</h2>
-          <p class="lede lede--center" data-i18n="home.journeyLede">New to chess? Start with The First Move. Each evening is a complete standalone experience.</p>
+          <h2 class="section-heading" id="journey" data-i18n="home.journeyTitle">Choose an evening.</h2>
+          <p class="lede lede--center" data-i18n="home.journeyLede">Most people start with The First Move. Each evening stands alone.</p>
         </div>
         <div class="exp-grid">
           <article class="exp-card exp-card--start">
@@ -110,7 +102,11 @@
             <h3 data-i18n="experiences.firstMoveName">The First Move</h3>
             <p class="exp-audience" data-i18n="home.firstAudience">For complete beginners</p>
             <p data-i18n="home.firstMoveBody">Learn the essentials and play your first real game.</p>
-            <a class="btn-text exp-explore" href="/the-first-move.html" data-i18n="home.explore">Explore</a>
+            <p class="exp-audience" style="margin-top:.75rem"><span data-mm-price="experience">€55</span> <span data-i18n="common.perPerson">per person</span>.</p>
+            <div class="cta-row" style="justify-content:flex-start;margin-top:1rem;gap:.85rem;flex-wrap:wrap">
+              <a class="btn btn-primary" href="/book.html" data-mm-home-book-cta data-i18n="common.bookFirstMove">Book your First Move</a>
+              <a class="btn-text exp-explore" href="/the-first-move.html" data-i18n="home.explore">Explore</a>
+            </div>
           </article>
           <article class="exp-card">
             <h3 data-i18n="experiences.thinkAheadName">Think Ahead</h3>
@@ -142,7 +138,7 @@
           </div>
         </div>
         <div class="split-media">
-          <img src="/hero.png" alt="" />
+          <img src="/photos/web/hands-on-board.jpg" alt="Friends laughing around chessboards at a Madrid evening" width="1152" height="864" />
         </div>
       </div>
     </section>
@@ -153,7 +149,7 @@
       <div class="inner inner--narrow center">
         <h2 class="section-heading" id="teams-gate" data-i18n="home.teamsTitle">MadridMinds for Teams</h2>
         <p class="lede lede--center" data-i18n="home.teamsLede">Learn something new together, play some chess and enjoy a little friendly competition. Designed so everyone can take part — no chess experience required.</p>
-        <p style="margin-top:1.5rem"><a class="btn btn-primary" href="/teams.html" data-i18n="home.teamsCta">Explore team experiences</a></p>
+        <p style="margin-top:1.5rem"><a class="btn-text" href="/teams.html" data-i18n="home.teamsCta">Explore team experiences</a></p>
       </div>
     </section>
 
@@ -163,7 +159,7 @@
       <div data-final-mode="has-dates" hidden>
         <h2 id="final-cta" data-i18n="home.finalBookTitle">Ready for your first game?</h2>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="/book.html" data-i18n="common.bookFirstMove">Book The First Move</a>
+          <a class="btn btn-primary" href="/book.html" data-i18n="common.bookFirstMove">Book your First Move</a>
         </div>
         <p class="final-secondary">
           <a class="btn-text" href="#notify" data-i18n="home.finalNotifyLink">Can’t make this one? Get notified of future dates.</a>
@@ -184,10 +180,10 @@
     <img src="/TopHeaderReadable.png" alt="Madrid Minds logo" class="footer-logo" data-i18n-alt="nav.logoAlt" />
     <nav class="footer-nav" aria-label="Footer">
       <a href="/experiences.html" data-i18n="footer.experiences">Experiences</a>
-      <a href="/learn.html" data-i18n="footer.learn">Learn</a>
       <a href="/teams.html" data-i18n="footer.forTeams">For Teams</a>
       <a href="/about.html" data-i18n="footer.about">About</a>
       <a href="/book.html" data-i18n="footer.book">Book</a>
+      <a href="/members.html" data-i18n="footer.members">Members</a>
       <a href="/chess-in-madrid.html" data-i18n="footer.chessInMadrid">Chess in Madrid</a>
     </nav>
     <div class="footer-links">

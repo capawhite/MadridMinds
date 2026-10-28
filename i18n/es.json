@@ -11,7 +11,8 @@
     "pieces": "Piezas",
     "forTeams": "Para equipos",
     "about": "Acerca de",
-    "book": "Reservar The First Move",
+    "members": "Members",
+    "book": "Reservar tu First Move",
     "menu": "Menú",
     "language": "Idioma"
   },
@@ -21,6 +22,7 @@
     "forTeams": "Para equipos",
     "about": "Acerca de",
     "book": "Reservar",
+    "members": "Members",
     "chessInMadrid": "Ajedrez en Madrid"
   },
   "teams": {
@@ -75,9 +77,9 @@
     "english": "Inglés",
     "madrid": "Madrid",
     "smallGroups": "Grupos pequeños",
-    "guestIncluded": "Tu invitado corre de nuestra cuenta",
+    "guestIncluded": "Trae un invitado sin coste extra",
     "getNotified": "Avísame de las próximas fechas",
-    "bookFirstMove": "Reservar The First Move",
+    "bookFirstMove": "Reservar tu First Move",
     "aboutThisEvening": "Sobre esta velada",
     "whoFor": "Para quién es",
     "whatHappens": "Qué pasa",
@@ -91,7 +93,10 @@
     "drinksLabel": "Bebidas",
     "commitmentLabel": "Compromiso",
     "book": "Reservar",
-    "inEnglish": "En inglés"
+    "inEnglish": "En inglés",
+    "perPerson": "por persona",
+    "guestPerk": "Trae un invitado sin coste extra",
+    "comeAlone": "Venir solo es normal — te sentamos con el grupo."
   },
   "experiences": {
     "firstMoveName": "The First Move",
@@ -125,8 +130,8 @@
     "discoverBody": "Historias e ideas que hacen vivo el juego.",
     "playTitle": "Play",
     "playBody": "Aprende lo esencial jugando de verdad.",
-    "journeyTitle": "Tres veladas. Ven a una o a las tres.",
-    "journeyLede": "¿Nuevo en el ajedrez? Empieza por The First Move. Cada velada es una experiencia completa por sí sola.",
+    "journeyTitle": "Elige una velada.",
+    "journeyLede": "La mayoría empieza por The First Move. Cada velada funciona por sí sola.",
     "bestStart": "El mejor sitio para empezar",
     "firstAudience": "Para principiantes totales",
     "firstMoveBody": "Aprende lo esencial y juega tu primera partida real.",
@@ -135,7 +140,7 @@
     "planAudience": "Para principiantes listos para ir más allá",
     "gamePlanBody": "Aprende a empezar bien, construir un plan y jugar con más confianza.",
     "explore": "Explorar",
-    "forYouGuest": "para ti + un invitado",
+    "forYouGuest": "por persona",
     "atmoTitle": "Una velada distinta.",
     "atmo1": "Grupos pequeños, un entorno bonito, buena conversación y algo de verdad interesante que hacer juntos. El ajedrez está en el centro, pero la experiencia trata de aprender, pensar, jugar y disfrutar de la gente a tu alrededor.",
     "teamsTitle": "MadridMinds for Teams",
@@ -147,7 +152,8 @@
     "finalWaitBody": "Deja tu email y te avisaremos cuando se anuncie la próxima velada.",
     "getNotifiedShort": "Avísame",
     "notifyTitle": "Avísame de las próximas fechas",
-    "notifyIframe": "Avísame de las próximas fechas de MadridMinds"
+    "notifyIframe": "Avísame de las próximas fechas de MadridMinds",
+    "priceGuestLine": "Trae un invitado sin coste extra."
   },
   "firstMove": {
     "meta": {
@@ -176,7 +182,7 @@
     "leave": "Cómo se mueven las piezas. Qué pide realmente el juego. Y la sensación de haber jugado una partida de verdad — no solo de haberla visto.",
     "playedLine": "Al final de la velada, habrás jugado una partida real.",
     "where": "Madrid — el local exacto te llega con la reserva",
-    "guest": "Tu invitado corre de nuestra cuenta. Una reserva es para dos.",
+    "guest": "Trae un invitado si quieres — es gratis. Venir solo es normal — te sentamos con el grupo.",
     "drinks": "Disponibles como parte del ambiente",
     "commitment": "Velada independiente. Sin suscripción.",
     "nextKicker": "Siguiente recomendada",
@@ -209,7 +215,7 @@
     "hap3": "Reconocimiento de patrones jugando",
     "hap4": "Desarrollo y decisiones más fuertes",
     "leave": "Cómo notar cuando algo está colgando. Cómo mirar una idea más allá de la jugada obvia. El lenguaje de patrones justo para sentir que el tablero empieza a hablar.",
-    "guest": "Tu invitado corre de nuestra cuenta.",
+    "guest": "Trae un invitado si quieres — es gratis. Venir solo es normal.",
     "nextKicker": "Siguiente recomendada",
     "nextTitle": "Sigue con Game Plan",
     "nextLede": "La tercera velada trata de empezar una partida con propósito — principios de apertura que puedes reutilizar.",
@@ -240,7 +246,7 @@
     "hap3": "Planes básicos y errores comunes",
     "hap4": "Cómo salir de la apertura con algo que hacer",
     "leave": "Un puñado de principios que puedes reutilizar cada vez que te sientas. Una forma de empezar, desarrollar y cuidar al rey — y luego pasar a un plan con sentido.",
-    "guest": "Tu invitado corre de nuestra cuenta.",
+    "guest": "Trae un invitado si quieres — es gratis. Venir solo es normal.",
     "afterKicker": "Después",
     "afterTitle": "Vuelve a jugar",
     "afterLede": "Cuando ya te ha picado el bicho, vuelve a veladas más ligeras — sin apuntarte a un curso.",
@@ -258,46 +264,46 @@
       "ogDescription": "Veladas de ajedrez para principiantes, en inglés, en Madrid. Ven a una. O vive las tres."
     },
     "kicker": "Madrid · Inglés · Adultos",
-    "h1a": "Tres veladas independientes.",
-    "h1b": "Una progresión natural.",
-    "lede": "Ven a una. O vive las tres. Sin suscripciones. Sin compromiso semanal. Cada velada es una experiencia completa por sí sola.",
-    "firstBody": "Para principiantes totales. El ajedrez es más fácil de lo que crees. Juegos, historias, patrones — y tu primera partida real.",
+    "h1a": "Tres veladas.",
+    "h1b": "Elige la que encaje.",
+    "lede": "Ven a una, o a las tres. Cada velada funciona por sí sola. La mayoría empieza por The First Move.",
+    "firstBody": "Para principiantes totales — lo esencial, jugar y tu primera partida real.",
     "firstWho": "nunca has jugado, se te olvidó hace años, o el ajedrez siempre te ha parecido interesante pero intimidante.",
-    "thinkBody": "Empieza a ver lo que ven los buenos jugadores. Táctica sencilla, amenazas, capturas y decisiones más fuertes — a través del juego.",
+    "thinkBody": "Para quien ya sabe mover las piezas — táctica, amenazas y mejores decisiones jugando.",
     "thinkWho": "sabes cómo se mueven las piezas y quieres entender qué pasa en el tablero.",
-    "planBody": "Empieza a jugar con un plan. Principios de apertura, el centro, la seguridad del rey y planes que puedes reutilizar en casi cualquier partida.",
+    "planBody": "Para principiantes listos para más — aperturas, el centro, seguridad del rey y planes reutilizables.",
     "planWho": "principiantes que entienden lo básico y quieren jugar con más propósito.",
     "whoLabel": "Para quién:",
     "bundle": "Pack",
     "bundleTitleBefore": "Las tres —",
-    "bundleLede1": "Tu invitado corre de nuestra cuenta. Una velada es",
-    "bundleLede2": "Las tres ahorran €45. La mayoría empieza por The First Move.",
+    "bundleLede1": "Una velada es",
+    "bundleLede2": "Las tres ahorran €20 por persona. La mayoría empieza por The First Move. Trae un invitado sin coste extra.",
     "askBundle": "Preguntar por el pack",
     "bundleSubject": "Pack MadridMinds de las tres veladas"
   },
   "book": {
     "meta": {
-      "title": "Reservar una velada de ajedrez en Madrid | MadridMinds",
-      "description": "Reserva The First Move — una velada de ajedrez para principiantes, en inglés, en Madrid. Tu invitado corre de nuestra cuenta. Sin compromiso semanal.",
-      "ogTitle": "Reservar The First Move | MadridMinds",
-      "ogDescription": "Próximas veladas de ajedrez en Madrid. Tu invitado corre de nuestra cuenta."
+      "title": "Reservar tu First Move | MadridMinds",
+      "description": "Reserva The First Move — una velada de ajedrez para principiantes, en inglés, en Madrid. €55 por persona; trae un invitado sin coste extra.",
+      "ogTitle": "Reservar tu First Move | MadridMinds",
+      "ogDescription": "Una velada de ajedrez para principiantes en Madrid. €55 por persona; invitado gratis."
     },
-    "kicker": "Reservar",
-    "h1": "Próximas veladas",
-    "lede": "The First Move es la forma habitual de entrar. Tu invitado corre de nuestra cuenta. Sin suscripciones. Sin compromiso semanal.",
+    "kicker": "The First Move",
+    "h1": "Reservar tu First Move",
+    "lede": "Tu primera velada de ajedrez en Madrid. €55 por persona — ven solo o trae a alguien. Sin suscripciones. Sin compromiso semanal.",
     "datesSoon": "Próximas fechas muy pronto",
     "nextDatesSoon": "Próximas fechas muy pronto",
-    "firstMoveWait": "Una velada para principiantes totales en Madrid. Déjanos tu interés y te enviaremos la siguiente fecha en cuanto esté.",
+    "firstMoveWait": "Una velada para principiantes totales. Deja tu email y te enviaremos la siguiente fecha en cuanto esté.",
     "lessOftenWait": "Próximas fechas muy pronto. Deja tu email y te diremos cuándo hay velada.",
-    "bookSubject": "Reservar The First Move",
-    "priceLine1": "Una experiencia —",
+    "bookSubject": "Reservar tu First Move",
+    "priceLine1": "Una velada —",
     "priceLine2": "Las tres —",
-    "notifyTitle": "Avísame de las próximas fechas",
-    "notifyBody": "Apúntate a la lista y te diremos cuándo hay una velada en Madrid. The First Move es la forma habitual de entrar.",
+    "notifyTitle": "Avísame del próximo First Move",
+    "notifyBody": "Aún no hay fechas publicadas. Apúntate a la lista y te diremos cuándo The First Move vuelve a Madrid.",
     "notifyIframe": "Fechas de MadridMinds",
     "teamsLead": "¿Algo para tu equipo?",
     "teamsCta": "Pedir una propuesta",
-    "saveLine": "Ahorra €45 con las tres."
+    "saveLine": "Ahorra €20 por persona con las tres."
   },
   "about": {
     "meta": {
@@ -343,7 +349,7 @@
     "castleBody": "La jugada que parece un truco y, en realidad, solo guarda al rey.",
     "ctaTitle": "Leer sobre ajedrez sirve. Jugarlo, más.",
     "ctaBody": "The First Move es la velada pensada para quien no ha jugado nunca — o apenas recuerda.",
-    "cta": "Probar The First Move"
+    "cta": "Reservar tu First Move"
   },
   "chessInMadrid": {
     "meta": {

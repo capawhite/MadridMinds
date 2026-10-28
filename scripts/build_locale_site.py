@@ -35,7 +35,7 @@ COMMON_EN = {
         "smallGroups": "Small groups",
         "guestIncluded": "Your guest is on us",
         "getNotified": "Get notified of the next dates",
-        "bookFirstMove": "Book The First Move",
+        "bookFirstMove": "Book your First Move",
         "aboutThisEvening": "About this evening",
         "whoFor": "Who this is for",
         "whatHappens": "What happens",
@@ -70,7 +70,7 @@ COMMON_ES = {
         "smallGroups": "Grupos pequeños",
         "guestIncluded": "Tu invitado corre de nuestra cuenta",
         "getNotified": "Avísame de las próximas fechas",
-        "bookFirstMove": "Reservar The First Move",
+        "bookFirstMove": "Reservar tu First Move",
         "aboutThisEvening": "Sobre esta velada",
         "whoFor": "Para quién es",
         "whatHappens": "Qué pasa",
@@ -110,6 +110,7 @@ def chrome(page_id: str, title: str, description: str, og_title: str, og_desc: s
         "experiences": ' aria-current="page"' if current == "experiences" else "",
         "teams": ' aria-current="page"' if current == "teams" else "",
         "about": ' aria-current="page"' if current == "about" else "",
+        "members": ' aria-current="page"' if current == "members" else "",
         "book": ' aria-current="page"' if current == "book" else "",
         "learn": ' aria-current="page"' if current == "learn" else "",
     }
@@ -159,7 +160,8 @@ def chrome(page_id: str, title: str, description: str, og_title: str, og_desc: s
       </div>
       <a href="/teams.html" class="site-nav-link"{nav_current['teams']} data-i18n="nav.forTeams">For Teams</a>
       <a href="/about.html" class="site-nav-link"{nav_current['about']} data-i18n="nav.about">About</a>
-      <a href="/book.html" class="site-nav-link site-nav-cta"{nav_current['book']} data-i18n="nav.book">Book The First Move</a>
+      <a href="/members.html" class="site-nav-link"{nav_current['members']} data-i18n="nav.members">Members</a>
+      <a href="/book.html" class="site-nav-link site-nav-cta"{nav_current['book']} data-i18n="nav.book">Book your First Move</a>
     </div>
     <div class="site-nav-end">
       <nav class="lang-switch" data-i18n-aria="nav.language" aria-label="Language">
@@ -180,6 +182,7 @@ def chrome(page_id: str, title: str, description: str, og_title: str, og_desc: s
       <a href="/teams.html" data-i18n="footer.forTeams">For Teams</a>
       <a href="/about.html" data-i18n="footer.about">About</a>
       <a href="/book.html" data-i18n="footer.book">Book</a>
+      <a href="/members.html" data-i18n="footer.members">Members</a>
       <a href="/chess-in-madrid.html" data-i18n="footer.chessInMadrid">Chess in Madrid</a>
     </nav>
     <div class="footer-links">
