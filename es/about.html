@@ -24,7 +24,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/site.css" />
   <link rel="stylesheet" href="/nav-mobile.css" />
 </head>
@@ -59,16 +59,32 @@
     <header class="page-hero">
       <p class="kicker" data-i18n="about.kicker">Sobre MadridMinds</p>
       <h1 data-i18n="about.h1">Más que aprender ajedrez.</h1>
-      <p class="lede lede--center" data-i18n="about.lede">MadridMinds reúne ajedrez, conversación y un ambiente relajado para adultos que quieren aprender algo nuevo y pasar una velada haciendo algo de verdad interesante.</p>
+      <p class="lede lede--center" data-i18n="about.lede">MadridMinds reúne ajedrez, conversación y un ambiente relajado para adultos que quieren aprender algo nuevo y pasar una velada al tablero.</p>
     </header>
-    <section class="section" style="padding-top:0">
+    <section class="section" style="padding-top:0" aria-labelledby="about-host">
+      <div class="inner">
+        <div class="host-block">
+          <img src="/AvatarRuy.png" alt="Ruy, anfitrión de MadridMinds" class="host-photo" width="200" height="200" loading="lazy" data-i18n-alt="about.hostPhotoAlt" />
+          <div>
+            <p class="kicker" data-i18n="about.hostKicker">Tu anfitrión</p>
+            <h2 class="host-name" id="about-host" data-i18n="about.hostName">Ruy</h2>
+            <div class="body-text">
+              <p data-i18n="about.hostBody1">Creé MadridMinds porque algunas cosas simplemente se disfrutan más en compañía.</p>
+              <p data-i18n="about.hostBody2">Llevo más de 20 años en el mundo del ajedrez — ayudando a que el juego sea más accesible y divertido para gente de todo el mundo.</p>
+              <p class="host-sign" data-i18n="about.hostSign">— Ruy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
       <div class="inner inner--narrow">
         <h2 class="section-heading" data-i18n="about.idea">Por qué MadridMinds</h2>
         <div class="accent-rule"></div>
         <div class="body-text">
-          <p data-i18n="about.p1">El ajedrez es uno de los grandes juegos del mundo: estratégico, social y siempre interesante. MadridMinds lo hace accesible a través de experiencias cuidadosamente diseñadas donde se puede aprender, jugar y disfrutar de la compañía.</p>
-          <p data-i18n="about.p2">Cada partida te pide concentrarte, reconocer patrones, sopesar opciones, planificar y decidir. El reto es real, pero la experiencia está pensada para que sea agradable.</p>
-          <p data-i18n="about.p3">Las experiencias se hacen en inglés, lo que da a MadridMinds un lugar propio en la comunidad internacional y profesional de Madrid.</p>
+          <p data-i18n="about.p1">El ajedrez es uno de los grandes juegos del mundo: estratégico, social y siempre interesante. MadridMinds lo hace accesible a través de veladas donde se puede aprender, jugar y disfrutar de la compañía.</p>
+          <p data-i18n="about.p2">Cada partida te pide concentrarte, reconocer patrones, sopesar opciones, planificar y decidir — con otras personas en la mesa. El reto es real; la velada está pensada para disfrutarse.</p>
+          <p data-i18n="about.p3">Las veladas son en inglés — un encaje natural para el público internacional de Madrid.</p>
         </div>
       </div>
     </section>
@@ -79,8 +95,8 @@
       </div>
     </section>
     <section class="final-cta" style="padding-top:1rem">
-      <h2 data-i18n="about.finalTitle">¿Curiosidad?</h2>
-      <p class="hero-sub" data-i18n="about.finalSub">Descubre las experiencias MadridMinds y encuentra la velada que te encaje.</p>
+      <h2 data-i18n="about.finalTitle">Ver las veladas</h2>
+      <p class="hero-sub" data-i18n="about.finalSub">Elige la velada que te encaje.</p>
       <a class="btn btn-primary" href="/experiences.html" data-i18n="about.finalCta">Explorar experiencias</a>
     </section>
   </main>

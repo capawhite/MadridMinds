@@ -24,7 +24,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/site.css" />
   <link rel="stylesheet" href="/nav-mobile.css" />
 </head>
@@ -48,16 +48,32 @@
     <header class="page-hero">
       <p class="kicker" data-i18n="about.kicker">About MadridMinds</p>
       <h1 data-i18n="about.h1">More than learning chess.</h1>
-      <p class="lede lede--center" data-i18n="about.lede">MadridMinds brings together chess, conversation, wine and snacks, and a relaxed setting for adults who want to learn something new and spend an evening doing something genuinely engaging.</p>
+      <p class="lede lede--center" data-i18n="about.lede">MadridMinds brings together chess, conversation, wine and snacks, and a relaxed setting for adults who want to learn something new and spend an evening at the board.</p>
     </header>
-    <section class="section" style="padding-top:0">
+    <section class="section" style="padding-top:0" aria-labelledby="about-host">
+      <div class="inner">
+        <div class="host-block">
+          <img src="/AvatarRuy.png" alt="Ruy, host of MadridMinds" class="host-photo" width="200" height="200" loading="lazy" data-i18n-alt="about.hostPhotoAlt" />
+          <div>
+            <p class="kicker" data-i18n="about.hostKicker">Your host</p>
+            <h2 class="host-name" id="about-host" data-i18n="about.hostName">Ruy</h2>
+            <div class="body-text">
+              <p data-i18n="about.hostBody1">I created MadridMinds because some things are just better shared.</p>
+              <p data-i18n="about.hostBody2">I’ve spent over 20 years as a chess insider — helping make the game more accessible and fun for people around the world.</p>
+              <p class="host-sign" data-i18n="about.hostSign">— Ruy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
       <div class="inner inner--narrow">
         <h2 class="section-heading" data-i18n="about.idea">Why MadridMinds</h2>
         <div class="accent-rule"></div>
         <div class="body-text">
-          <p data-i18n="about.p1">Chess is one of the world’s great games: strategic, social and endlessly interesting. MadridMinds makes it accessible through carefully designed experiences where people can learn, play and enjoy the company around them.</p>
-          <p data-i18n="about.p2">Every game asks you to focus, recognise patterns, weigh options, plan ahead and make decisions. The challenge is real, but the experience is designed to make it enjoyable.</p>
-          <p data-i18n="about.p3">Experiences are hosted in English, giving MadridMinds a distinctive place in Madrid’s international and professional community.</p>
+          <p data-i18n="about.p1">Chess is one of the world’s great games: strategic, social and endlessly interesting. MadridMinds makes it accessible through evenings where people can learn, play and enjoy the company around them.</p>
+          <p data-i18n="about.p2">Every game asks you to focus, recognise patterns, weigh options, plan ahead and make decisions — with other people at the table. The challenge is real; the evening is meant to be enjoyed.</p>
+          <p data-i18n="about.p3">Evenings are in English — a natural fit for Madrid’s international crowd.</p>
         </div>
       </div>
     </section>
@@ -68,8 +84,8 @@
       </div>
     </section>
     <section class="final-cta" style="padding-top:1rem">
-      <h2 data-i18n="about.finalTitle">Curious?</h2>
-      <p class="hero-sub" data-i18n="about.finalSub">Discover the MadridMinds experiences and find the evening that suits you.</p>
+      <h2 data-i18n="about.finalTitle">See the evenings</h2>
+      <p class="hero-sub" data-i18n="about.finalSub">Pick the evening that fits.</p>
       <a class="btn btn-primary" href="/experiences.html" data-i18n="about.finalCta">Explore experiences</a>
     </section>
   </main>
