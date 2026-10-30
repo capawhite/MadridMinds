@@ -191,9 +191,6 @@
       '<li><span data-mm-price="experience"></span> ' +
       t("common.perPerson", "per person") +
       "</li>" +
-      "<li>" +
-      t("common.comeAlone", "Coming alone is normal — we’ll seat you with the group.") +
-      "</li>" +
       "</ul>" +
       '<div class="event-card-actions">' +
       actions +
@@ -218,20 +215,17 @@
       (exp.tagline || "") +
       "</p>" +
       '<ul class="event-meta-list">' +
-      "<li>" +
-      (session.timeLabel || "") +
-      "</li>" +
+      (session.timeLabel
+        ? "<li>" + session.timeLabel + "</li>"
+        : "") +
       "<li>" +
       (session.city || "Madrid") +
       "</li>" +
-      "<li>" +
-      (session.seatsLabel || "Small group") +
-      "</li>" +
+      (session.seatsLabel
+        ? "<li>" + session.seatsLabel + "</li>"
+        : "") +
       '<li><span data-mm-price="experience"></span> ' +
       t("common.perPerson", "per person") +
-      "</li>" +
-      "<li>" +
-      t("common.comeAlone", "Coming alone is normal — we’ll seat you with the group.") +
       "</li>" +
       "</ul>" +
       '<div class="event-card-actions">' +
@@ -249,6 +243,10 @@
   function renderBooking() {
     var root = document.getElementById("booking-list");
     if (!root) return;
+    if (!sessions.length) {
+      root.hidden = true;
+      return;
+    }
 
     var html = "";
     var idsWithDates = {};
@@ -274,9 +272,15 @@
     var bar = document.querySelector("[data-sticky-cta]");
     if (!bar) return;
     var hero = document.querySelector(".page-hero, .hero");
+    var signup = document.getElementById("notify");
     function update() {
       var threshold = hero ? hero.getBoundingClientRect().bottom : 280;
-      bar.classList.toggle("is-visible", threshold < 0);
+      var signupInView = false;
+      if (signup) {
+        var rect = signup.getBoundingClientRect();
+        signupInView = rect.top < window.innerHeight && rect.bottom > 0;
+      }
+      bar.classList.toggle("is-visible", threshold < 0 && !signupInView);
     }
     window.addEventListener("scroll", update, { passive: true });
     update();

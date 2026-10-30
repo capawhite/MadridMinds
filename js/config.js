@@ -62,7 +62,7 @@ window.MM_CONFIG = {
   openDecisions: {
     comeAlone: {
       allowed: true,
-      publishedCopy: "Coming alone is normal — we'll seat you with the group."
+      publishedCopy: "Fine to come on your own."
     },
     bundle: {
       sameGuestRequired: null,
@@ -101,7 +101,24 @@ window.MM_CONFIG = {
    *   mailtoSubject: "Book your First Move — 12 November"
    * }
    */
-  sessions: [],
+  sessions: [
+    {
+      id: "tfm-2026-11-10",
+      experienceId: "the-first-move",
+      dateLabel: "Tuesday 10 November",
+      timeLabel: "19:30",
+      city: "Madrid",
+      mailtoSubject: "Book your First Move — 10 November"
+    },
+    {
+      id: "tfm-2026-11-17",
+      experienceId: "the-first-move",
+      dateLabel: "Tuesday 17 November",
+      timeLabel: "19:30",
+      city: "Madrid",
+      mailtoSubject: "Book your First Move — 17 November"
+    }
+  ],
 
   experiences: [
     {

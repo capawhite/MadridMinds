@@ -45,13 +45,12 @@
     <div class="mm-nav-backdrop" aria-hidden="true"></div>
   </nav>
   <main id="main-content">
-    <section class="hero" aria-label="Introduction">
-      <div class="hero-bg" style="background-image:url('/photos/web/hero-pieces.jpg')" role="img" aria-hidden="true"></div>
+    <section class="hero hero--people" aria-label="Introduction">
+      <div class="hero-bg" style="background-image:url('/photos/web/hero-gathering.jpg')" role="img" aria-hidden="true"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <h1 data-i18n="home.h1">Chess is easier than you think.</h1>
-        <p class="hero-sub" data-i18n="home.sub">We’ll show you.</p>
-        <p class="hero-support" data-i18n="home.support">Beginner-friendly chess experiences in Madrid, in English.</p>
+        <p class="hero-support" data-i18n="home.support">We’ll show you — beginner-friendly chess experiences in Madrid, in English.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="/book.html" data-mm-home-hero-cta data-i18n="common.bookFirstMove">Book your First Move</a>
           <a class="btn-text" href="#never-played" data-i18n="home.seeHowItWorks">See how it works</a>
@@ -60,18 +59,25 @@
       </div>
     </section>
 
+    <section class="glance-strip" data-i18n-aria="home.glanceLabel" aria-label="At a glance">
+      <ul class="glance-list">
+        <li data-i18n="common.madrid">Madrid</li>
+        <li data-i18n="common.inEnglish">In English</li>
+        <li data-i18n="common.smallGroups">Small groups</li>
+        <li data-i18n="home.glanceWine">Drinks and light snacks included</li>
+      </ul>
+    </section>
+
     <section id="name-the-player" hidden data-feature="name-the-player" aria-hidden="true"></section>
 
     <section class="section" aria-labelledby="never-played">
       <div class="inner">
-        <div class="center inner--narrow" style="margin-left:auto;margin-right:auto">
-          <h2 class="section-heading" id="never-played" data-i18n="home.never">Never played chess?</h2>
-          <p class="hero-sub" data-i18n="home.perfect">Perfect.</p>
-          <p class="lede lede--center" data-i18n="home.curiousLine">Not a game for geniuses. A game for curious people.</p>
+        <div class="inner--narrow center">
+          <h2 class="section-heading" id="never-played"><span data-i18n="home.never">Never played chess?</span> <span class="heading-accent" data-i18n="home.perfect">Perfect.</span></h2>
+          <p class="pull-line" data-i18n="home.curiousLine">Not a game for geniuses. A game for curious people.</p>
           <p class="lede lede--center" data-i18n="home.neverLede">Meet The First Move — our introductory evening for complete beginners. We’ll show you the essentials, get you playing, and by the end of the evening you’ll have played a real game.</p>
-          <p style="margin-top:1.5rem"><a class="btn btn-primary" href="/book.html" data-mm-home-book-cta data-i18n="common.bookFirstMove">Book your First Move</a></p>
         </div>
-        <p class="kicker" style="text-align:center;margin:2.25rem 0 1rem" data-i18n="home.pillarsKicker">Inside The First Move</p>
+        <p class="kicker pillars-kicker" data-i18n="home.pillarsKicker">Inside The First Move</p>
         <ul class="pillar-row pillar-row--strip">
           <li>
             <h3 data-i18n="home.discoverTitle">Discover</h3>
@@ -89,9 +95,7 @@
       </div>
     </section>
 
-    <div class="section-rule"></div>
-
-    <section class="section" aria-labelledby="journey">
+    <section class="section section--alt" aria-labelledby="journey">
       <div class="inner">
         <div class="center">
           <h2 class="section-heading" id="journey" data-i18n="home.journeyTitle">Choose an evening.</h2>
@@ -103,7 +107,7 @@
             <h3 data-i18n="experiences.firstMoveName">The First Move</h3>
             <p class="exp-audience" data-i18n="home.firstAudience">For complete beginners</p>
             <p data-i18n="home.firstMoveBody">Learn the essentials and play your first real game.</p>
-            <div class="cta-row" style="justify-content:flex-start;margin-top:1rem;gap:.85rem;flex-wrap:wrap">
+            <div class="cta-row cta-row--start">
               <a class="btn btn-primary" href="/book.html" data-mm-home-book-cta data-i18n="common.bookFirstMove">Book your First Move</a>
               <a class="btn-text exp-explore" href="/the-first-move.html" data-i18n="home.explore">About this evening</a>
             </div>
@@ -121,7 +125,7 @@
             <a class="btn-text exp-explore" href="/game-plan.html" data-i18n="home.explore">About this evening</a>
           </article>
         </div>
-        <p class="center" style="margin-top:1.75rem">
+        <p class="center see-all">
           <a class="btn-text" href="/experiences.html" data-i18n="home.seeAllEvenings">See all evenings</a>
         </p>
         <div hidden data-feature="womens-edition"></div>
@@ -129,36 +133,45 @@
       </div>
     </section>
 
-    <div class="section-rule"></div>
-
     <section class="section section--flush" aria-labelledby="atmosphere">
       <div class="split">
         <div class="split-text">
           <h2 class="section-heading" id="atmosphere" data-i18n="home.atmoTitle">A different kind of evening.</h2>
           <div class="accent-rule"></div>
           <div class="body-text">
-            <p data-i18n="home.atmo1">Small groups, a beautiful setting, wine and snacks on the table — chess and conversation in the same evening. Chess is at the centre, but the evening is about learning, thinking, playing and enjoying the people around you.</p>
+            <p data-i18n="home.atmo1">Small groups, a beautiful setting, drinks and snacks on the table — chess and conversation in the same evening. Chess is at the centre, but the evening is about learning, thinking, playing and enjoying the people around you.</p>
           </div>
         </div>
-        <div class="split-media">
-          <img src="/photos/web/hands-on-board.jpg" alt="Friends laughing over chess, wine and snacks in a Madrid restaurant" width="1152" height="864" />
+        <div class="split-media photo-mosaic">
+          <img class="photo-mosaic-main" src="/photos/web/atmo-boards.jpg" alt="Chessboards mid-game on the table at a MadridMinds evening" data-i18n-alt="home.atmoAlt" width="1152" height="864" loading="lazy" />
+          <img class="photo-mosaic-inset" src="/photos/web/deco-wine.jpg" alt="" width="728" height="408" loading="lazy" />
         </div>
       </div>
     </section>
 
-    <div class="section-rule"></div>
+    <section class="section section--tight section--alt" aria-labelledby="home-host">
+      <div class="inner">
+        <div class="host-line">
+          <img src="/AvatarRuy.png" alt="Ruy, host of MadridMinds" class="host-line-photo" width="96" height="96" loading="lazy" data-i18n-alt="about.hostPhotoAlt" />
+          <div>
+            <p class="kicker" data-i18n="home.hostKicker">Your host</p>
+            <h2 class="host-name" id="home-host" data-i18n="home.hostTitle">Hosted by Ruy</h2>
+            <p class="host-line-body" data-i18n="home.hostLine">Over 20 years as a chess insider — helping make the game more accessible and fun for people around the world.</p>
+            <a class="btn-text" href="/about.html" data-i18n="home.hostCta">Meet your host</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section section--tight" aria-labelledby="teams-gate">
       <div class="inner inner--narrow center">
         <h2 class="section-heading" id="teams-gate" data-i18n="home.teamsTitle">MadridMinds for Teams</h2>
-        <p class="lede lede--center" data-i18n="home.teamsLede">Practice decisions together, share wine and snacks, and enjoy a friendly evening at the board. Designed so everyone can take part — no chess experience required.</p>
-        <p style="margin-top:1.5rem"><a class="btn-text" href="/teams.html" data-i18n="home.teamsCta">Explore team experiences</a></p>
+        <p class="lede lede--center" data-i18n="home.teamsLede">Practice decisions together, share drinks and snacks, and enjoy a friendly evening at the board. Designed so everyone can take part — no chess experience required.</p>
+        <p class="section-cta"><a class="btn-text" href="/teams.html" data-i18n="home.teamsCta">Explore team experiences</a></p>
       </div>
     </section>
 
-    <div class="section-rule"></div>
-
-    <section class="final-cta" aria-labelledby="final-cta" data-mm-home-final>
+    <section class="final-cta final-cta--texture" aria-labelledby="final-cta" data-mm-home-final>
       <div data-final-mode="has-dates" hidden>
         <h2 id="final-cta" data-i18n="home.finalBookTitle">Ready for your first game?</h2>
         <div class="hero-actions">
@@ -172,7 +185,7 @@
         <h2 id="final-cta-wait" data-i18n="home.finalWaitTitle">Be there for the next First Move.</h2>
         <p class="final-note" data-i18n="home.finalWaitBody">Leave your email and we’ll let you know when the next evening is announced.</p>
       </div>
-      <section id="notify" class="notify-band signup-block" aria-label="Email signup">
+      <section id="notify" class="notify-band signup-block signup-card" aria-label="Email signup">
         <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
         <iframe src="https://subscribe-forms.beehiiv.com/99a27d92-3bee-4026-9c32-33556a386d08" class="beehiiv-embed" data-test-id="beehiiv-embed" data-i18n-title="home.notifyIframe" title="Get notified of the next MadridMinds dates" frameborder="0" scrolling="no"></iframe>
       </section>

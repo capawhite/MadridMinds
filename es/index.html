@@ -56,33 +56,39 @@
     <div class="mm-nav-backdrop" aria-hidden="true"></div>
   </nav>
   <main id="main-content">
-    <section class="hero" aria-label="Introduction">
-      <div class="hero-bg" style="background-image:url('/photos/web/hero-pieces.jpg')" role="img" aria-hidden="true"></div>
+    <section class="hero hero--people" aria-label="Introduction">
+      <div class="hero-bg" style="background-image:url('/photos/web/hero-gathering.jpg')" role="img" aria-hidden="true"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <h1 data-i18n="home.h1">Chess is easier than you think.</h1>
-        <p class="hero-sub" data-i18n="home.sub">We’ll show you.</p>
-        <p class="hero-support" data-i18n="home.support">Beginner-friendly chess experiences in Madrid, in English.</p>
+        <h1 data-i18n="home.h1">El ajedrez es más fácil de lo que crees.</h1>
+        <p class="hero-support" data-i18n="home.support">Te lo enseñamos — veladas de ajedrez para principiantes en Madrid, en inglés.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="/book.html" data-mm-home-hero-cta data-i18n="common.bookFirstMove">Reservar tu First Move</a>
           <a class="btn-text" href="#never-played" data-i18n="home.seeHowItWorks">Ver cómo funciona</a>
         </div>
-        <p class="hero-note" data-i18n="home.heroReassure">Complete beginners welcome. No experience needed.</p>
+        <p class="hero-note" data-i18n="home.heroReassure">Principiantes totales bienvenidos. No hace falta experiencia.</p>
       </div>
+    </section>
+
+    <section class="glance-strip" data-i18n-aria="home.glanceLabel" aria-label="De un vistazo">
+      <ul class="glance-list">
+        <li data-i18n="common.madrid">Madrid</li>
+        <li data-i18n="common.inEnglish">En inglés</li>
+        <li data-i18n="common.smallGroups">Grupos pequeños</li>
+        <li data-i18n="home.glanceWine">Bebidas y algo ligero para picar incluidos</li>
+      </ul>
     </section>
 
     <section id="name-the-player" hidden data-feature="name-the-player" aria-hidden="true"></section>
 
     <section class="section" aria-labelledby="never-played">
       <div class="inner">
-        <div class="center inner--narrow" style="margin-left:auto;margin-right:auto">
-          <h2 class="section-heading" id="never-played" data-i18n="home.never">Never played chess?</h2>
-          <p class="hero-sub" data-i18n="home.perfect">Perfecto.</p>
-          <p class="lede lede--center" data-i18n="home.curiousLine">No es un juego de genios. Es un juego para gente curiosa.</p>
+        <div class="inner--narrow center">
+          <h2 class="section-heading" id="never-played"><span data-i18n="home.never">¿Nunca has jugado al ajedrez?</span> <span class="heading-accent" data-i18n="home.perfect">Perfecto.</span></h2>
+          <p class="pull-line" data-i18n="home.curiousLine">No es un juego de genios. Es un juego para gente curiosa.</p>
           <p class="lede lede--center" data-i18n="home.neverLede">Conoce The First Move — nuestra velada introductoria para principiantes totales. Te mostramos lo esencial, te ponemos a jugar y, al final de la velada, habrás jugado una partida real.</p>
-          <p style="margin-top:1.5rem"><a class="btn btn-primary" href="/book.html" data-mm-home-book-cta data-i18n="common.bookFirstMove">Reservar tu First Move</a></p>
         </div>
-        <p class="kicker" style="text-align:center;margin:2.25rem 0 1rem" data-i18n="home.pillarsKicker">Dentro de The First Move</p>
+        <p class="kicker pillars-kicker" data-i18n="home.pillarsKicker">Dentro de The First Move</p>
         <ul class="pillar-row pillar-row--strip">
           <li>
             <h3 data-i18n="home.discoverTitle">Discover</h3>
@@ -100,9 +106,7 @@
       </div>
     </section>
 
-    <div class="section-rule"></div>
-
-    <section class="section" aria-labelledby="journey">
+    <section class="section section--alt" aria-labelledby="journey">
       <div class="inner">
         <div class="center">
           <h2 class="section-heading" id="journey" data-i18n="home.journeyTitle">Elige una velada.</h2>
@@ -114,7 +118,7 @@
             <h3 data-i18n="experiences.firstMoveName">The First Move</h3>
             <p class="exp-audience" data-i18n="home.firstAudience">Para principiantes totales</p>
             <p data-i18n="home.firstMoveBody">Aprende lo esencial y juega tu primera partida real.</p>
-            <div class="cta-row" style="justify-content:flex-start;margin-top:1rem;gap:.85rem;flex-wrap:wrap">
+            <div class="cta-row cta-row--start">
               <a class="btn btn-primary" href="/book.html" data-mm-home-book-cta data-i18n="common.bookFirstMove">Reservar tu First Move</a>
               <a class="btn-text exp-explore" href="/the-first-move.html" data-i18n="home.explore">Sobre esta velada</a>
             </div>
@@ -132,7 +136,7 @@
             <a class="btn-text exp-explore" href="/game-plan.html" data-i18n="home.explore">Sobre esta velada</a>
           </article>
         </div>
-        <p class="center" style="margin-top:1.75rem">
+        <p class="center see-all">
           <a class="btn-text" href="/experiences.html" data-i18n="home.seeAllEvenings">Ver todas las veladas</a>
         </p>
         <div hidden data-feature="womens-edition"></div>
@@ -140,52 +144,61 @@
       </div>
     </section>
 
-    <div class="section-rule"></div>
-
     <section class="section section--flush" aria-labelledby="atmosphere">
       <div class="split">
         <div class="split-text">
           <h2 class="section-heading" id="atmosphere" data-i18n="home.atmoTitle">Una velada distinta.</h2>
           <div class="accent-rule"></div>
           <div class="body-text">
-            <p data-i18n="home.atmo1">Grupos pequeños, un entorno bonito, vino y algo para picar en la mesa — ajedrez y conversación en la misma velada. El ajedrez está en el centro, pero la velada trata de aprender, pensar, jugar y disfrutar de la gente a tu alrededor.</p>
+            <p data-i18n="home.atmo1">Grupos pequeños, un entorno bonito, bebidas y algo para picar en la mesa — ajedrez y conversación en la misma velada. El ajedrez está en el centro, pero la velada trata de aprender, pensar, jugar y disfrutar de la gente a tu alrededor.</p>
           </div>
         </div>
-        <div class="split-media">
-          <img src="/photos/web/hands-on-board.jpg" alt="Amigos riendo con ajedrez, vino y snacks en un restaurante de Madrid" width="1152" height="864" />
+        <div class="split-media photo-mosaic">
+          <img class="photo-mosaic-main" src="/photos/web/atmo-boards.jpg" alt="Tableros de ajedrez con partidas en juego en una velada MadridMinds" data-i18n-alt="home.atmoAlt" width="1152" height="864" loading="lazy" />
+          <img class="photo-mosaic-inset" src="/photos/web/deco-wine.jpg" alt="" width="728" height="408" loading="lazy" />
         </div>
       </div>
     </section>
 
-    <div class="section-rule"></div>
+    <section class="section section--tight section--alt" aria-labelledby="home-host">
+      <div class="inner">
+        <div class="host-line">
+          <img src="/AvatarRuy.png" alt="Ruy, anfitrión de MadridMinds" class="host-line-photo" width="96" height="96" loading="lazy" data-i18n-alt="about.hostPhotoAlt" />
+          <div>
+            <p class="kicker" data-i18n="home.hostKicker">Tu anfitrión</p>
+            <h2 class="host-name" id="home-host" data-i18n="home.hostTitle">Con Ruy como anfitrión</h2>
+            <p class="host-line-body" data-i18n="home.hostLine">Más de 20 años en el mundo del ajedrez — ayudando a que el juego sea más accesible y divertido para gente de todo el mundo.</p>
+            <a class="btn-text" href="/about.html" data-i18n="home.hostCta">Conoce a tu anfitrión</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section section--tight" aria-labelledby="teams-gate">
       <div class="inner inner--narrow center">
         <h2 class="section-heading" id="teams-gate" data-i18n="home.teamsTitle">MadridMinds for Teams</h2>
-        <p class="lede lede--center" data-i18n="home.teamsLede">Practicad decisiones juntos, compartid vino y snacks, y disfrutad una velada amable al tablero. Pensado para que todo el mundo pueda participar — no hace falta saber ajedrez.</p>
-        <p style="margin-top:1.5rem"><a class="btn-text" href="/teams.html" data-i18n="home.teamsCta">Explorar experiencias para equipos</a></p>
+        <p class="lede lede--center" data-i18n="home.teamsLede">Practicad decisiones juntos, compartid bebidas y snacks, y disfrutad una velada amable al tablero. Pensado para que todo el mundo pueda participar — no hace falta saber ajedrez.</p>
+        <p class="section-cta"><a class="btn-text" href="/teams.html" data-i18n="home.teamsCta">Explorar experiencias para equipos</a></p>
       </div>
     </section>
 
-    <div class="section-rule"></div>
-
-    <section class="final-cta" aria-labelledby="final-cta" data-mm-home-final>
+    <section class="final-cta final-cta--texture" aria-labelledby="final-cta" data-mm-home-final>
       <div data-final-mode="has-dates" hidden>
-        <h2 id="final-cta" data-i18n="home.finalBookTitle">Ready for your first game?</h2>
+        <h2 id="final-cta" data-i18n="home.finalBookTitle">¿Listo para tu primera partida?</h2>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="/book.html" data-i18n="common.bookFirstMove">Book your First Move</a>
+          <a class="btn btn-primary" href="/book.html" data-i18n="common.bookFirstMove">Reservar tu First Move</a>
         </div>
         <p class="final-secondary">
-          <a class="btn-text" href="#notify" data-i18n="home.finalNotifyLink">Can’t make this one? Get notified of future dates.</a>
+          <a class="btn-text" href="#notify" data-i18n="home.finalNotifyLink">¿No puedes en esta? Avísame de futuras fechas.</a>
         </p>
       </div>
       <div data-final-mode="no-dates">
-        <h2 id="final-cta-wait" data-i18n="home.finalWaitTitle">Be there for the next First Move.</h2>
-        <p class="final-note" data-i18n="home.finalWaitBody">Leave your email and we’ll let you know when the next evening is announced.</p>
+        <h2 id="final-cta-wait" data-i18n="home.finalWaitTitle">Estate en el próximo First Move.</h2>
+        <p class="final-note" data-i18n="home.finalWaitBody">Deja tu email y te avisaremos cuando se anuncie la próxima velada.</p>
       </div>
-      <section id="notify" class="notify-band signup-block" aria-label="Email signup">
+      <section id="notify" class="notify-band signup-block signup-card" aria-label="Email signup">
         <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-        <iframe src="https://subscribe-forms.beehiiv.com/99a27d92-3bee-4026-9c32-33556a386d08" class="beehiiv-embed" data-test-id="beehiiv-embed" data-i18n-title="home.notifyIframe" title="Get notified of the next MadridMinds dates" frameborder="0" scrolling="no"></iframe>
+        <iframe src="https://subscribe-forms.beehiiv.com/99a27d92-3bee-4026-9c32-33556a386d08" class="beehiiv-embed" data-test-id="beehiiv-embed" data-i18n-title="home.notifyIframe" title="Avísame de las próximas fechas de MadridMinds" frameborder="0" scrolling="no"></iframe>
       </section>
     </section>
   </main>

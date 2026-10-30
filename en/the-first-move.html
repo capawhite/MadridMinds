@@ -49,13 +49,13 @@
       <p class="kicker" data-i18n="firstMove.kicker">01 · Begin</p>
       <h1 data-i18n="experiences.firstMoveName">The First Move</h1>
       <p class="hero-sub" data-i18n="firstMove.sub">Your first chess evening.</p>
-      <p class="lede lede--center" data-i18n="firstMove.lede">Chess is easier than you think. A standalone evening for complete beginners — relaxed and unintimidating. Chess at the centre, with wine and snacks around the table.</p>
-      <div class="hero-actions" style="margin-top:1.5rem">
+      <p class="lede lede--center" data-i18n="firstMove.lede">Chess is easier than you think. A standalone evening for complete beginners — relaxed and unintimidating. Chess at the centre, with drinks and snacks around the table.</p>
+      <div class="hero-actions">
         <a class="btn btn-primary" href="/book.html" data-i18n="common.bookFirstMove">Book your First Move</a>
-        <a class="btn btn-ghost" href="#notify" data-i18n="common.getNotified">Get notified of the next dates</a>
+        <a class="btn-text" href="#notify" data-i18n="common.getNotified">Get notified of the next dates</a>
       </div>
     </header>
-    <section class="section" style="padding-top:0">
+    <section class="section section--after-hero">
       <div class="inner">
         <div class="card-grid card-grid--2">
           <article>
@@ -66,7 +66,7 @@
               <li data-i18n="firstMove.who3">You vaguely know how the pieces move</li>
               <li data-i18n="firstMove.who4">Chess has always looked interesting but intimidating</li>
             </ul>
-            <p class="body-text" style="margin-top:1.25rem;color:var(--muted);font-size:.95rem">
+            <p class="body-text fine-print">
               <span data-i18n="firstMove.notForYou">Already play regularly?</span>
               <a href="mailto:ruy@madridminds.com?subject=Which%20evening%20is%20right%20for%20me" data-i18n="firstMove.writeToUs" data-i18n-mailto-subject="firstMove.writeSubject">Write to us</a>
               <span data-i18n="firstMove.notForYou2">and we’ll suggest a better fit.</span>
@@ -84,7 +84,7 @@
         </div>
       </div>
     </section>
-    <section class="section section--tight">
+    <section class="section section--tight section--alt">
       <div class="inner inner--narrow">
         <h2 class="section-heading" data-i18n="common.leaveKnowing">What you leave knowing</h2>
         <p class="body-text" data-i18n="firstMove.leave">How the pieces move. How a turn works and what you’re trying to do. And the feeling of having played a real game — not just watched one.</p>
@@ -94,24 +94,23 @@
     <section class="section section--tight">
       <div class="inner">
         <h2 class="section-heading" data-i18n="common.practical">Practical information</h2>
-        <dl class="practical-grid" style="margin-top:1.5rem">
+        <dl class="practical-grid">
           <div class="practical-item"><dt data-i18n="common.languageLabel">Language</dt><dd data-i18n="firstMove.languageDetail">English — conversational English is enough.</dd></div>
           <div class="practical-item"><dt data-i18n="common.whereLabel">Where</dt><dd data-i18n="firstMove.where">Madrid — exact venue sent with your booking</dd></div>
           <div class="practical-item"><dt data-i18n="common.groupLabel">Group</dt><dd data-i18n="common.smallGroups">Small groups</dd></div>
           <div class="practical-item"><dt data-i18n="common.priceLabel">Price</dt><dd><span data-mm-price="experience">€75</span> <span data-i18n="common.perPerson">per person</span>.</dd></div>
-          <div class="practical-item"><dt data-i18n="common.guestLabel">Tickets</dt><dd data-i18n="firstMove.guest">Tickets are per person. Coming alone is normal — we’ll seat you with the group.</dd></div>
-          <div class="practical-item"><dt data-i18n="common.drinksLabel">Wine &amp; snacks</dt><dd data-i18n="firstMove.drinks">Wine and light snacks included as part of the evening</dd></div>
+          <div class="practical-item"><dt data-i18n="common.guestLabel">Tickets</dt><dd data-i18n="firstMove.guest">Tickets are per person.</dd></div>
+          <div class="practical-item"><dt data-i18n="common.drinksLabel">Drinks &amp; snacks</dt><dd data-i18n="firstMove.drinks">Drinks and light snacks included as part of the evening</dd></div>
           <div class="practical-item"><dt data-i18n="common.commitmentLabel">Commitment</dt><dd data-i18n="firstMove.commitment">Standalone evening. No subscription.</dd></div>
         </dl>
-        <p style="margin-top:2rem"><a class="btn btn-primary" href="/book.html" data-i18n="common.bookFirstMove">Book your First Move</a></p>
       </div>
     </section>
-    <section class="section">
+    <section class="section section--alt">
       <div class="inner inner--narrow center">
         <p class="kicker" data-i18n="firstMove.nextKicker">Recommended next</p>
         <h2 class="section-heading" data-i18n="firstMove.nextTitle">Continue with Think Ahead</h2>
         <p class="lede lede--center" data-i18n="firstMove.nextLede">Once the pieces make sense, the next evening is about seeing threats, tactics and stronger decisions. Still a standalone night — only if you want it.</p>
-        <p style="margin-top:1.5rem"><a class="btn btn-ghost" href="/think-ahead.html" data-i18n="experiences.thinkAheadName">Think Ahead</a></p>
+        <p class="panel-action"><a class="btn-text" href="/think-ahead.html" data-i18n="experiences.thinkAheadName">Think Ahead</a></p>
       </div>
     </section>
     <div hidden data-feature="womens-edition"></div>
@@ -122,7 +121,9 @@
           <h2 class="section-heading section-heading--sm" id="notify-heading" data-i18n="firstMove.notifyTitle">Get notified of the next dates</h2>
           <p data-i18n="firstMove.notifyBody">Not ready to book? Leave your email and we’ll tell you when The First Move is next in Madrid.</p>
           <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-          <iframe src="https://subscribe-forms.beehiiv.com/99a27d92-3bee-4026-9c32-33556a386d08" class="beehiiv-embed" data-test-id="beehiiv-embed" data-i18n-title="firstMove.notifyIframe" title="Get notified of the next First Move dates" frameborder="0" scrolling="no"></iframe>
+          <div class="signup-card">
+            <iframe src="https://subscribe-forms.beehiiv.com/99a27d92-3bee-4026-9c32-33556a386d08" class="beehiiv-embed" data-test-id="beehiiv-embed" data-i18n-title="firstMove.notifyIframe" title="Get notified of the next First Move dates" frameborder="0" scrolling="no"></iframe>
+          </div>
         </div>
       </div>
     </section>
