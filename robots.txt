@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /download.html
 Disallow: /madrid-minds-rules.html
+Disallow: /es/
 
 Sitemap: https://madridminds.com/sitemap.xml

@@ -6,7 +6,9 @@
 window.MM_CONFIG = {
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "es"]
+    locales: ["en", "es"],
+    /** Keep false until Spanish copy is ready for public visitors. */
+    spanishPublic: false
   },
 
   contact: {

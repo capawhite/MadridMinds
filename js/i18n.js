@@ -9,10 +9,31 @@
   var LOCALES = ["en", "es"];
   var ORIGIN = "https://madridminds.com";
   var ASSET = /^\/(css|js|i18n|photos|social|Branding|nav-mobile|TopHeader|chess\.png|Ruy|Avatar|favicon)/i;
+  var spanishPublic =
+    window.MM_CONFIG &&
+    window.MM_CONFIG.i18n &&
+    window.MM_CONFIG.i18n.spanishPublic === true;
+
+  function publicLocales() {
+    return spanishPublic ? LOCALES : ["en"];
+  }
+
+  /** Until Spanish is public, send /es/... visitors to the English twin. */
+  function redirectSpanishIfPrivate() {
+    if (spanishPublic) return false;
+    var path = location.pathname || "/";
+    if (!/^\/es(?=\/|$)/.test(path)) return false;
+    var enPath = path.replace(/^\/es(?=\/|$)/, "/en") || "/en/";
+    if (enPath === "/en") enPath = "/en/";
+    location.replace(enPath + location.search + location.hash);
+    return true;
+  }
+
+  if (redirectSpanishIfPrivate()) return;
 
   function detectLocale() {
     var match = (location.pathname || "").match(/\/(en|es)(?=\/|$)/);
-    if (match && LOCALES.indexOf(match[1]) !== -1) return match[1];
+    if (match && publicLocales().indexOf(match[1]) !== -1) return match[1];
     return DEFAULT;
   }
 
@@ -109,7 +130,7 @@
     setMeta('meta[property="og:url"]', "content", canonical);
     setMeta('meta[property="og:locale"]', "content", locale === "es" ? "es_ES" : "en_GB");
 
-    LOCALES.forEach(function (loc) {
+    publicLocales().forEach(function (loc) {
       ensureLink("alternate", loc, ORIGIN + localeHref(loc));
     });
     ensureLink("alternate", "x-default", ORIGIN + localeHref(DEFAULT));
@@ -171,7 +192,13 @@
 
     document.querySelectorAll("[data-locale-link]").forEach(function (el) {
       var loc = el.getAttribute("data-locale-link");
-      if (LOCALES.indexOf(loc) === -1) return;
+      if (publicLocales().indexOf(loc) === -1) {
+        el.hidden = true;
+        el.setAttribute("aria-hidden", "true");
+        return;
+      }
+      el.hidden = false;
+      el.removeAttribute("aria-hidden");
       el.setAttribute("href", localeHref(loc));
       if (loc === locale) el.setAttribute("aria-current", "true");
       else el.removeAttribute("aria-current");

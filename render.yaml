@@ -4,6 +4,17 @@ services:
     runtime: static
     staticPublishPath: .
     routes:
+      # Spanish not public yet — keep these above page redirects.
+      # Note: Render skips rules when a file exists at the source path,
+      # so /es/*.html files are also stub redirects to /en/.
+      - type: redirect
+        source: /es
+        destination: /en/
+        status: 301
+      - type: redirect
+        source: /es/*
+        destination: /en/*
+        status: 301
       - type: redirect
         source: /wine.html
         destination: /en/experiences.html

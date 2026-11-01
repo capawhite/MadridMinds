@@ -200,12 +200,28 @@ def chrome(page_id: str, title: str, description: str, og_title: str, og_desc: s
     return head, foot
 
 
+# Flip to True when Spanish is ready for public visitors (also set js/config.js spanishPublic).
+SPANISH_PUBLIC = False
+
+
+def en_target_for(filename: str) -> str:
+    if filename in ("", "index.html"):
+        return "/en/"
+    return f"/en/{filename}"
+
+
 def write_page(filename: str, head: str, main: str, foot: str) -> None:
     html = head + main + foot
-    for loc in ("en", "es"):
-        dest = ROOT / loc / filename
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        dest.write_text(html, encoding="utf-8")
+    en_dest = ROOT / "en" / filename
+    en_dest.parent.mkdir(parents=True, exist_ok=True)
+    en_dest.write_text(html, encoding="utf-8")
+
+    es_dest = ROOT / "es" / filename
+    es_dest.parent.mkdir(parents=True, exist_ok=True)
+    if SPANISH_PUBLIC:
+        es_dest.write_text(html, encoding="utf-8")
+    else:
+        es_dest.write_text(redirect_file(en_target_for(filename)), encoding="utf-8")
 
 
 def redirect_file(target: str) -> str:
@@ -215,6 +231,7 @@ def redirect_file(target: str) -> str:
   <meta charset="UTF-8" />
   <title>MadridMinds</title>
   <link rel="canonical" href="https://madridminds.com{target}" />
+  <meta name="robots" content="noindex, follow" />
   <meta http-equiv="refresh" content="0; url={target}" />
   <script>location.replace("{target}" + location.search + location.hash);</script>
 </head>
@@ -281,8 +298,11 @@ def copy_learn_guides() -> None:
                 src,
                 count=1,
             )
-        for loc in ("en", "es"):
-            (ROOT / loc / name).write_text(src, encoding="utf-8")
+        (ROOT / "en" / name).write_text(src, encoding="utf-8")
+        if SPANISH_PUBLIC:
+            (ROOT / "es" / name).write_text(src, encoding="utf-8")
+        else:
+            (ROOT / "es" / name).write_text(redirect_file(en_target_for(name)), encoding="utf-8")
 
 
 def main() -> None:

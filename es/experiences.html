@@ -1,126 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" data-i18n-page="experiencesPage">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script>
-    (function () {
-      var locale = /\/es(?:\/|$)/.test(location.pathname) ? "es" : "en";
-      document.documentElement.lang = locale;
-      if (locale === "es") document.documentElement.classList.add("mm-i18n-pending");
-    })();
-  </script>
-  <title>Chess Experiences in Madrid | MadridMinds</title>
-  <meta name="description" content="Three standalone chess evenings in English, in Madrid: The First Move, Think Ahead and Game Plan." />
+  <title>MadridMinds</title>
   <link rel="canonical" href="https://madridminds.com/en/experiences.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Three standalone evenings | MadridMinds" />
-  <meta property="og:description" content="Beginner-friendly chess experiences in English, in Madrid. Come to one. Or experience all three." />
-  <meta property="og:image" content="https://madridminds.com/chess.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Three standalone evenings | MadridMinds" />
-  <meta name="twitter:description" content="Beginner-friendly chess experiences in English, in Madrid. Come to one. Or experience all three." />
-  <meta name="twitter:image" content="https://madridminds.com/chess.png" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/site.css" />
-  <link rel="stylesheet" href="/nav-mobile.css" />
+  <meta name="robots" content="noindex, follow" />
+  <meta http-equiv="refresh" content="0; url=/en/experiences.html" />
+  <script>location.replace("/en/experiences.html" + location.search + location.hash);</script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content" data-i18n="nav.skip">Skip to main content</a>
-  <nav class="site-nav mm-nav" aria-label="Primary">
-    <a href="/index.html" class="site-nav-brand" data-i18n-aria="nav.brand" aria-label="Madrid Minds"><img src="/TopHeaderReadable.png" alt="Madrid Minds logo" class="site-nav-logo" data-i18n-alt="nav.logoAlt" /></a>
-    <div class="site-nav-links" id="mm-primary-nav" data-nav-group="primary">
-      <a href="/experiences.html" class="site-nav-link" aria-current="page" data-i18n="nav.experiences">Experiences</a>
-      <div class="site-nav-dropdown">
-        <button type="button" class="site-nav-link site-nav-dropdown-toggle" data-i18n-aria="nav.learnOpen" aria-label="Open Learn menu" aria-expanded="false"><span data-i18n="nav.learn">Learn</span> <span class="site-nav-caret">▾</span></button>
-        <div class="site-nav-dropdown-menu" role="menu" aria-label="Learn pages">
-          <a href="/learn.html" class="site-nav-dropdown-item" role="menuitem" data-i18n="nav.learnStart">Start here</a>
-          <a href="/rules.html" class="site-nav-dropdown-item" role="menuitem" data-i18n="nav.howToPlay">How to play</a>
-          <a href="/pieces.html" class="site-nav-dropdown-item" role="menuitem" data-i18n="nav.pieces">Pieces</a>
-        </div>
-      </div>
-      <a href="/teams.html" class="site-nav-link" data-i18n="nav.forTeams">For Teams</a>
-      <a href="/about.html" class="site-nav-link" data-i18n="nav.about">About</a>
-      <a href="/book.html" class="site-nav-link site-nav-cta" data-i18n="nav.book">Book your First Move</a>
-    </div>
-    <div class="site-nav-end">
-      <nav class="lang-switch" data-i18n-aria="nav.language" aria-label="Language">
-        <a href="/en/" lang="en" hreflang="en" data-locale-link="en">EN</a>
-        <a href="/es/" lang="es" hreflang="es" data-locale-link="es">ES</a>
-      </nav>
-      <button type="button" class="mm-nav-toggle" data-i18n-aria="nav.menu" aria-label="Open menu" aria-controls="mm-primary-nav" aria-expanded="false" data-i18n="nav.menu">Menu</button>
-    </div>
-    <div class="mm-nav-backdrop" aria-hidden="true"></div>
-  </nav>
-  <main id="main-content">
-    <header class="page-hero">
-      <p class="kicker" data-i18n="experiencesPage.kicker">Madrid · Inglés</p>
-      <h1><span data-i18n="experiencesPage.h1a">Tres veladas.</span><br /><span data-i18n="experiencesPage.h1b">Elige la que encaje.</span></h1>
-      <p class="lede lede--center" style="margin-top:1rem" data-i18n="experiencesPage.lede">Ven a una, o a las tres. Cada velada funciona por sí sola. La mayoría empieza por The First Move.</p>
-    </header>
-    <section class="section" style="padding-top:0">
-      <div class="inner">
-        <div class="journey">
-          <article class="card">
-            <p class="journey-num">01</p>
-            <h2 class="journey-title" data-i18n="experiences.firstMoveName">The First Move</h2>
-            <p class="card-label" data-i18n="experiences.begin">Begin</p>
-            <p data-i18n="experiencesPage.firstBody">Para principiantes totales — lo esencial, jugar y tu primera partida real.</p>
-            <div class="cta-row" style="justify-content:flex-start;margin-top:1.25rem">
-              <a class="btn btn-primary" href="/book.html" data-i18n="common.bookFirstMove">Reservar tu First Move</a>
-              <a class="btn-text" href="/the-first-move.html" data-i18n="common.aboutThisEvening">About this evening</a>
-            </div>
-          </article>
-          <article class="card">
-            <p class="journey-num">02</p>
-            <h2 class="journey-title" data-i18n="experiences.thinkAheadName">Think Ahead</h2>
-            <p class="card-label" data-i18n="experiences.think">Think</p>
-            <p data-i18n="experiencesPage.thinkBody">Para quien ya sabe mover las piezas — táctica, amenazas y mejores decisiones jugando.</p>
-            <div class="cta-row" style="justify-content:flex-start;margin-top:1.25rem">
-              <a class="btn btn-primary" href="/think-ahead.html" data-i18n="common.aboutThisEvening">About this evening</a>
-              <a class="btn-text" href="/think-ahead.html#notify" data-i18n="common.getNotified">Get notified of the next dates</a>
-            </div>
-          </article>
-          <article class="card">
-            <p class="journey-num">03</p>
-            <h2 class="journey-title" data-i18n="experiences.gamePlanName">Game Plan</h2>
-            <p class="card-label" data-i18n="experiences.plan">Plan</p>
-            <p data-i18n="experiencesPage.planBody">Para principiantes listos para más — aperturas, el centro, seguridad del rey y planes reutilizables.</p>
-            <div class="cta-row" style="justify-content:flex-start;margin-top:1.25rem">
-              <a class="btn btn-primary" href="/game-plan.html" data-i18n="common.aboutThisEvening">About this evening</a>
-              <a class="btn-text" href="/game-plan.html#notify" data-i18n="common.getNotified">Get notified of the next dates</a>
-            </div>
-          </article>
-        </div>
-        <div class="feature-panel" style="margin-top:2.5rem;text-align:center">
-          <p class="lede lede--center" data-i18n="experiencesPage.bundleQuiet">¿Quieres más de una velada? Pregunta por reservar las tres.</p>
-          <p style="margin-top:1.5rem"><a class="btn btn-ghost" href="mailto:ruy@madridminds.com?subject=MadridMinds%20bundle%20of%20all%20three" data-i18n="experiencesPage.askBundle" data-i18n-mailto-subject="experiencesPage.bundleSubject">Preguntar por las tres</a></p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <img src="/TopHeaderReadable.png" alt="Madrid Minds logo" class="footer-logo" data-i18n-alt="nav.logoAlt" />
-    <nav class="footer-nav" aria-label="Footer">
-      <a href="/experiences.html" data-i18n="footer.experiences">Experiences</a>
-      <a href="/learn.html" data-i18n="footer.learn">Learn</a>
-      <a href="/teams.html" data-i18n="footer.forTeams">For Teams</a>
-      <a href="/about.html" data-i18n="footer.about">About</a>
-      <a href="/book.html" data-i18n="footer.book">Book</a>
-      <a href="/chess-in-madrid.html" data-i18n="footer.chessInMadrid">Chess in Madrid</a>
-    </nav>
-    <div class="footer-links">
-      <a href="https://instagram.com/madridminds" target="_blank" rel="noopener noreferrer">@madridminds</a>
-      <a href="mailto:ruy@madridminds.com">ruy@madridminds.com</a>
-    </div>
-  </footer>
-  <script src="/js/config.js"></script>
-  <script src="/js/i18n.js"></script>
-  <script src="/js/site.js"></script>
-  <script src="/nav-mobile.js" defer></script>
+  <p><a href="/en/experiences.html">MadridMinds</a></p>
 </body>
 </html>

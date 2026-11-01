@@ -1,128 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" data-i18n-page="about">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script>
-    (function () {
-      var locale = /\/es(?:\/|$)/.test(location.pathname) ? "es" : "en";
-      document.documentElement.lang = locale;
-      if (locale === "es") document.documentElement.classList.add("mm-i18n-pending");
-    })();
-  </script>
-  <title>Sobre MadridMinds — Experiencias de ajedrez para adultos curiosos en Madrid</title>
-  <meta name="description" content="MadridMinds reúne ajedrez, conversación y un ambiente relajado para adultos curiosos en Madrid. Experiencias en inglés." />
-  <link rel="canonical" href="https://madridminds.com/es/about.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Sobre MadridMinds" />
-  <meta property="og:description" content="Más que aprender ajedrez. Veladas de ajedrez para adultos curiosos en Madrid." />
-  <meta property="og:image" content="https://madridminds.com/chess.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sobre MadridMinds" />
-  <meta name="twitter:description" content="Más que aprender ajedrez. Veladas de ajedrez para adultos curiosos en Madrid." />
-  <meta name="twitter:image" content="https://madridminds.com/chess.png" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/site.css" />
-  <link rel="stylesheet" href="/nav-mobile.css" />
+  <title>MadridMinds</title>
+  <link rel="canonical" href="https://madridminds.com/en/about.html" />
+  <meta name="robots" content="noindex, follow" />
+  <meta http-equiv="refresh" content="0; url=/en/about.html" />
+  <script>location.replace("/en/about.html" + location.search + location.hash);</script>
 </head>
-<body class="page-about">
-  <a class="skip-link" href="#main-content" data-i18n="nav.skip">Skip to main content</a>
-  <nav class="site-nav mm-nav" aria-label="Primary">
-    <a href="/index.html" class="site-nav-brand" data-i18n-aria="nav.brand" aria-label="Madrid Minds"><img src="/TopHeaderReadable.png" alt="Madrid Minds logo" class="site-nav-logo" data-i18n-alt="nav.logoAlt" /></a>
-    <div class="site-nav-links" id="mm-primary-nav" data-nav-group="primary">
-      <a href="/experiences.html" class="site-nav-link" data-i18n="nav.experiences">Experiences</a>
-      <div class="site-nav-dropdown">
-        <button type="button" class="site-nav-link site-nav-dropdown-toggle" data-i18n-aria="nav.learnOpen" aria-label="Open Learn menu" aria-expanded="false"><span data-i18n="nav.learn">Learn</span> <span class="site-nav-caret">▾</span></button>
-        <div class="site-nav-dropdown-menu" role="menu" aria-label="Learn pages">
-          <a href="/learn.html" class="site-nav-dropdown-item" role="menuitem" data-i18n="nav.learnStart">Start here</a>
-          <a href="/rules.html" class="site-nav-dropdown-item" role="menuitem" data-i18n="nav.howToPlay">How to play</a>
-          <a href="/pieces.html" class="site-nav-dropdown-item" role="menuitem" data-i18n="nav.pieces">Pieces</a>
-        </div>
-      </div>
-      <a href="/teams.html" class="site-nav-link" data-i18n="nav.forTeams">For Teams</a>
-      <a href="/about.html" class="site-nav-link" aria-current="page" data-i18n="nav.about">About</a>
-      <a href="/book.html" class="site-nav-link site-nav-cta" data-i18n="nav.book">Book your First Move</a>
-    </div>
-    <div class="site-nav-end">
-      <nav class="lang-switch" data-i18n-aria="nav.language" aria-label="Language">
-        <a href="/en/" lang="en" hreflang="en" data-locale-link="en">EN</a>
-        <a href="/es/" lang="es" hreflang="es" data-locale-link="es">ES</a>
-      </nav>
-      <button type="button" class="mm-nav-toggle" data-i18n-aria="nav.menu" aria-label="Open menu" aria-controls="mm-primary-nav" aria-expanded="false" data-i18n="nav.menu">Menu</button>
-    </div>
-    <div class="mm-nav-backdrop" aria-hidden="true"></div>
-  </nav>
-  <main id="main-content">
-    <header class="page-hero">
-      <p class="kicker" data-i18n="about.kicker">Sobre MadridMinds</p>
-      <h1 data-i18n="about.h1">Más que aprender ajedrez.</h1>
-      <p class="lede lede--center" data-i18n="about.lede">MadridMinds reúne ajedrez, conversación y un ambiente relajado para adultos que quieren aprender algo nuevo y pasar una velada al tablero.</p>
-    </header>
-    <section class="section" style="padding-top:0" aria-labelledby="about-host">
-      <div class="inner">
-        <div class="host-block">
-          <img src="/AvatarRuy.png" alt="Ruy, anfitrión de MadridMinds" class="host-photo" width="200" height="200" loading="lazy" data-i18n-alt="about.hostPhotoAlt" />
-          <div>
-            <p class="kicker" data-i18n="about.hostKicker">Tu anfitrión</p>
-            <h2 class="host-name" id="about-host" data-i18n="about.hostName">Ruy</h2>
-            <div class="body-text">
-              <p data-i18n="about.hostBody1">Creé MadridMinds porque algunas cosas simplemente se disfrutan más en compañía.</p>
-              <p data-i18n="about.hostBody2">Llevo más de 20 años en el mundo del ajedrez — ayudando a que el juego sea más accesible y divertido para gente de todo el mundo.</p>
-              <p class="host-sign" data-i18n="about.hostSign">— Ruy</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="inner inner--narrow">
-        <h2 class="section-heading" data-i18n="about.idea">Por qué MadridMinds</h2>
-        <div class="accent-rule"></div>
-        <div class="body-text">
-          <p data-i18n="about.p1">El ajedrez es uno de los grandes juegos del mundo: estratégico, social y siempre interesante. MadridMinds lo hace accesible a través de veladas donde se puede aprender, jugar y disfrutar de la compañía.</p>
-          <p data-i18n="about.p2">Cada partida te pide concentrarte, reconocer patrones, sopesar opciones, planificar y decidir — con otras personas en la mesa. El reto es real; la velada está pensada para disfrutarse.</p>
-          <p data-i18n="about.p3">Las veladas son en inglés — un encaje natural para el público internacional de Madrid.</p>
-        </div>
-      </div>
-    </section>
-    <section class="section section--tight">
-      <div class="inner inner--narrow center">
-        <h2 class="section-heading" data-i18n="about.atmosphereTitle">Una velada distinta.</h2>
-        <p class="lede lede--center" data-i18n="about.atmosphereBody">Grupos pequeños, un ambiente cómodo, bebidas y snacks, buena conversación y tiempo para conectar de verdad con la gente a tu alrededor. Ven a aprender, o simplemente ven porque quieres probar algo diferente.</p>
-        <div class="photo-pair" aria-hidden="true">
-          <img src="/photos/web/deco-chess.jpg" alt="" width="728" height="408" loading="lazy" />
-          <img src="/photos/web/deco-wine.jpg" alt="" width="728" height="408" loading="lazy" />
-        </div>
-      </div>
-    </section>
-    <section class="final-cta" style="padding-top:1rem">
-      <h2 data-i18n="about.finalTitle">Ver las veladas</h2>
-      <p class="hero-sub" data-i18n="about.finalSub">Elige la velada que te encaje.</p>
-      <a class="btn btn-primary" href="/experiences.html" data-i18n="about.finalCta">Explorar experiencias</a>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <img src="/TopHeaderReadable.png" alt="Madrid Minds logo" class="footer-logo" data-i18n-alt="nav.logoAlt" />
-    <nav class="footer-nav" aria-label="Footer">
-      <a href="/experiences.html" data-i18n="footer.experiences">Experiences</a>
-      <a href="/learn.html" data-i18n="footer.learn">Learn</a>
-      <a href="/teams.html" data-i18n="footer.forTeams">For Teams</a>
-      <a href="/about.html" data-i18n="footer.about">About</a>
-      <a href="/book.html" data-i18n="footer.book">Book</a>
-      <a href="/chess-in-madrid.html" data-i18n="footer.chessInMadrid">Chess in Madrid</a>
-    </nav>
-    <div class="footer-links">
-      <a href="https://instagram.com/madridminds" target="_blank" rel="noopener noreferrer">@madridminds</a>
-      <a href="mailto:ruy@madridminds.com">ruy@madridminds.com</a>
-    </div>
-  </footer>
-  <script src="/js/config.js"></script>
-  <script src="/js/i18n.js"></script>
-  <script src="/js/site.js"></script>
-  <script src="/nav-mobile.js" defer></script>
+<body>
+  <p><a href="/en/about.html">MadridMinds</a></p>
 </body>
 </html>
