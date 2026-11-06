@@ -1880,11 +1880,31 @@ html.mm-members-locked .site-footer {
   max-width: 18ch;
 }
 
+.page-teams .teams-hero .teams-hero-sub {
+  margin: 0.85rem 0 0;
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--cream);
+  max-width: 28rem;
+}
+
 .page-teams .teams-hero .lede {
   margin-top: 1.1rem;
   text-align: left;
   max-width: 34rem;
-  font-size: var(--text-lede);
+  font-size: var(--text-body);
+  line-height: 1.65;
+}
+
+.page-teams .teams-hero .hero-note {
+  margin-top: 1rem;
+  text-align: left;
+  max-width: 34rem;
+  font-size: 0.92rem;
+  color: var(--stone, #b8afa0);
 }
 
 .page-teams .teams-hero .hero-actions {
@@ -1943,6 +1963,8 @@ html.mm-members-locked .site-footer {
   font-size: var(--text-card-title);
   font-weight: 300;
   font-style: normal;
+  line-height: 1.2;
+  text-wrap: balance;
   margin: 0 0 0.55rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -1960,10 +1982,16 @@ html.mm-members-locked .site-footer {
 .page-teams .teams-why {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem 2.25rem;
-  margin: 0.25rem 0 0;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 3.5rem;
+  max-width: 60rem;
+  margin: 0.25rem auto 0;
   padding: 0;
+}
+
+.page-teams .teams-why li {
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
 }
 
 .page-teams .teams-why h3 {
@@ -1971,11 +1999,14 @@ html.mm-members-locked .site-footer {
   font-size: var(--text-card-title);
   font-weight: 300;
   font-style: normal;
+  line-height: 1.2;
+  text-wrap: balance;
   margin: 0 0 0.55rem;
   color: var(--cream);
 }
 
 .page-teams .teams-why p {
+  max-width: 34rem;
   margin: 0;
   color: var(--text);
   font-size: var(--text-body);
@@ -1992,10 +2023,27 @@ html.mm-members-locked .site-footer {
   text-align: left;
 }
 
-.page-teams .teams-atmosphere .lede {
-  text-align: left;
+.page-teams .teams-atmosphere .body-text {
   margin-top: 1rem;
   max-width: 32rem;
+  text-align: left;
+}
+
+.page-teams .teams-atmosphere .body-text p {
+  color: var(--muted);
+}
+
+.page-teams .teams-atmosphere .body-text .teams-closing {
+  margin-top: 1.5rem;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--cream);
+}
+
+.page-teams .teams-practical-grid {
+  margin-top: 1.25rem;
 }
 
 .page-teams .final-cta h2 {
@@ -2028,6 +2076,7 @@ html.mm-members-locked .site-footer {
 
   .page-teams .teams-why {
     grid-template-columns: 1fr 1fr;
+    gap: 2rem 2rem;
   }
 
   .page-teams .teams-atmosphere .split-text {
