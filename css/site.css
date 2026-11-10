@@ -455,6 +455,10 @@ a {
   z-index: 0;
 }
 
+.hero-bg--mobile {
+  display: none;
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -544,8 +548,9 @@ a {
     linear-gradient(
       to bottom,
       rgba(10, 8, 6, 0.15) 0%,
-      rgba(10, 8, 6, 0.1) 45%,
-      rgba(10, 8, 6, 0.55) 100%
+      rgba(10, 8, 6, 0.12) 40%,
+      rgba(10, 8, 6, 0.72) 82%,
+      rgba(10, 8, 6, 0.94) 100%
     );
 }
 
@@ -559,6 +564,15 @@ a {
 }
 
 @media (max-width: 800px) {
+  .hero--people .hero-bg--desktop {
+    display: none;
+  }
+
+  .hero--people .hero-bg--mobile {
+    display: block;
+    background-position: center 38%;
+  }
+
   .hero--people .hero-overlay {
     background:
       radial-gradient(
@@ -570,8 +584,9 @@ a {
       linear-gradient(
         to bottom,
         rgba(10, 8, 6, 0.2) 0%,
-        rgba(10, 8, 6, 0.15) 45%,
-        rgba(10, 8, 6, 0.6) 100%
+        rgba(10, 8, 6, 0.15) 40%,
+        rgba(10, 8, 6, 0.75) 82%,
+        rgba(10, 8, 6, 0.94) 100%
       );
   }
 }
@@ -2351,5 +2366,84 @@ html.mm-members-locked .site-footer {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+  }
+}
+
+/* —— Events page —— */
+.page-events .events-upcoming {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.page-events .events-past {
+  margin-top: 2rem;
+  display: grid;
+  gap: 4.5rem;
+}
+
+.page-events .events-past-card {
+  max-width: 56rem;
+}
+
+.page-events .events-past-copy h3 {
+  font-family: var(--serif);
+  font-size: var(--text-card-title);
+  font-weight: 300;
+  margin: 0.35rem 0 0.75rem;
+  color: var(--cream);
+}
+
+.page-events .events-past-copy > p:not(.kicker) {
+  max-width: 36rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.page-events .events-feature {
+  margin: 1.5rem 0 0;
+  overflow: hidden;
+  background: var(--bg-elev);
+  aspect-ratio: 3 / 2;
+}
+
+.page-events .events-feature img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.page-events .events-support {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-top: 0.85rem;
+}
+
+.page-events .events-support-item {
+  margin: 0;
+  overflow: hidden;
+  background: var(--bg-elev);
+  aspect-ratio: 4 / 5;
+}
+
+.page-events .events-support-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 36%;
+}
+
+@media (max-width: 700px) {
+  .page-events .events-past {
+    gap: 3.25rem;
+  }
+
+  .page-events .events-support {
+    grid-template-columns: 1fr;
+    max-width: 22rem;
   }
 }

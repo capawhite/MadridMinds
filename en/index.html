@@ -35,6 +35,7 @@
     <div class="site-nav-links" id="mm-primary-nav" data-nav-group="primary">
       <a href="/experiences.html" class="site-nav-link" data-i18n="nav.experiences">Experiences</a>
       <a href="/teams.html" class="site-nav-link" data-i18n="nav.forTeams">For Teams</a>
+      <a href="/events.html" class="site-nav-link" data-i18n="nav.events">Events</a>
       <a href="/about.html" class="site-nav-link" data-i18n="nav.about">About</a>
       <a href="/members.html" class="site-nav-link" data-i18n="nav.members">Members</a>
       <a href="/book.html" class="site-nav-link site-nav-cta" data-i18n="nav.book">Book your First Move</a>
@@ -46,7 +47,8 @@
   </nav>
   <main id="main-content">
     <section class="hero hero--people" aria-label="Introduction">
-      <div class="hero-bg" style="background-image:url('/photos/web/hero-gathering.jpg')" role="img" aria-hidden="true"></div>
+      <div class="hero-bg hero-bg--desktop" style="background-image:url('/photos/web/hero-gathering.jpg')" role="img" aria-hidden="true"></div>
+      <div class="hero-bg hero-bg--mobile" style="background-image:url('/photos/web/hero-gathering-mobile.jpg')" role="img" aria-hidden="true"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <h1 data-i18n="home.h1">Chess is easier than you think.</h1>
@@ -61,28 +63,18 @@
 
     <section class="glance-strip" data-i18n-aria="home.glanceLabel" aria-label="At a glance">
       <ul class="glance-list">
-        <li data-i18n="common.madrid">Madrid</li>
         <li data-i18n="common.inEnglish">In English</li>
-        <li data-i18n="common.smallGroups">Small groups</li>
         <li data-i18n="home.glanceWine">Drinks and snacks at the table</li>
       </ul>
     </section>
 
     <section id="name-the-player" hidden data-feature="name-the-player" aria-hidden="true"></section>
 
-    <section class="section section--flush" aria-labelledby="atmosphere">
-      <div class="split">
-        <div class="split-text">
-          <h2 class="section-heading" id="atmosphere" data-i18n="home.atmoTitle">A different kind of evening.</h2>
-          <div class="accent-rule"></div>
-          <div class="body-text">
-            <p data-i18n="home.atmo1">Small groups, a beautiful setting, drinks and snacks on the table — chess and conversation in the same evening. Chess is at the centre, but the evening is about learning, thinking, playing and enjoying the people around you.</p>
-          </div>
-        </div>
-        <div class="split-media photo-mosaic">
-          <img class="photo-mosaic-main" src="/photos/web/atmo-boards.jpg" alt="Chessboards mid-game on the table at a MadridMinds evening" data-i18n-alt="home.atmoAlt" width="1152" height="864" loading="lazy" />
-          <img class="photo-mosaic-inset" src="/photos/web/deco-wine.jpg" alt="" width="728" height="408" loading="lazy" />
-        </div>
+    <section class="section section--tight" aria-labelledby="atmosphere">
+      <div class="inner inner--narrow center">
+        <h2 class="section-heading" id="atmosphere" data-i18n="home.atmoTitle">A different kind of evening.</h2>
+        <div class="accent-rule accent-rule--center"></div>
+        <p class="lede lede--center" data-i18n="home.atmo1">A beautiful setting, drinks and snacks on the table — chess and conversation in the same evening. Chess is at the centre, but the evening is about learning, thinking, playing and enjoying the people around you.</p>
       </div>
     </section>
 
@@ -199,6 +191,7 @@
       <a href="/teams.html" data-i18n="footer.forTeams">For Teams</a>
       <a href="/about.html" data-i18n="footer.about">About</a>
       <a href="/book.html" data-i18n="footer.book">Book</a>
+      <a href="/events.html" data-i18n="footer.events">Events</a>
       <a href="/members.html" data-i18n="footer.members">Members</a>
       <a href="/chess-in-madrid.html" data-i18n="footer.chessInMadrid">Chess in Madrid</a>
     </nav>

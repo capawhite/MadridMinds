@@ -25,7 +25,7 @@ services:
         status: 301
       - type: redirect
         source: /events.html
-        destination: /en/book.html
+        destination: /en/events.html
         status: 301
       - type: redirect
         source: /your-host.html

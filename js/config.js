@@ -105,20 +105,43 @@ window.MM_CONFIG = {
    */
   sessions: [
     {
-      id: "tfm-2026-11-10",
-      experienceId: "the-first-move",
-      dateLabel: "Tuesday 10 November",
-      timeLabel: "19:30",
-      city: "Madrid",
-      mailtoSubject: "Book your First Move — 10 November"
-    },
-    {
       id: "tfm-2026-11-17",
       experienceId: "the-first-move",
       dateLabel: "Tuesday 17 November",
       timeLabel: "19:30",
       city: "Madrid",
       mailtoSubject: "Book your First Move — 17 November"
+    }
+  ],
+
+  /**
+   * Past evenings shown on /en/events.html.
+   * feature = large lead image; photos = up to two supports.
+   * Prefer boards / venue / slides; avoid clear guest portraits.
+   */
+  pastEvents: [
+    {
+      id: "tfm-2026-11-10",
+      title: "The First Move",
+      dateLabel: "Tuesday 10 November 2026",
+      blurb:
+        "A beginner evening around the board — stories, play, and good company.",
+      feature: "/photos/web/events-nov-feature.jpg",
+      photos: [
+        "/photos/web/events-nov-03.jpg",
+        "/photos/web/events-nov-05.jpg"
+      ]
+    },
+    {
+      id: "evening-2025-05",
+      title: "Chess evening",
+      dateLabel: "May 2025",
+      blurb: "An early MadridMinds evening in the same room.",
+      feature: "/photos/web/events-may-feature.jpg",
+      photos: [
+        "/photos/web/events-may-06.jpg",
+        "/photos/web/events-may-04.jpg"
+      ]
     }
   ],
 

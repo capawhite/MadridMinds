@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-page="events">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var locale = /\/es(?:\/|$)/.test(location.pathname) ? "es" : "en";
+      document.documentElement.lang = locale;
+      if (locale === "es") document.documentElement.classList.add("mm-i18n-pending");
+    })();
+  </script>
+  <title>Chess Evenings in Madrid — Past &amp; Upcoming | MadridMinds</title>
+  <meta name="description" content="Upcoming MadridMinds chess evenings in English, plus a look at past evenings around the board in Madrid." />
+  <link rel="canonical" href="https://madridminds.com/en/events.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Chess evenings in Madrid | MadridMinds" />
+  <meta property="og:description" content="Upcoming dates and past evenings — beginner-friendly chess in English, in Madrid." />
+  <meta property="og:image" content="https://madridminds.com/photos/web/events-nov-feature.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Chess evenings in Madrid | MadridMinds" />
+  <meta name="twitter:description" content="Upcoming dates and past evenings — beginner-friendly chess in English, in Madrid." />
+  <meta name="twitter:image" content="https://madridminds.com/photos/web/events-nov-feature.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/site.css" />
+  <link rel="stylesheet" href="/nav-mobile.css" />
+</head>
+<body class="page-events">
+  <a class="skip-link" href="#main-content" data-i18n="nav.skip">Skip to main content</a>
+  <nav class="site-nav mm-nav" aria-label="Primary">
+    <a href="/index.html" class="site-nav-brand" data-i18n-aria="nav.brand" aria-label="Madrid Minds"><img src="/TopHeaderReadable.png" alt="Madrid Minds logo" class="site-nav-logo" data-i18n-alt="nav.logoAlt" /></a>
+    <div class="site-nav-links" id="mm-primary-nav" data-nav-group="primary">
+      <a href="/experiences.html" class="site-nav-link" data-i18n="nav.experiences">Experiences</a>
+      <a href="/teams.html" class="site-nav-link" data-i18n="nav.forTeams">For Teams</a>
+      <a href="/events.html" class="site-nav-link" aria-current="page" data-i18n="nav.events">Events</a>
+      <a href="/about.html" class="site-nav-link" data-i18n="nav.about">About</a>
+      <a href="/members.html" class="site-nav-link" data-i18n="nav.members">Members</a>
+      <a href="/book.html" class="site-nav-link site-nav-cta" data-i18n="nav.book">Book your First Move</a>
+    </div>
+    <div class="site-nav-end">
+      <button type="button" class="mm-nav-toggle" data-i18n-aria="nav.menu" aria-label="Open menu" aria-controls="mm-primary-nav" aria-expanded="false" data-i18n="nav.menu">Menu</button>
+    </div>
+    <div class="mm-nav-backdrop" aria-hidden="true"></div>
+  </nav>
+
+  <main id="main-content">
+    <header class="page-hero">
+      <p class="kicker" data-i18n="events.kicker">MadridMinds evenings</p>
+      <h1 data-i18n="events.h1">Evenings in Madrid</h1>
+      <p class="lede lede--center" data-i18n="events.lede">Upcoming First Move dates, and a look at evenings already around the board.</p>
+    </header>
+
+    <section class="section section--after-hero" aria-labelledby="events-upcoming-heading">
+      <div class="inner">
+        <div class="center">
+          <h2 class="section-heading" id="events-upcoming-heading" data-i18n="events.upcomingTitle">Upcoming</h2>
+        </div>
+        <div id="events-upcoming" class="events-upcoming"></div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="events-past-heading">
+      <div class="inner">
+        <div class="center">
+          <h2 class="section-heading" id="events-past-heading" data-i18n="events.pastTitle">Past evenings</h2>
+          <p class="lede lede--center" data-i18n="events.pastLede">A few moments from evenings we’ve hosted — boards, the room, and the atmosphere.</p>
+        </div>
+        <div id="events-past" class="events-past"></div>
+      </div>
+    </section>
+
+    <section class="final-cta final-cta--texture">
+      <h2 data-i18n="events.finalTitle">Join the next evening.</h2>
+      <p class="lede lede--center" data-i18n="events.finalLede">Book your First Move, or leave your email if the dates don’t work yet.</p>
+      <p class="panel-action">
+        <a class="btn btn-primary" href="/book.html" data-i18n="common.bookFirstMove">Book your First Move</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="/TopHeaderReadable.png" alt="Madrid Minds logo" class="footer-logo" data-i18n-alt="nav.logoAlt" />
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/experiences.html" data-i18n="footer.experiences">Experiences</a>
+      <a href="/teams.html" data-i18n="footer.forTeams">For Teams</a>
+      <a href="/about.html" data-i18n="footer.about">About</a>
+      <a href="/book.html" data-i18n="footer.book">Book</a>
+      <a href="/events.html" data-i18n="footer.events" aria-current="page">Events</a>
+      <a href="/members.html" data-i18n="footer.members">Members</a>
+      <a href="/chess-in-madrid.html" data-i18n="footer.chessInMadrid">Chess in Madrid</a>
+    </nav>
+    <div class="footer-links">
+      <a href="https://instagram.com/madridminds" target="_blank" rel="noopener noreferrer">@madridminds</a>
+      <a href="mailto:ruy@madridminds.com">ruy@madridminds.com</a>
+    </div>
+  </footer>
+  <script src="/js/config.js"></script>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/site.js"></script>
+  <script src="/nav-mobile.js" defer></script>
+</body>
+</html>

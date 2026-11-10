@@ -185,9 +185,6 @@
       copy +
       "</p>" +
       '<ul class="event-meta-list">' +
-      "<li>" +
-      t("common.madrid", "Madrid") +
-      "</li>" +
       '<li><span data-mm-price="experience"></span> ' +
       t("common.perPerson", "per person") +
       "</li>" +
@@ -218,9 +215,6 @@
       (session.timeLabel
         ? "<li>" + session.timeLabel + "</li>"
         : "") +
-      "<li>" +
-      (session.city || "Madrid") +
-      "</li>" +
       (session.seatsLabel
         ? "<li>" + session.seatsLabel + "</li>"
         : "") +
@@ -346,6 +340,82 @@
     if (noDates) noDates.hidden = hasDates;
   }
 
+  function renderEventsPage() {
+    var upcomingRoot = document.getElementById("events-upcoming");
+    var pastRoot = document.getElementById("events-past");
+    if (!upcomingRoot && !pastRoot) return;
+
+    if (upcomingRoot) {
+      if (!sessions.length) {
+        upcomingRoot.innerHTML =
+          '<p class="lede">' +
+          escapeHtml(
+            t(
+              "events.noUpcoming",
+              "No public dates announced yet. Leave your email on the Book page and we’ll tell you when the next evening is set."
+            )
+          ) +
+          "</p>" +
+          '<p class="section-cta"><a class="btn btn-primary" href="' +
+          pageHref("/book.html") +
+          '">' +
+          escapeHtml(t("common.getNotified", "Get notified of the next dates")) +
+          "</a></p>";
+      } else {
+        var html = "";
+        sessions.forEach(function (session, index) {
+          html += sessionCard(session, index === 0);
+        });
+        upcomingRoot.innerHTML = html;
+        fillPrices();
+      }
+    }
+
+    if (pastRoot) {
+      var past = cfg.pastEvents || [];
+      if (!past.length) {
+        pastRoot.hidden = true;
+        return;
+      }
+      pastRoot.innerHTML = past
+        .map(function (event) {
+          var feature = event.feature
+            ? '<figure class="events-feature"><img src="' +
+              escapeHtml(event.feature) +
+              '" alt="" loading="lazy" /></figure>'
+            : "";
+          var support = (event.photos || [])
+            .slice(0, 2)
+            .map(function (src) {
+              return (
+                '<figure class="events-support-item"><img src="' +
+                escapeHtml(src) +
+                '" alt="" loading="lazy" /></figure>'
+              );
+            })
+            .join("");
+          return (
+            '<article class="events-past-card">' +
+            '<div class="events-past-copy">' +
+            '<p class="kicker">' +
+            escapeHtml(event.dateLabel || "") +
+            "</p>" +
+            "<h3>" +
+            escapeHtml(event.title || "Evening") +
+            "</h3>" +
+            (event.blurb ? "<p>" + escapeHtml(event.blurb) + "</p>" : "") +
+            "</div>" +
+            feature +
+            (support
+              ? '<div class="events-support">' + support + "</div>"
+              : "") +
+            "</article>"
+          );
+        })
+        .join("");
+    }
+  }
+
   function homeActionCtas() {
     var hasDates = sessions.length > 0;
     var bookLabel = t("common.bookFirstMove", "Book your First Move");
@@ -379,6 +449,7 @@
     fillDuration();
     fillEnglish();
     renderBooking();
+    renderEventsPage();
     renderProof();
     homeFinalCta();
     homeActionCtas();
