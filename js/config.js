@@ -108,7 +108,7 @@ window.MM_CONFIG = {
       id: "tfm-2026-11-21",
       experienceId: "the-first-move",
       dateLabel: "Saturday 21 November",
-      timeLabel: "19:30",
+      timeLabel: "17:00",
       city: "Madrid",
       mailtoSubject: "Book your First Move — 21 November"
     }
