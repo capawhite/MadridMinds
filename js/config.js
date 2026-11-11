@@ -105,12 +105,12 @@ window.MM_CONFIG = {
    */
   sessions: [
     {
-      id: "tfm-2026-11-17",
+      id: "tfm-2026-11-21",
       experienceId: "the-first-move",
-      dateLabel: "Tuesday 17 November",
+      dateLabel: "Saturday 21 November",
       timeLabel: "19:30",
       city: "Madrid",
-      mailtoSubject: "Book your First Move — 17 November"
+      mailtoSubject: "Book your First Move — 21 November"
     }
   ],
 
