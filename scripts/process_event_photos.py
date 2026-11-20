@@ -166,6 +166,18 @@ def main() -> None:
         focus=(0.5, 0.85),
     )
 
+    # Events — 17 November 2026
+    job(
+        "photos/Nov17New.jpg",
+        "events-nov17-feature.jpg",
+        "cover",
+        w=1400,
+        h=933,
+        focus=(0.5, 0.45),
+    )
+    job("photos/Nov17.jpg", "events-nov17-01.jpg", "max", max_w=1080, max_h=1440)
+    job("photos/Nov17.heic", "events-nov17-02.jpg", "max", max_w=1080, max_h=1440)
+
 
 if __name__ == "__main__":
     main()

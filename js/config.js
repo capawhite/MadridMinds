@@ -105,12 +105,12 @@ window.MM_CONFIG = {
    */
   sessions: [
     {
-      id: "tfm-2026-11-17",
-      experienceId: "the-first-move",
-      dateLabel: "Tuesday 17 November",
-      timeLabel: "19:00",
+      id: "eo-2027-01",
+      title: "Entrepreneurs' Organization (EO)",
+      dateLabel: "January 2027",
+      tagline: "A private MadridMinds evening for EO members.",
       city: "Madrid",
-      mailtoSubject: "Book your First Move — 17 November"
+      bookable: false
     }
   ],
 
@@ -120,6 +120,18 @@ window.MM_CONFIG = {
    * Prefer boards / venue / slides; avoid clear guest portraits.
    */
   pastEvents: [
+    {
+      id: "tfm-2026-11-17",
+      title: "The First Move",
+      dateLabel: "Tuesday 17 November 2026",
+      blurb:
+        "A beginner evening around the board — stories, play, and good company.",
+      feature: "/photos/web/events-nov17-feature.jpg",
+      photos: [
+        "/photos/web/events-nov17-01.jpg",
+        "/photos/web/events-nov17-02.jpg"
+      ]
+    },
     {
       id: "tfm-2026-11-10",
       title: "The First Move",

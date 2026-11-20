@@ -123,6 +123,14 @@
     return null;
   }
 
+  function isBookableSession(session) {
+    return !session || session.bookable !== false;
+  }
+
+  function bookableSessions() {
+    return sessions.filter(isBookableSession);
+  }
+
   function mailLink(subject) {
     return (
       "mailto:" +
@@ -197,39 +205,49 @@
   }
 
   function sessionCard(session, featured) {
+    var bookable = isBookableSession(session);
     var exp = experienceById(session.experienceId) || {};
+    var label = session.title || exp.name || "Experience";
+    var tagline = session.tagline || exp.tagline || "";
+    var meta = "";
+    if (session.timeLabel) {
+      meta += "<li>" + escapeHtml(session.timeLabel) + "</li>";
+    }
+    if (session.city) meta += "<li>" + escapeHtml(session.city) + "</li>";
+    if (session.seatsLabel) {
+      meta += "<li>" + escapeHtml(session.seatsLabel) + "</li>";
+    }
+    if (bookable) {
+      meta +=
+        '<li><span data-mm-price="experience"></span> ' +
+        t("common.perPerson", "per person") +
+        "</li>";
+    }
+    var actions = "";
+    if (bookable) {
+      actions =
+        '<div class="event-card-actions">' +
+        '<a class="btn btn-primary" href="' +
+        mailLink(session.mailtoSubject || "Book " + (exp.name || "MadridMinds")) +
+        '">' +
+        t("common.book", "Book") +
+        "</a>" +
+        "</div>";
+    }
     return (
       '<article class="event-card' +
       (featured ? " event-card--featured" : "") +
+      (bookable ? "" : " event-card--announce") +
       '">' +
       '<p class="event-card-label">' +
-      (exp.name || "Experience") +
+      escapeHtml(label) +
       "</p>" +
       "<h2>" +
-      (session.dateLabel || "") +
+      escapeHtml(session.dateLabel || "") +
       "</h2>" +
-      "<p>" +
-      (exp.tagline || "") +
-      "</p>" +
-      '<ul class="event-meta-list">' +
-      (session.timeLabel
-        ? "<li>" + session.timeLabel + "</li>"
-        : "") +
-      (session.seatsLabel
-        ? "<li>" + session.seatsLabel + "</li>"
-        : "") +
-      '<li><span data-mm-price="experience"></span> ' +
-      t("common.perPerson", "per person") +
-      "</li>" +
-      "</ul>" +
-      '<div class="event-card-actions">' +
-      '<a class="btn btn-primary" href="' +
-      mailLink(session.mailtoSubject || "Book " + (exp.name || "MadridMinds")) +
-      '">' +
-      t("common.book", "Book") +
-      "</a>" +
-
-      "</div>" +
+      (tagline ? "<p>" + escapeHtml(tagline) + "</p>" : "") +
+      (meta ? '<ul class="event-meta-list">' + meta + "</ul>" : "") +
+      actions +
       "</article>"
     );
   }
@@ -237,16 +255,12 @@
   function renderBooking() {
     var root = document.getElementById("booking-list");
     if (!root) return;
-    if (!sessions.length) {
-      root.hidden = true;
-      return;
-    }
-
+    var bookable = bookableSessions();
     var html = "";
     var idsWithDates = {};
 
-    sessions.forEach(function (session, index) {
-      idsWithDates[session.experienceId] = true;
+    bookable.forEach(function (session, index) {
+      if (session.experienceId) idsWithDates[session.experienceId] = true;
       html += sessionCard(session, index === 0);
     });
 
@@ -255,9 +269,10 @@
       if (idsWithDates[id]) return;
       var exp = experienceById(id);
       if (!exp) return;
-      html += emptyCard(exp, !sessions.length && id === "the-first-move");
+      html += emptyCard(exp, !bookable.length && id === "the-first-move");
     });
 
+    root.hidden = false;
     root.innerHTML = html;
     fillPrices();
   }
@@ -333,7 +348,7 @@
   function homeFinalCta() {
     var root = document.querySelector("[data-mm-home-final]");
     if (!root) return;
-    var hasDates = sessions.length > 0;
+    var hasDates = bookableSessions().length > 0;
     var withDates = root.querySelector('[data-final-mode="has-dates"]');
     var noDates = root.querySelector('[data-final-mode="no-dates"]');
     if (withDates) withDates.hidden = !hasDates;
@@ -417,7 +432,7 @@
   }
 
   function homeActionCtas() {
-    var hasDates = sessions.length > 0;
+    var hasDates = bookableSessions().length > 0;
     var bookLabel = t("common.bookFirstMove", "Book your First Move");
     var notifyLabel = t("home.getNotifiedShort", "Get notified");
     var bookHref = pageHref("/book.html");
