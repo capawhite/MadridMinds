@@ -434,17 +434,13 @@
   function homeActionCtas() {
     var hasDates = bookableSessions().length > 0;
     var bookLabel = t("common.bookFirstMove", "Book your First Move");
-    var notifyLabel = t("home.getNotifiedShort", "Get notified");
+    var exploreLabel = t("home.exploreEvenings", "Explore evenings");
     var bookHref = pageHref("/book.html");
+    var exploreHref = pageHref("/events.html");
 
     document.querySelectorAll("[data-mm-home-hero-cta]").forEach(function (cta) {
-      if (hasDates) {
-        cta.textContent = bookLabel;
-        cta.setAttribute("href", bookHref);
-      } else {
-        cta.textContent = notifyLabel;
-        cta.setAttribute("href", "#notify");
-      }
+      cta.textContent = exploreLabel;
+      cta.setAttribute("href", exploreHref);
     });
 
     document.querySelectorAll("[data-mm-home-book-cta]").forEach(function (cta) {
@@ -452,8 +448,8 @@
         cta.textContent = bookLabel;
         cta.setAttribute("href", bookHref);
       } else {
-        cta.textContent = notifyLabel;
-        cta.setAttribute("href", "#notify");
+        cta.textContent = exploreLabel;
+        cta.setAttribute("href", exploreHref);
       }
     });
   }

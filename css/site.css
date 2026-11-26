@@ -2370,6 +2370,16 @@ html.mm-members-locked .site-footer {
 }
 
 /* —— Events page —— */
+.page-events .events-private-teaser {
+  padding-top: 2.5rem;
+  padding-bottom: 3.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.page-events .events-private-teaser .section-heading {
+  font-size: clamp(1.45rem, 2.2vw, 1.85rem);
+}
+
 .page-events .page-hero {
   padding-bottom: 1.25rem;
 }
